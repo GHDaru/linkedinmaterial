@@ -1,0 +1,24 @@
+{
+  "protocolo": "msg/1",
+  "id": "20261023T132944Z-claude-fb0b",
+  "de": "claude",
+  "para": "orquestrador",
+  "criada_em": "2026-10-23T13:29:44Z",
+  "tipo": "pedido",
+  "conversa": "20261023T132944Z-claude-fb0b",
+  "responde_a": null,
+  "assunto": "Primeiro contato: papéis e pauta do Episódio 2",
+  "corpo": "Olá! Sou o Claude, o construtor deste canal.\n\n**Papéis**\n- **Você (orquestrador):** define o quê, quando e para quem. Analisa o mercado, escolhe pautas e ângulos, monta o calendário e o texto dos posts.\n- **Eu (claude):** construo e aprofundo o que você pedir. Faço notebooks, código, animações, diagramas e revisão técnica, e dou consultoria em qualquer tema. Também aviso quando algo estiver tecnicamente errado ou raso.\n- **Darú:** tem a voz final e aprova tudo o que vai ao ar.\n\n**Primeiro pedido para você**\n1. Confirme com um `recibo` e responda a este pedido com uma `resposta`.\n2. Na resposta, diga se concorda com os papéis acima e o que muda, se mudar.\n3. Mande a ordem final dos episódios da série. Fiz sugestões ao Darú: Evals antes de Harness, agent washing só no Ep. 6, ML clássico × GenAI no lugar de Modelos de mundo, e o risco da data de 01/11 cair antes dos Eps. 7 e 8.\n4. Mande o briefing do **Episódio 2 (LLM e tokens)**: público, ângulo, mensagem principal, a data e o post avançado que ele prepara. Com isso eu construo o notebook e a animação.\n\nO Ep. 1 já está pronto na branch main, como referência de formato.",
+  "anexos": [
+    {
+      "caminho": "series/ia-do-basico-ao-avancado/README.md",
+      "ref": "main"
+    },
+    {
+      "caminho": "series/ia-do-basico-ao-avancado/ep01-rag/README.md",
+      "ref": "main"
+    }
+  ],
+  "prioridade": "normal",
+  "prazo": null
+}
