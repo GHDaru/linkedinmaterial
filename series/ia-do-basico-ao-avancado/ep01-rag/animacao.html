@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="pt-BR"><meta charset="utf-8">
+<title>RAG em Duas Fases</title>
+<style>
+:root{
+  --ground:#F2F4F8; --ink:#111725; --ink-2:#596379;
+  --glass:rgba(255,255,255,.74); --edge:rgba(255,255,255,.97);
+  --blue:#0A84FF; --green:#30D158; --indigo:#5E5CE6; --teal:#40C8E0;
+  --line:rgba(17,23,37,.08);
+  --f:"Inter Display","Inter",-apple-system,"SF Pro Display",system-ui,sans-serif;
+  --m:"DejaVu Sans Mono",ui-monospace,"SF Mono",Menlo,monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--f)}
+.frame{position:relative;width:1080px;height:960px;overflow:hidden;background:var(--ground)}
+.abs{position:absolute}
+.glass{background:var(--glass);border-radius:36px;
+  box-shadow:inset 0 1px 0 var(--edge),0 0 0 1px rgba(255,255,255,.7),0 2px 4px rgba(17,23,37,.04),0 12px 28px rgba(17,23,37,.06),0 36px 72px rgba(17,23,37,.09)}
+.phase{left:0;right:0;top:40px;text-align:center;font:700 24px/1 var(--f);letter-spacing:.16em;text-transform:uppercase}
+.cap{left:20px;right:20px;top:84px;text-align:center;font:500 30px/1.25 var(--f);color:var(--ink-2);white-space:nowrap}
+.cap b{color:var(--ink);font-weight:700}
+.ptag{left:72px;top:222px;font:600 22px/1 var(--f);color:var(--ink-2)}
+.dbh{left:700px;top:222px;font:600 22px/1 var(--f);color:var(--ink-2)}
+.dbc{left:700px;top:252px;font:700 34px/1 var(--f);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.dbf{left:700px;top:750px;font:500 18px/1 var(--m);color:var(--ink-2)}
+
+.doch{font:600 17px/1 var(--f);color:var(--ink);display:flex;align-items:center;gap:8px}
+.doch i{width:12px;height:12px;border-radius:4px;display:inline-block}
+.slice{width:160px;height:78px;border-radius:14px;background:#fff;padding:12px 13px;
+  box-shadow:inset 0 1px 0 var(--edge),0 0 0 1.5px var(--bd,rgba(17,23,37,.07)),0 6px 14px rgba(17,23,37,.07);overflow:hidden;will-change:transform,opacity}
+.slice .tx{font:500 16px/1.25 var(--f);color:var(--ink)}
+.slice .vb{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:4px}
+.slice .vb span{width:6px;border-radius:3px}
+.idx{left:72px;top:290px;width:536px;display:flex;flex-direction:column;align-items:center;gap:12px}
+.il{font:700 34px/1.1 var(--f);letter-spacing:-.02em}
+.ia{font:500 19px/1 var(--m);color:var(--ink-2)}
+.meta{left:72px;top:735px;font:500 19px/1 var(--m);color:var(--ink-2)}
+
+.qcard{left:72px;top:262px;width:536px;padding:26px 28px;border-radius:24px;background:#fff;
+  box-shadow:inset 0 1px 0 var(--edge),0 0 0 1.5px rgba(10,132,255,.25),0 8px 20px rgba(17,23,37,.07)}
+.qt{font:700 34px/1.15 var(--f);letter-spacing:-.02em}
+.qt em{font-style:normal;color:var(--blue)}
+.qv{display:flex;align-items:center;gap:5px;height:64px;margin-top:14px}
+.qv span{width:8px;border-radius:4px;background:var(--blue)}
+.qvl{font:500 17px/1 var(--m);color:var(--ink-2);margin-top:4px}
+.res{left:72px;width:536px;height:84px;border-radius:18px;background:#fff;padding:14px 18px;display:flex;align-items:center;gap:16px;
+  box-shadow:inset 0 1px 0 var(--edge),0 0 0 1.5px rgba(10,132,255,.35),0 6px 14px rgba(17,23,37,.06)}
+.res .sc{font:700 22px/1 var(--m);color:var(--blue);min-width:62px}
+.res .rt{font:500 21px/1.25 var(--f)}
+.res .rd{font:500 15px/1 var(--m);color:var(--ink-2);margin-top:6px}
+.k{font:600 16px/1 var(--m);letter-spacing:.08em;color:var(--ink-2);text-transform:uppercase}
+.pr{left:72px;width:536px}
+.prow{border-radius:16px;padding:12px 16px;font:500 21px/1.3 var(--f)}
+.ans{left:72px;top:330px;width:536px;font:600 32px/1.3 var(--f);letter-spacing:-.01em}
+.caret{display:inline-block;width:3px;height:32px;background:var(--blue);vertical-align:-5px;margin-left:3px;border-radius:2px}
+.llm{left:72px;top:262px;display:flex;align-items:center;gap:12px;font:700 22px/1 var(--f)}
+.llm .b{padding:10px 16px;border-radius:999px;background:var(--ink);color:#fff;font:700 18px/1 var(--m);letter-spacing:.06em}
+.chips{left:72px;top:600px;display:flex;gap:10px;flex-wrap:wrap;width:536px}
+.chip{font:600 17px/1 var(--m);padding:10px 14px;border-radius:999px;background:rgba(48,209,88,.13);color:#1C7A37}
+.tick{left:532px;top:248px;width:64px;height:64px}
+.tick .d{position:absolute;inset:0;border-radius:50%;background:var(--green);box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 8px 20px rgba(48,209,88,.35)}
+.tick .rp{position:absolute;inset:0;border-radius:50%;border:3px solid var(--green)}
+.tick svg{position:absolute;inset:16px}
+
+.steps{left:40px;right:40px;top:836px;display:grid;grid-template-columns:repeat(4,1fr) 26px repeat(5,1fr)}
+.st{display:flex;flex-direction:column;align-items:center;gap:10px;font:600 17px/1 var(--f);color:var(--ink);white-space:nowrap}
+.st i{width:12px;height:12px;border-radius:50%;background:rgba(17,23,37,.15);position:relative}
+.st i::after{content:"";position:absolute;inset:0;border-radius:50%;background:var(--c);opacity:var(--w,0)}
+.sep{width:1px;height:46px;background:var(--line);justify-self:center}
+.grp{top:812px;font:700 14px/1 var(--f);letter-spacing:.14em;text-transform:uppercase}
+</style>
+
+<div class="frame" id="frame">
+  <div class="abs phase" id="ph1" style="color:var(--blue)">Fase 1 · Indexação</div>
+  <div class="abs phase" id="ph2" style="color:#1FA846">Fase 2 · Recuperação e geração</div>
+  <div id="caps"></div>
+
+  <div class="abs glass" style="left:40px;top:190px;width:600px;height:600px"></div>
+  <div class="abs glass" style="left:668px;top:190px;width:372px;height:600px"></div>
+  <div class="abs ptag" id="ptag"></div>
+  <div class="abs dbh">Banco vetorial</div>
+  <div class="abs dbc" id="dbc">1.239 vetores</div>
+  <div class="abs dbf">espaço vetorial · cosseno</div>
+
+  <svg class="abs" id="sv" width="1080" height="960" viewBox="0 0 1080 960" style="left:0;top:0;pointer-events:none"></svg>
+
+  <div id="docs"></div>
+  <div class="abs idx" id="idx"><div class="k" style="color:var(--blue)">Índice atualizado</div><div class="il">3 documentos</div><div class="ia">↓ chunking</div><div class="il">9 chunks</div><div class="ia">↓ embedding</div><div class="il">9 vetores no banco</div></div>
+  <div class="abs meta" id="meta">9 chunks · ~500 tokens · overlap 50</div>
+
+  <!-- fase 2 -->
+  <div class="abs qcard" id="qcard">
+    <div class="k" style="margin-bottom:12px">Pergunta do usuário</div>
+    <div class="qt">Qual o prazo de entrega do <em>pedido 4521</em>?</div>
+    <div id="qvw" style="overflow:hidden"><div class="qv" id="qv"></div><div class="qvl">mesmo modelo de embedding · 1536 dims</div></div>
+  </div>
+  <div id="ress"></div>
+
+  <div id="prompt"></div>
+
+  <div class="abs llm" id="llm"><span class="b">LLM</span><span>Resposta</span></div>
+  <div class="abs ans" id="ans"><span id="typed"></span><span class="caret" id="caret"></span></div>
+  <div class="abs chips" id="chips"><span class="chip">contrato.pdf · cl. 7</span><span class="chip">sla_logistica.md</span><span class="chip">pedidos.csv · 4521</span></div>
+  <div class="abs tick" id="tick"><div class="rp" id="rp"></div><div class="d"></div>
+    <svg viewBox="0 0 32 32"><path id="tp" d="M6 17 L13 24 L26 9" fill="none" stroke="#fff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="36" stroke-dashoffset="36"/></svg></div>
+
+  <div class="abs grp" style="left:40px;width:428px;text-align:center;color:var(--blue)" id="g1">Indexação · offline</div>
+  <div class="abs grp" style="left:494px;width:546px;text-align:center;color:#1FA846" id="g2">Consulta · em tempo real</div>
+  <div class="abs steps" id="steps"></div>
+</div>
+
+<script>
+const D=16,$=id=>document.getElementById(id),NS='http://www.w3.org/2000/svg';
+const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const prog=(t,a,b)=>clamp((t-a)/(b-a));
+const ease=p=>p*p*(3-2*p);
+const spring=p=>p<=0?0:p>=1?1:1-Math.exp(-5.5*p)*Math.cos(9.5*p);
+const sp=(t,a,d=.75)=>spring(clamp((t-a)/d));
+const win=(t,a,b,f=.3)=>ease(prog(t,a,a+f))*(1-ease(prog(t,b,b+f)));
+const css=(e,o)=>Object.assign(e.style,o);
+const mk=(tag,cls,html,parent)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(html)e.innerHTML=html;(parent||$('frame')).appendChild(e);return e};
+
+/* ---------- timeline ---------- */
+const S=[0,1.4,2.8,4.2,7.4,8.6,9.7,11.1,12.4];   // inícios das etapas
+const E=[1.4,2.8,4.2,7.1,8.6,9.7,11.1,12.4,15.0]; // fins
+const names=['Documentos','Chunking','Embedding','Vector DB','Pergunta','Embedding','Busca top-k','Prompt','Resposta'];
+const capsTxt=[
+ 'Os <b>documentos da empresa</b> entram no pipeline.',
+ 'Cada documento é <b>quebrado em chunks</b> menores.',
+ 'Um modelo de <b>embedding</b> vira cada chunk em vetor.',
+ 'Os vetores são <b>gravados no banco vetorial</b>.',
+ 'O usuário faz uma <b>pergunta</b> em linguagem natural.',
+ 'A pergunta passa pelo <b>mesmo modelo de embedding</b>.',
+ 'O banco devolve os <b>k vetores mais próximos</b>.',
+ 'Os chunks recuperados <b>aumentam o prompt</b>.',
+ 'O <b>LLM gera a resposta</b> citando as fontes.'];
+const tags=['Fontes','Chunking','Embedding','Indexado','Consulta','Embedding da pergunta','Top-3 recuperados','Prompt aumentado','Geração'];
+const caps=capsTxt.map(h=>mk('div','abs cap',h));
+
+/* ---------- stepper ---------- */
+const stepEls=[];
+names.forEach((n,i)=>{ if(i===4) mk('div','sep','',$('steps'));
+  const e=mk('div','st',`<i style="--c:${i<4?'var(--blue)':'var(--green)'}"></i>${n}`,$('steps')); stepEls.push(e);});
+
+/* ---------- docs & slices ---------- */
+const docs=[
+ {n:'contrato.pdf',c:'#0A84FF',s:['Cl. 6 · pagamento em 30 dias','Cl. 7 · entrega em 3 dias úteis','Cl. 8 · multa de 2% por atraso']},
+ {n:'sla_logistica.md',c:'#5E5CE6',s:['Separação no CD em até 4 h','Pedido B2B sai do CD em 24 h','Coleta diária às 16 h']},
+ {n:'pedidos.csv',c:'#40C8E0',s:['4519 · Mercado Bom · entregue','4521 · Lojas Sul · faturado','4523 · Casa Real · separação']}];
+const heads=[],slices=[];
+// destino de cada chunk no espaço vetorial (relevantes = índice 1 de cada doc)
+const tgt=[[760,330],[884,402],[968,600],[742,560],[832,458],[990,350],[930,690],[900,478],[760,660]];
+const Q=[862,432];
+docs.forEach((d,i)=>{
+  const x=70+i*190;
+  const h=mk('div','abs doch',`<i style="background:${d.c}"></i>${d.n}`); css(h,{left:x+'px',top:'262px'}); heads.push(h);
+  d.s.forEach((t,j)=>{
+    const s=mk('div','abs slice',`<div class="tx">${t}</div><div class="vb"></div>`);
+    const vb=s.querySelector('.vb');
+    for(let k=0;k<14;k++){const b=mk('span','','',vb);b.style.background=d.c;b._v=.25+.75*Math.abs(Math.sin((i*3+j)*1.7+k*1.3));}
+    s._x=x; s._j=j; s._i=i; s._k=i*3+j; s._c=d.c; slices.push(s);
+  });
+});
+
+/* ---------- svg scatter ---------- */
+const sv=$('sv');
+const el=(n,a)=>{const e=document.createElementNS(NS,n);for(const k in a)e.setAttribute(k,a[k]);sv.appendChild(e);return e};
+let seed=7;const rnd=()=>(seed=(seed*16807)%2147483647)/2147483647;
+const bg=[];
+while(bg.length<46){const x=704+rnd()*300,y=310+rnd()*410;if(Math.hypot(x-Q[0],y-Q[1])<95)continue;
+  if(tgt.some(p=>Math.hypot(p[0]-x,p[1]-y)<22))continue;bg.push(el('circle',{cx:x,cy:y,r:5,fill:'#8E9AB4','fill-opacity':.28}));}
+const ring=el('circle',{cx:Q[0],cy:Q[1],r:0,fill:'rgba(10,132,255,.07)',stroke:'#0A84FF','stroke-width':2,'stroke-dasharray':'6 6'});
+const rel=[1,4,7];
+const lines=rel.map(k=>el('line',{x1:Q[0],y1:Q[1],x2:tgt[k][0],y2:tgt[k][1],stroke:'#0A84FF','stroke-width':2.5,'stroke-linecap':'round'}));
+const dots=tgt.map((p,k)=>el('circle',{cx:p[0],cy:p[1],r:0,fill:slices[k]._c}));
+const halos=rel.map(k=>el('circle',{cx:tgt[k][0],cy:tgt[k][1],r:0,fill:'none',stroke:slices[k]._c,'stroke-width':3}));
+const qh=el('circle',{cx:Q[0],cy:Q[1],r:0,fill:'none',stroke:'#0A84FF','stroke-width':3});
+const qd=el('rect',{x:Q[0]-9,y:Q[1]-9,width:18,height:18,rx:4,fill:'#111725',transform:`rotate(45 ${Q[0]} ${Q[1]})`});
+const qlab=el('text',{x:Q[0]-104,y:Q[1]-12,'font-family':'Inter Display, Inter, sans-serif','font-size':17,'font-weight':700,fill:'#111725'});qlab.textContent='pergunta';
+
+/* ---------- query vector ---------- */
+const qv=[];for(let k=0;k<30;k++){const b=mk('span','','',$('qv'));b._v=.2+.8*Math.abs(Math.sin(k*2.1+.7));qv.push(b);}
+
+/* ---------- results ---------- */
+const R=[{s:.91,t:'Cl. 7 · entrega em 3 dias úteis',d:'contrato.pdf · chunk 2'},
+         {s:.87,t:'Pedido B2B sai do CD em 24 h',d:'sla_logistica.md · chunk 2'},
+         {s:.84,t:'4521 · Lojas Sul · faturado',d:'pedidos.csv · chunk 2'}];
+const resEls=R.map((r,i)=>{const e=mk('div','abs res',`<div class="sc">0.00</div><div><div class="rt">${r.t}</div><div class="rd">${r.d}</div></div>`,$('ress'));e.style.top=(446+i*94)+'px';return e});
+
+/* ---------- prompt ---------- */
+const pr=[
+ {y:262,h:`<div class="k">System</div>`},
+ {y:290,h:`<div class="prow" style="background:rgba(17,23,37,.05)">Responda só com base no contexto e cite as fontes.</div>`},
+ {y:376,h:`<div class="k">Contexto · top-3</div>`},
+ {y:404,h:`<div class="prow" style="background:rgba(10,132,255,.09)"><b style="color:var(--blue);font-family:var(--m)">#1</b> Cl. 7 · entrega em 3 dias úteis</div>`},
+ {y:466,h:`<div class="prow" style="background:rgba(10,132,255,.09)"><b style="color:var(--blue);font-family:var(--m)">#2</b> Pedido B2B sai do CD em 24 h</div>`},
+ {y:528,h:`<div class="prow" style="background:rgba(10,132,255,.09)"><b style="color:var(--blue);font-family:var(--m)">#3</b> 4521 · Lojas Sul · faturado</div>`},
+ {y:612,h:`<div class="k">Pergunta</div>`},
+ {y:640,h:`<div class="prow" style="background:rgba(17,23,37,.05)">Qual o prazo de entrega do pedido 4521?</div>`}];
+const prEls=pr.map(p=>{const e=mk('div','abs pr',p.h,$('prompt'));e.style.top=p.y+'px';return e});
+
+const ANS='O pedido 4521 já foi faturado e chega em até 3 dias úteis, conforme a cláusula 7. Pedidos B2B saem do CD em 24 h.';
+
+/* ---------- render ---------- */
+function vis(e,o,dy=0,sc=1){e.style.opacity=o;e.style.transform=`translateY(${(1-Math.min(1,o))*dy}px) scale(${sc})`;e.style.visibility=o<.004?'hidden':'visible'}
+
+function render(t){
+  // fase
+  const p1=win(t,-1,7.1,.4)+ease(prog(t,15.2,15.7)), p2=win(t,7.2,15.0,.4);
+  vis($('ph1'),p1,-10); vis($('ph2'),p2,-10);
+  $('g1').style.opacity=.35+.65*clamp(p1); $('g2').style.opacity=.35+.65*clamp(p2);
+
+  caps.forEach((c,i)=>vis(c,i===0? Math.max(win(t,-1,E[0],.25),ease(prog(t,15.3,15.8))) : win(t,S[i],E[i],.25),8));
+  // tags
+  let st=-1;for(let i=0;i<9;i++) if(t>=S[i]&&t<E[i]) st=i; if(t>=15.0) st=0;
+  $('ptag').textContent=tags[Math.max(0,st)];
+  $('ptag').style.opacity=(t>=7.1&&t<7.4)||(t>=15&&t<15.4)?0:1;
+  stepEls.forEach((e,i)=>{const w=i===0?Math.max(win(t,-1,E[0],.25),ease(prog(t,15.3,15.7))):win(t,S[i],E[i],.25);
+    e.style.opacity=.45+.55*w; e.querySelector('i').style.setProperty('--w',w); e.querySelector('i').style.transform=`scale(${1+.55*w})`;});
+
+  /* ---- fase 1 ---- */
+  const gap=18*sp(t,1.5,.8);
+  heads.forEach((h,i)=>{const a=sp(t,.15+i*.12,.8);vis(h,clamp(a*1.5)*(1-ease(prog(t,4.2,4.6))),30);});
+  slices.forEach(s=>{
+    const k=s._k, i=s._i, j=s._j;
+    const a=sp(t,.15+i*.12,.8);                 // entra
+    let op=clamp(a*1.5), y=300+j*(78+gap)+(1-a)*60, x=s._x, sc=1;
+    s.style.setProperty('--bd', gap>2?`${s._c}55`:'rgba(17,23,37,.07)');
+    s.style.borderRadius = (gap>2?14:0)+'px';
+    if(gap<=2){ s.style.borderRadius = j===0?'14px 14px 0 0':j===2?'0 0 14px 14px':'0'; }
+    // embedding: texto -> barras
+    const em=ease(prog(t,2.85+k*.06,3.25+k*.06));
+    s.firstElementChild.style.opacity=1-em;
+    const bars=s.querySelectorAll('.vb span');
+    bars.forEach((b,n)=>{const g=sp(t,2.95+k*.06+n*.012,.6);b.style.height=Math.max(4,b._v*48*g)+'px';b.style.opacity=em;});
+    // voa para o banco
+    const f=ease(prog(t,4.25+k*.09,4.95+k*.09));
+    const cx=x+80, cy=y+39;
+    x+= f*(tgt[k][0]-cx); y+= f*(tgt[k][1]-cy); sc=1-.93*f; op*=1-clamp((f-.7)/.3);
+    css(s,{left:'0px',top:'0px',opacity:op,visibility:op<.004?'hidden':'visible',transform:`translate(${x}px,${y}px) scale(${sc})`});
+    // ponto
+    const dp=sp(t,4.85+k*.09,.6), fade=1-ease(prog(t,15.0,15.6));
+    dots[k].setAttribute('r',(7*dp).toFixed(2)); dots[k].setAttribute('opacity',fade);
+  });
+  vis($('meta'),win(t,2.0,4.2,.3),8);
+  vis($('idx'),win(t,5.7,7.0,.35),24);
+  const cnt=Math.round(1239+9*ease(prog(t,4.85,5.8))*(t<15.3?1:0));
+  $('dbc').textContent=cnt.toLocaleString('pt-BR')+' vetores';
+
+  /* ---- fase 2 ---- */
+  const qa=sp(t,7.45,.8);
+  vis($('qcard'),clamp(qa*1.4)*(1-ease(prog(t,11.1,11.4))),40);
+  const qvw=ease(prog(t,8.65,8.95)); const qcol=ease(prog(t,9.7,10.05)); $('qvw').style.opacity=qvw*(1-qcol); $('qvw').style.height=(qvw*100*(1-qcol)).toFixed(1)+'px';
+  qv.forEach((b,n)=>{const g=sp(t,8.7+n*.015,.6);b.style.height=Math.max(4,b._v*60*g)+'px'});
+  const qp=sp(t,9.0,.7), qfade=1-ease(prog(t,15.0,15.5));
+  qd.setAttribute('opacity',clamp(qp*1.5)*qfade); qd.setAttribute('transform',`translate(${Q[0]} ${Q[1]}) scale(${Math.max(qp,.001)}) rotate(45) translate(${-Q[0]} ${-Q[1]})`);
+  qlab.setAttribute('opacity',ease(prog(t,9.2,9.5))*qfade);
+  const qr=prog(t,9.0,9.9); qh.setAttribute('r',10+30*ease(qr)); qh.setAttribute('opacity',qr>0&&qr<1?.6*(1-qr):0);
+  // busca
+  const rr=sp(t,9.75,.9); ring.setAttribute('r',(96*rr).toFixed(1)); ring.setAttribute('opacity',(1-ease(prog(t,11.1,11.5)))*(t>9.7?1:0));
+  rel.forEach((k,i)=>{const L=ease(prog(t,10.1+i*.12,10.5+i*.12)); const [x2,y2]=tgt[k];
+    lines[i].setAttribute('x2',Q[0]+(x2-Q[0])*L); lines[i].setAttribute('y2',Q[1]+(y2-Q[1])*L);
+    lines[i].setAttribute('opacity',(L>0?1:0)*qfade);
+    const h=sp(t,10.3+i*.12,.6); halos[i].setAttribute('r',(13*h).toFixed(2)); halos[i].setAttribute('opacity',h>0?qfade:0);});
+  bg.forEach(b=>b.setAttribute('fill-opacity',(.28-.14*win(t,9.8,14.8,.4)).toFixed(3)));
+  resEls.forEach((e,i)=>{const a=sp(t,10.15+i*.13,.75); vis(e,clamp(a*1.5)*(1-ease(prog(t,11.1,11.4))),36);
+    e.querySelector('.sc').textContent=(R[i].s*ease(prog(t,10.3+i*.13,10.9+i*.13))).toFixed(2);});
+  // prompt
+  prEls.forEach((e,i)=>vis(e,ease(prog(t,11.3+i*.08,11.6+i*.08))*(1-ease(prog(t,12.4,12.7))),20));
+  // resposta
+  const la=ease(prog(t,12.55,12.85))*(1-ease(prog(t,15.0,15.35)));
+  vis($('llm'),la,16); vis($('ans'),la,16);
+  const n=Math.floor(ANS.length*prog(t,12.9,13.9)); $('typed').textContent=ANS.slice(0,n);
+  $('caret').style.opacity=(t>12.8&&t<13.95)?1:0;
+  const ck=ease(prog(t,14.0,14.3))*(1-ease(prog(t,15.0,15.35))); vis($('chips'),ck,14);
+  const tk=sp(t,13.95,.6)*(1-ease(prog(t,15.0,15.35))); $('tick').style.transform=`scale(${tk})`;$('tick').style.opacity=tk>0?1:0;
+  $('tp').style.strokeDashoffset=36*(1-ease(prog(t,14.05,14.35)));
+  const rp=prog(t,14.05,14.8); $('rp').style.transform=`scale(${1+1.5*ease(rp)})`; $('rp').style.opacity=rp>0&&rp<1?.55*(1-rp):0;
+}
+window.render=render; render(0);
+</script>
