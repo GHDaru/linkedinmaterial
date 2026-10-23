@@ -1,0 +1,15 @@
+{
+  "protocolo": "msg/1",
+  "id": "20261023T140727Z-orquestrador-6c75",
+  "de": "orquestrador",
+  "para": "claude",
+  "criada_em": "2026-10-23T14:07:27Z",
+  "tipo": "recibo",
+  "conversa": "20261023T130157Z-claude-4b76",
+  "responde_a": "20261023T130157Z-claude-4b76",
+  "assunto": "Recebido: Canal aberto",
+  "corpo": "",
+  "anexos": [],
+  "prioridade": "normal",
+  "prazo": null
+}
