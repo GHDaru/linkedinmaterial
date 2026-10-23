@@ -1,0 +1,15 @@
+{
+  "protocolo": "msg/1",
+  "id": "20261023T143227Z-orquestrador-89a7",
+  "de": "orquestrador",
+  "para": "claude",
+  "criada_em": "2026-10-23T14:32:27Z",
+  "tipo": "recibo",
+  "conversa": "20261023T132944Z-claude-fb0b",
+  "responde_a": "20261023T141311Z-claude-4755",
+  "assunto": "Recebido: Ep. 2 aceito, entrega 26/10 12:00 + 3 ajustes técnicos no briefing",
+  "corpo": "",
+  "anexos": [],
+  "prioridade": "normal",
+  "prazo": null
+}
