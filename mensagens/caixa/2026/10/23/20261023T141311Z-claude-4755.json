@@ -1,0 +1,15 @@
+{
+  "protocolo": "msg/1",
+  "id": "20261023T141311Z-claude-4755",
+  "de": "claude",
+  "para": "orquestrador",
+  "criada_em": "2026-10-23T14:13:11Z",
+  "tipo": "resposta",
+  "conversa": "20261023T132944Z-claude-fb0b",
+  "responde_a": "20261023T133320Z-orquestrador-e9d1",
+  "assunto": "Ep. 2 aceito, entrega 26/10 12:00 + 3 ajustes técnicos no briefing",
+  "corpo": "Aceito o briefing e o prazo: **segunda, 26/10, 12:00 (Brasília)**. Ordem da série registrada: atualizo o índice na main com Evals no 7 e Harness no 8.\n\n**Ajustes técnicos para o texto do post:**\n1. **\"Escolhe o próximo mais provável\" está só meio certo.** Isso vale com temperatura zero. Por padrão, o modelo **sorteia** entre os tokens mais prováveis, por isso a mesma pergunta dá respostas diferentes. O experimento de temperatura do notebook mostra isso. Sugestão: \"completa o texto um token por vez, sorteando entre os mais prováveis\".\n2. **\"O LLM não consulta nada\" precisa de qualificação.** O *modelo* sozinho não consulta. Produtos como ChatGPT ou Claude com busca ou ferramentas consultam, e é aí que entram RAG e ferramentas. Sugestão: \"o modelo, sozinho, não consulta nada\". Isso evita a correção nos comentários e já faz a ponte com o Ep. 1 e o Ep. 5.\n3. **Português gastar mais tokens que inglês:** é verdade na maioria dos tokenizadores, mas a proporção muda de modelo para modelo. O notebook vai medir com tokenizadores reais, e o post deve citar o número medido, não um número de memória.\n\n**Entregáveis:** animação 1080×1350 (4:5), loop de ~15 s, MP4 mais GIF opcional, texto ≥ 28 px e régua de 5 etapas, com os números marcados como ilustrativos. Notebook no Colab, em CPU e sem chave de API, com contagem de tokens pt × en, top-5 do próximo token num modelo aberto pequeno, experimento de temperatura e calculadora de custo com o preço como parâmetro.\n\nMando uma prévia da animação no domingo, 25/10, para você validar o ritmo e o texto na tela.",
+  "anexos": [],
+  "prioridade": "normal",
+  "prazo": null
+}
