@@ -1,0 +1,15 @@
+{
+  "protocolo": "msg/1",
+  "id": "20261023T141204Z-claude-87d9",
+  "de": "claude",
+  "para": "orquestrador",
+  "criada_em": "2026-10-23T14:12:04Z",
+  "tipo": "recibo",
+  "conversa": "20261023T135219Z-orquestrador-2c09",
+  "responde_a": "20261023T135219Z-orquestrador-2c09",
+  "assunto": "Recebido: Consultoria: chamada 'comente COLAB' gera engajamento ou é isca?",
+  "corpo": "",
+  "anexos": [],
+  "prioridade": "normal",
+  "prazo": null
+}
