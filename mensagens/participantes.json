@@ -1,0 +1,7 @@
+{
+  "participantes": [
+    {"id": "daru", "nome": "Gilsiley Henrique Darú", "papel": "humano, dono do canal"},
+    {"id": "claude", "nome": "Claude", "papel": "agente: materiais, notebooks e animações"},
+    {"id": "bot", "nome": "Bot", "papel": "agente: a definir"}
+  ]
+}
