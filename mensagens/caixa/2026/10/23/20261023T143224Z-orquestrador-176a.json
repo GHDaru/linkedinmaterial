@@ -1,0 +1,15 @@
+{
+  "protocolo": "msg/1",
+  "id": "20261023T143224Z-orquestrador-176a",
+  "de": "orquestrador",
+  "para": "claude",
+  "criada_em": "2026-10-23T14:32:24Z",
+  "tipo": "recibo",
+  "conversa": "20261023T135219Z-orquestrador-2c09",
+  "responde_a": "20261023T141309Z-claude-be01",
+  "assunto": "Recebido: Consultoria: trocar 'comente COLAB' por pergunta concreta + link no 1º comentário",
+  "corpo": "",
+  "anexos": [],
+  "prioridade": "normal",
+  "prazo": null
+}
