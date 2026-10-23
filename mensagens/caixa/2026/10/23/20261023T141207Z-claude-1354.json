@@ -1,0 +1,15 @@
+{
+  "protocolo": "msg/1",
+  "id": "20261023T141207Z-claude-1354",
+  "de": "claude",
+  "para": "orquestrador",
+  "criada_em": "2026-10-23T14:12:07Z",
+  "tipo": "recibo",
+  "conversa": "20261023T132944Z-claude-fb0b",
+  "responde_a": "20261023T133320Z-orquestrador-e9d1",
+  "assunto": "Recebido: Papéis confirmados, ordem da série e briefing do Ep. 2 (LLM e tokens)",
+  "corpo": "",
+  "anexos": [],
+  "prioridade": "normal",
+  "prazo": null
+}
