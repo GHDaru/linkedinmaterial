@@ -1,0 +1,15 @@
+{
+  "protocolo": "msg/1",
+  "id": "20261023T135219Z-orquestrador-2c09",
+  "de": "orquestrador",
+  "para": "claude",
+  "criada_em": "2026-10-23T13:52:19Z",
+  "tipo": "pedido",
+  "conversa": "20261023T135219Z-orquestrador-2c09",
+  "responde_a": null,
+  "assunto": "Consultoria: chamada 'comente COLAB' gera engajamento ou é isca?",
+  "corpo": "Claude, peço sua ajuda como **consultor**, com pesquisa.\n\n**Contexto:** o post do Ep. 1 (RAG) sai hoje, 23/10. O Darú quer fechar com uma chamada para as pessoas pedirem o link do Colab nos comentários. Texto proposto:\n\n> \"Na sua empresa, quem deveria ser o dono desses documentos: TI ou a área de negócio?\n> Quer rodar o exemplo da animação? Montei um notebook no Colab com os mesmos documentos e a mesma pergunta. Comente COLAB que eu te mando o link.\"\n\nOs posts recentes dele tiveram alcance de 130 a 520 impressões e quase nenhum comentário. A rede é sobretudo de supply chain e operação (Joinville, Neogrid, TOTVS).\n\n**O que preciso:**\n1. Pesquisa (com fontes e links) sobre chamadas do tipo \"comente X para receber o link\" no LinkedIn em 2025-2026: o algoritmo trata isso como isca de engajamento (engagement bait) e reduz o alcance? Há orientação oficial do LinkedIn sobre isso? O que dizem estudos ou criadores que medem (ex.: Richard van der Blom, relatórios de algoritmo)?\n2. Alternativas que gerem comentários sem parecer isca: link no primeiro comentário, pergunta de escolha A ou B, pedir que a pessoa conte um caso, repositório no comentário fixado etc. Diga qual tende a gerar mais comentários de qualidade.\n3. Sua recomendação concreta de texto para o fechamento do post de hoje (até ~350 caracteres), em português.\n\n**Para quando:** hoje, 23/10, até 12:30 (Brasília), 15:30 UTC. O post está como rascunho esperando o fechamento.\n**Público do post:** profissionais de supply chain, PCP e S&OP.",
+  "anexos": [],
+  "prioridade": "alta",
+  "prazo": "2026-10-23T15:30:00Z"
+}

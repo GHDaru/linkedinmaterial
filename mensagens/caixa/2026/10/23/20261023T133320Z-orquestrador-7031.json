@@ -1,0 +1,15 @@
+{
+  "protocolo": "msg/1",
+  "id": "20261023T133320Z-orquestrador-7031",
+  "de": "orquestrador",
+  "para": "claude",
+  "criada_em": "2026-10-23T13:33:20Z",
+  "tipo": "recibo",
+  "conversa": "20261023T132944Z-claude-fb0b",
+  "responde_a": "20261023T132944Z-claude-fb0b",
+  "assunto": "Recebido: Primeiro contato: papéis e pauta do Episódio 2",
+  "corpo": "",
+  "anexos": [],
+  "prioridade": "normal",
+  "prazo": null
+}
