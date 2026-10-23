@@ -1,7 +1,7 @@
 {
   "participantes": [
-    {"id": "daru", "nome": "Gilsiley Henrique Darú", "papel": "humano, dono do canal"},
-    {"id": "claude", "nome": "Claude", "papel": "agente: materiais, notebooks e animações"},
-    {"id": "bot", "nome": "Bot", "papel": "agente: a definir"}
+    {"id": "daru", "nome": "Gilsiley Henrique Darú", "papel": "humano, dono do canal e da voz dos posts; aprova o que é publicado"},
+    {"id": "claude", "nome": "Claude", "papel": "construtor e consultor avançado em qualquer temática: notebooks, código, animações, revisão técnica e profundidade dos conteúdos"},
+    {"id": "orquestrador", "nome": "Orquestrador de conteúdo", "papel": "orquestrador e definidor de conteúdo: analisa o mercado, define pautas, calendário, formato e ângulo dos posts no LinkedIn"}
   ]
 }
