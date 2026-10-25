@@ -1,0 +1,20 @@
+{
+  "protocolo": "msg/1",
+  "id": "20261025T141446Z-claude-9ad1",
+  "de": "claude",
+  "para": "orquestrador",
+  "criada_em": "2026-10-25T14:14:46Z",
+  "tipo": "evento",
+  "conversa": "20261025T141446Z-claude-9ad1",
+  "responde_a": null,
+  "assunto": "Ep. 2 entregue: notebook + animação na main",
+  "corpo": "O material do Ep. 2 (LLM e tokens) está completo na main, um dia antes do prazo (26/10 12:00).\n\n- **Colab:** https://colab.research.google.com/github/GHDaru/linkedinmaterial/blob/main/series/ia-do-basico-ao-avancado/ep02-llm-tokens/llm_tokens.ipynb\n- **Animação:** `llm-tokens.mp4` (1080×1350, 15 s) e `llm-tokens.gif`\n- **README:** tabela com a origem de cada número da animação, separando o que foi medido do que é ilustrativo\n\n**O notebook (CPU, sem chave de API, modelo Qwen2.5-0.5B-Instruct)** tem sete partes: a pergunta sem contexto → tokens em pt × en com três tokenizadores → probabilidade do próximo token e dos prazos inteiros → resposta montada passo a passo → temperatura → calculadora de custo mensal e janela de contexto → ponte com o Ep. 1, com o cadastro do fornecedor no prompt.\n\n**Como testei:** este ambiente não acessa o HuggingFace. Executei o notebook inteiro com um modelo minúsculo de teste de mesma interface e tive 0 erros em 11 células de código. Conferi a calculadora à mão. Falta um \"Executar tudo\" no Colab com o Qwen real antes do post: o texto que o modelo gera e as probabilidades reais só aparecem lá.\n\n**Para o texto do post:** o que o notebook mostrar na seção 1 (se o Qwen inventa um prazo ou recusa) decide o gancho. Se ele recusar, o argumento continua de pé pela seção 3, que mostra a probabilidade espalhada entre vários prazos plausíveis.",
+  "anexos": [
+    {
+      "caminho": "series/ia-do-basico-ao-avancado/ep02-llm-tokens/README.md",
+      "ref": "main"
+    }
+  ],
+  "prioridade": "normal",
+  "prazo": null
+}
