@@ -29,7 +29,7 @@ body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--f)}
   box-shadow:inset 0 1px 0 var(--edge),0 0 0 2px var(--bd,rgba(10,132,255,.35)),0 6px 14px rgba(17,23,37,.07)}
 .count{left:120px;top:780px;font:800 64px/1 var(--f);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
 .count span{font:600 32px/1 var(--f);color:var(--ink-2);letter-spacing:0;margin-left:10px}
-.note{left:120px;top:870px;font:600 32px/1.3 var(--f);color:var(--ink)}
+.note{left:120px;top:870px;width:840px;font:600 32px/1.3 var(--f);color:var(--ink)}
 .note b{font-family:var(--m);color:var(--amber)}
 .cmp{left:120px;top:400px;width:840px}
 .cmp .h{font:700 34px/1.25 var(--f);margin-bottom:34px}
@@ -44,7 +44,7 @@ body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--f)}
 .prefix .pk{color:var(--blue)}
 .bars{left:120px;top:560px;width:840px;display:flex;flex-direction:column;gap:20px}
 .bar{display:flex;align-items:center;gap:20px;height:72px}
-.bar .k{width:270px;font:700 40px/1 var(--m);white-space:pre}
+.bar .k{width:330px;font:700 40px/1 var(--m);white-space:pre}
 .bar .t{flex:1;height:72px;border-radius:18px;background:rgba(17,23,37,.05);position:relative;overflow:hidden}
 .bar .f{position:absolute;left:0;top:0;bottom:0;border-radius:18px;background:var(--blue)}
 .bar .p{width:110px;text-align:right;font:700 36px/1 var(--m);font-variant-numeric:tabular-nums}
@@ -83,16 +83,9 @@ body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--f)}
   <div class="abs count" id="count">0<span>tokens</span></div>
   <div class="abs note" id="note"><b>7781</b> virou dois tokens: <b>778</b> + <b>1</b></div>
 
-  <div class="abs cmp" id="cmp">
-    <div class="h">Frase longa sobre entrega, mesmo sentido</div>
-    <div class="row"><div class="l">inglês</div><div class="b" id="b1" style="background:var(--ink-2)"></div><div class="n">16</div></div>
-    <div class="row"><div class="l">português</div><div class="b" id="b2" style="background:var(--blue)"></div><div class="n">19</div></div>
-    <div class="sub">tokenizador o200k (modelos recentes)</div>
-    <div class="row"><div class="l">português</div><div class="b" id="b3" style="background:var(--blue);opacity:.55"></div><div class="n">27</div></div>
-    <div class="sub">tokenizador cl100k (geração anterior)</div>
-  </div>
+  <div class="abs note" id="note2">O modelo não lê palavras. <span style="color:var(--blue);font-weight:800">Lê esta sequência de números.</span></div>
 
-  <div class="abs prefix" id="prefix">O lead time é de<span class="pk" id="pk"></span><span class="cur" id="cur"></span></div>
+  <div class="abs prefix" id="prefix"><span id="gen"></span><span class="cur" id="cur"></span></div>
   <div class="abs bars" id="bars"></div>
 
   <div class="abs ans" id="ans">O lead time é de 15 dias.</div>
@@ -124,29 +117,40 @@ function vis(e,o,dy=0){e.style.opacity=o;e.style.transform=`translateY(${(1-Math
 
 /* etapas: início, fim */
 const S=[[-1,2.2],[2.2,5.6],[5.6,9.7],[9.7,12.2],[12.2,14.6]];
-const names=['Pergunta','Tokens','Próximo token','Resposta','Custo'];
+const names=['Pergunta','Tokens','Geração','Resposta','Custo'];
 const caps=['Alguém pergunta ao modelo, <b>sem dar contexto</b>.',
  'O texto vira <b>tokens</b>: pedaços de palavra.',
- 'O modelo <b>sorteia o próximo token</b> entre os mais prováveis.',
+ 'A resposta sai <b>um token por vez</b>, por sorteio.',
  'Sai uma resposta convincente. <b>E inventada.</b>',
  'Tokens são a <b>unidade de custo e de limite</b>.'];
-const tags=['Pergunta','Tokenização','Previsão','Resposta','Custo e janela'];
+const tags=['Pergunta','Tokenização','Gerando a resposta','Resposta','Custo e janela'];
 const capEls=caps.map(h=>mk('abs cap',h));
+const capB=mk('abs cap','Para o modelo, <b>cada token é só um número</b>.');
 const stepEls=names.map(n=>mk('st',`<i></i>${n}`,$('steps')));
 
 /* tokens reais (o200k_base) */
 const TOK=["Qual"," o"," lead"," time"," do"," fornecedor"," Alfa"," para"," o"," item"," ","778","1","?"];
+const IDS=[16752,293,4124,1058,621,170810,123728,1209,293,2169,220,42916,16,30];
 const chipEls=TOK.map((t,i)=>{const c=mk('chip',t===' '?'␣':t.replace(/^ /,'·'),$('chips'));if(i===11||i===12)c.style.setProperty('--bd','rgba(255,159,10,.9)');return c});
 
-/* duas rodadas de previsão (valores ilustrativos) */
-const R=[{c:[["15",.31],["30",.22],["20",.17],["45",.09],["10",.06]],pick:0},
-         {c:[[" dias",.78],[" semanas",.11],[" dias úteis",.06],[" meses",.03],[" d",.01]],pick:0}];
+/* a resposta gerada token por token (probabilidades ilustrativas) */
+const G=[
+ {k:"O",c:[["O",.58],["Não",.17],["Segundo",.09],["Para",.06],["Infelizmente",.04]],d:.32},
+ {k:" lead",c:[[" lead",.91],[" prazo",.05],[" fornecedor",.02],[" tempo",.01],[" item",.01]],d:.28},
+ {k:" time",c:[[" time",.97],[" times",.01],[" médio",.01],[" tempo",.005],[" de",.005]],d:.28},
+ {k:" é",c:[[" é",.71],[" do",.19],[" para",.05],[" médio",.03],[" estimado",.02]],d:.28},
+ {k:" de",c:[[" de",.88],[" aproximadamente",.07],[" em",.03],[" cerca",.01],[" entre",.01]],d:.30},
+ {k:" 15",c:[[" 15",.31],[" 30",.22],[" 20",.17],[" 45",.09],[" 10",.06]],d:1.15,sorteio:true},
+ {k:" dias",c:[[" dias",.78],[" semanas",.11],[" dias úteis",.06],[" meses",.03],[" horas",.01]],d:.80,sorteio:true},
+ {k:".",c:[[".",.83],[" úteis",.09],[",",.04],[" corridos",.03],[" após",.01]],d:.35}];
+{let x=5.8; G.forEach(g=>{g.ts=x; x+=g.d; g.te=x;});}
 const barEls=[0,1,2,3,4].map(()=>{const b=mk('bar','<div class="k"></div><div class="t"><div class="f"></div></div><div class="p"></div>',$('bars'));return b});
 
 function render(t){
   let st=0;for(let i=0;i<5;i++) if(t>=S[i][0]&&t<S[i][1]) st=i; if(t>=14.6) st=0;
   const w=i=> i===0? Math.max(win(t,-1,S[0][1],.25), ease(prog(t,14.7,15))) : win(t,S[i][0],S[i][1],.25);
-  capEls.forEach((c,i)=>vis(c,w(i),10));
+  capEls.forEach((c,i)=>vis(c,i===1?win(t,2.2,4.3,.25):w(i),10));
+  vis(capB,win(t,4.3,5.6,.25),10);
   stepEls.forEach((e,i)=>{const x=w(i);e.style.opacity=.42+.58*x;e.querySelector('i').style.setProperty('--w',x);e.querySelector('i').style.transform=`scale(${1+.6*x})`});
   $('tag').textContent=tags[st];
   $('ilus').style.opacity=(t>5.7&&t<9.7)||(t>12.3&&t<14.6)?1:0;
@@ -161,33 +165,40 @@ function render(t){
   if(t<0.001) vis($('q'),1);
 
   /* 2 tokens */
-  chipEls.forEach((c,i)=>{const a=sp(t,2.35+i*.07,.6);const o=clamp(a*1.4)*(1-ease(prog(t,4.05,4.3)));
-    c.style.opacity=o;c.style.transform=`translateY(${(1-a)*40}px) scale(${.85+.15*a})`;});
+  chipEls.forEach((c,i)=>{const a=sp(t,2.35+i*.07,.6);const o=clamp(a*1.4)*(1-ease(prog(t,5.4,5.65)));
+    // vira o cartão: texto -> id numérico (escalonado)
+    const f0=4.3+i*.05, f=prog(t,f0,f0+.3), virado=f>=.5;
+    c.textContent = virado ? String(IDS[i]) : (TOK[i]===' '?'␣':TOK[i].replace(/^ /,'·'));
+    c.style.color = virado ? 'var(--blue)' : 'var(--ink)';
+    const sy = Math.abs(Math.cos(Math.PI*f));
+    c.style.opacity=o;c.style.transform=`translateY(${(1-a)*40}px) scale(${.85+.15*a},${(.85+.15*a)*Math.max(.05,sy)})`;});
   const n=Math.round(14*ease(prog(t,2.35,3.4)));
   $('count').firstChild.nodeValue=String(n);
-  vis($('count'),win(t,2.35,4.05,.25),16);
-  vis($('note'),win(t,3.35,4.05,.25),16);
-  vis($('cmp'),win(t,4.25,5.6,.25),20);
-  $('b1').style.width=(16*24*ease(prog(t,4.35,4.85)))+'px';
-  $('b2').style.width=(19*24*ease(prog(t,4.5,5.0)))+'px';
-  $('b3').style.width=(27*24*ease(prog(t,4.7,5.2)))+'px';
+  vis($('count'),win(t,2.35,5.4,.25),16);
+  vis($('note'),win(t,3.35,4.25,.2),16);
+  vis($('note2'),win(t,4.6,5.4,.25),16);
 
-  /* 3 próximo token: duas rodadas */
+  /* 3 a resposta sendo gerada, token por token */
   const pv=win(t,5.65,9.7,.3);
   vis($('prefix'),pv,16); vis($('bars'),pv,24);
-  const r = t<7.75?0:1, t0 = r===0?5.8:7.85;
-  const pk1=ease(prog(t,7.2,7.5)), pk2=ease(prog(t,9.15,9.45));
-  $('pk').textContent=(t>=7.35?" 15":"")+(t>=9.3?" dias":"");
+  let cur=G.length-1; for(let g=0;g<G.length;g++){ if(t<G[g].te){cur=g;break;} }
+  const g=G[cur], dur=g.te-g.ts, pickT=g.ts+.85*dur;
+  // texto já gerado (o último token escolhido fica azul por um instante)
+  let html='';
+  G.forEach((x,n)=>{ const tt=x.ts+.85*(x.te-x.ts); if(t>=tt){ const novo=t-tt<.45; html+= novo?`<span class="pk">${x.k}</span>`:x.k; } });
+  $('gen').innerHTML=html;
   $('cur').style.opacity=(Math.floor(t*3)%2===0)?1:.25;
-  barEls.forEach((b,i)=>{const [k,p]=R[r].c[i];
-    b.querySelector('.k').textContent=k; b.querySelector('.p').textContent=Math.round(p*100*ease(prog(t,t0+.15+i*.05,t0+.75+i*.05)))+'%';
-    b.querySelector('.f').style.width=(p*100/R[r].c[0][1]*0.98*sp(t,t0+.1+i*.06,.8))+'%';
-    // sorteio: destaque percorre as barras e para na escolhida
-    const a=t0+.95, z=t0+1.35+.0;
-    let hi=-1; if(t>a&&t<z){hi=Math.floor((t-a)*14)%5;} if(t>=z) hi=R[r].pick;
+  const mx=g.c[0][1];
+  barEls.forEach((b,i)=>{const [k,p]=g.c[i];
+    const cresc=ease(prog(t,g.ts,g.ts+Math.min(.22,.45*dur)));
+    b.querySelector('.k').textContent=k.trim();
+    b.querySelector('.p').textContent=Math.round(p*100*cresc)+'%';
+    b.querySelector('.f').style.width=(p/mx*98*cresc)+'%';
+    let hi=-1;
+    if(g.sorteio){ const a=g.ts+.4*dur; if(t>a&&t<pickT) hi=Math.floor((t-a)*14)%5; }
+    if(t>=pickT || (!g.sorteio && t>=g.ts+.5*dur)) hi=0;
     b.querySelector('.f').style.background = (hi===i)? 'var(--blue)' : 'rgba(10,132,255,.32)';
-    b.style.transform=`translateX(${hi===i&&t>=z? 8*sp(t,z,.5):0}px)`;
-    b.style.opacity = 1;
+    b.style.transform=`translateX(${hi===i&&t>=pickT? 8*sp(t,pickT,.4):0}px)`;
   });
 
   /* 4 resposta */

@@ -14,12 +14,10 @@ Tokens também são a **unidade de custo e de limite**. Você paga por token de 
 
 | Dado | Valor | Origem |
 |---|---|---|
-| Pergunta em português | 14 tokens | medido, tokenizador `o200k_base` |
-| Mesma pergunta em inglês | 14 tokens | medido, `o200k_base` |
-| Frase longa sobre entrega: inglês / português | 16 / 19 tokens | medido, `o200k_base` |
-| A mesma frase em português | 27 tokens | medido, `cl100k_base` (geração anterior) |
+| Pergunta | 14 tokens | medido, tokenizador `o200k_base` |
+| IDs dos tokens (16752, 293, 4124…) | números reais | medido, `o200k_base` |
 | "7781" | 2 tokens: `778` + `1` | medido, `o200k_base` |
-| Probabilidades do próximo token | ilustrativas | o notebook calcula as reais |
+| Probabilidades de cada token da resposta | ilustrativas | o notebook calcula as reais |
 | Custo e janela de contexto | ilustrativos | o notebook tem a calculadora |
 
 ## O notebook
