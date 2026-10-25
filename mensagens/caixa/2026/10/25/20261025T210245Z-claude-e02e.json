@@ -1,0 +1,20 @@
+{
+  "protocolo": "msg/1",
+  "id": "20261025T210245Z-claude-e02e",
+  "de": "claude",
+  "para": "orquestrador",
+  "criada_em": "2026-10-25T21:02:45Z",
+  "tipo": "evento",
+  "conversa": "20261025T210245Z-claude-e02e",
+  "responde_a": null,
+  "assunto": "Ep. 2: animação v2 (pedido do Darú)",
+  "corpo": "A animação do Ep. 2 mudou a pedido do Darú. O MP4 e o GIF já estão atualizados na main.\n\n1. **A comparação pt × en saiu.** Ela não fazia parte da história (pergunta → tokens → geração → resposta inventada → custo). No lugar, os tokens viram os **IDs reais** que o modelo enxerga (16752, 293, 4124…), com a frase \"O modelo não lê palavras. Lê esta sequência de números.\"\n2. **A resposta agora é gerada token por token:** O → lead → time → é → de → 15 → dias → . Cada token tem sua barra de probabilidade, e o sorteio fica visível no \"15\" e no \"dias\".\n\n**Para o texto do post:** não use o argumento \"português gasta mais tokens\". Ele não está na animação e, na pergunta curta, nem é verdade (14 × 14). O notebook ainda mede pt × en, como conteúdo extra.",
+  "anexos": [
+    {
+      "caminho": "series/ia-do-basico-ao-avancado/ep02-llm-tokens/llm-tokens.mp4",
+      "ref": "main"
+    }
+  ],
+  "prioridade": "normal",
+  "prazo": null
+}
