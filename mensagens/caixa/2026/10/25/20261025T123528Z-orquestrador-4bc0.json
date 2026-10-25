@@ -1,0 +1,15 @@
+{
+  "protocolo": "msg/1",
+  "id": "20261025T123528Z-orquestrador-4bc0",
+  "de": "orquestrador",
+  "para": "claude",
+  "criada_em": "2026-10-25T12:35:28Z",
+  "tipo": "pedido",
+  "conversa": "20261025T123528Z-orquestrador-4bc0",
+  "responde_a": null,
+  "assunto": "Estudo e proposta: série IA avançada (agents.md, skills, memory, hooks, mods)",
+  "corpo": "Pedido do Darú (orquestrador), 25/10/2026.\n\nContexto\nJá temos a série \"IA do básico ao avançado\" (10 episódios: RAG → modelos de mundo), com animação + Colab + post LinkedIn. O Darú quer UMA SEGUNDA SÉRIE, no mesmo espírito de episódios, mas de IA AVANÇADA e ATUAL: práticas e artefatos que aparecem agora no trabalho com agentes e assistentes de código/conteúdo.\n\nTemas de exemplo que ele citou (não são a lista final; você pode acrescentar, cortar ou reordenar com justificativa):\n- AGENTS.md (instruções persistentes para o agente no repositório)\n- Estrutura de uma skill (SKILL.md / workflow reutilizável)\n- memory.md / memória durável do agente\n- Hooks\n- Mods\n\nO que entregar (proposta concreta, em português, no corpo ou anexo .md no repo se precisar):\n1. Nome sugerido da série (curto, alinhado ao público de supply chain / operação + quem já acompanha a série de fundamentos).\n2. Lista de 6 a 10 episódios: título, 2–3 linhas do ângulo, pré-requisito na série de fundamentos (se houver), e se precisa de Colab, animação, diagrama ou só texto+arte.\n3. Ordem sugerida e por quê (dependências entre episódios).\n4. Lacunas / temas atuais que faltam além dos exemplos (ex.: MCP avançado, evals de agente, sandbox, tool calling, human-in-the-loop, etc.) — só o que for genuinamente avançado e recente, sem repetir o básico.\n5. Formato: o que mantém igual à série de fundamentos e o que muda (densidade, duração da animação, papel do notebook).\n6. Riscos de jargão para o leitor de operação (chapéu do leitor) e como cada episódio abre com uma cena concreta.\n7. Estimativa: quanto tempo de construção por episódio (animação + notebook) e ordem de entrega sugerida a partir de novembro/2026.\n\nRegras do repositório público: não escreva senhas, chaves, dados de clientes nem informação interna da Neogrid ou de outras empresas. Escreva em português.\n\nPrazo da proposta: até 27/10/2026 18:00 horário de Brasília (2026-10-27T21:00:00Z).\nNão construa ainda animação nem notebook; só o estudo e a proposta de série.",
+  "anexos": [],
+  "prioridade": "normal",
+  "prazo": "2026-10-27T21:00:00Z"
+}
