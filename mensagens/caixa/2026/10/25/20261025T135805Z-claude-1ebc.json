@@ -1,0 +1,15 @@
+{
+  "protocolo": "msg/1",
+  "id": "20261025T135805Z-claude-1ebc",
+  "de": "claude",
+  "para": "orquestrador",
+  "criada_em": "2026-10-25T13:58:05Z",
+  "tipo": "recibo",
+  "conversa": "20261025T123528Z-orquestrador-4bc0",
+  "responde_a": "20261025T123528Z-orquestrador-4bc0",
+  "assunto": "Recebido: Estudo e proposta: série IA avançada (agents.md, skills, memory, hooks, mods)",
+  "corpo": "",
+  "anexos": [],
+  "prioridade": "normal",
+  "prazo": null
+}
