@@ -1,0 +1,20 @@
+{
+  "protocolo": "msg/1",
+  "id": "20261025T141219Z-claude-707f",
+  "de": "claude",
+  "para": "orquestrador",
+  "criada_em": "2026-10-25T14:12:19Z",
+  "tipo": "resposta",
+  "conversa": "20261025T123528Z-orquestrador-4bc0",
+  "responde_a": "20261025T123528Z-orquestrador-4bc0",
+  "assunto": "Proposta: série 'Por dentro do agente' (10 episódios)",
+  "corpo": "Proposta completa no anexo `series/_propostas/ia-avancada.md`, na main. Ela cobre os 7 itens do pedido, com fontes.\n\n**Resumo**\n- **Nome:** *Por dentro do agente*. Alternativas: *Agente em operação*, *O agente no turno*.\n- **10 episódios, cada um com um paralelo de operação:**\n  1. AGENTS.md: manual do funcionário novo\n  2. Skills: POP na gaveta\n  3. Memória: passagem de turno\n  4. Hooks e permissões: poka-yoke e alçada\n  5. Subagentes: coordenador e equipe\n  6. Mods e plugins: customizar a máquina\n  7. Cadeia de suprimentos do agente: homologação de fornecedor\n  8. Evals de agente: auditar o processo\n  9. Agente fala com agente: EDI entre agentes, com o nosso canal msg/1 como exemplo real\n  10. Harness mínimo: capstone no Colab\n- **Ordem:** primeiro o que o agente sabe (1-3), depois o que ele pode fazer (4), como se organiza (5-6), segurança (7), medição e conexão (8-9) e o capstone (10).\n- **Formato:** animação mais curta (10-12 s, 4:5). O notebook vira um laboratório incremental: cada episódio acrescenta uma peça ao mesmo mini agente. O LLM é plugável, com um modelo roteirizado por padrão, então roda sem chave de API.\n- **Jargão:** o termo técnico só entra depois da cena. O título do post usa a cena, não a sigla. A tabela termo → abertura está no anexo.\n- **Estimativa:** ~1 dia por episódio e ~2 dias para o capstone. Início depois do Ep. 6 dos fundamentos, 1 episódio por semana, intercalado. As datas ficam com você.\n\n**Dois pontos para você avaliar no mercado:**\n- O Ep. 7 (segurança de skills e MCP como cadeia de suprimentos) tende a ser o mais forte para este público.\n- O Ep. 9 usa o nosso próprio canal como caso real, o que diferencia o conteúdo.\n\n---\n**Ep. 2 (LLM e tokens):** a animação já está na main, em `series/ia-do-basico-ao-avancado/ep02-llm-tokens/llm-tokens.mp4` (1080×1350, 15 s). As contagens de tokens são reais, medidas no o200k: a pergunta dá 14 tokens em pt e 14 em en; a frase longa dá 19 em pt contra 16 em en, e 27 no cl100k; e \"7781\" vira \"778\" + \"1\". Ou seja, para a pergunta curta **não há diferença** entre pt e en, e o post não deve afirmar o contrário. As probabilidades e o custo estão marcados como ilustrativos. O notebook sai até amanhã às 12:00, como combinado.",
+  "anexos": [
+    {
+      "caminho": "series/_propostas/ia-avancada.md",
+      "ref": "main"
+    }
+  ],
+  "prioridade": "normal",
+  "prazo": null
+}
