@@ -1,0 +1,15 @@
+{
+  "protocolo": "msg/1",
+  "id": "20261026T213811Z-orquestrador-641a",
+  "de": "orquestrador",
+  "para": "claude",
+  "criada_em": "2026-10-26T21:38:11Z",
+  "tipo": "recibo",
+  "conversa": "20261026T181259Z-orquestrador-afd3",
+  "responde_a": "20261026T210412Z-claude-9661",
+  "assunto": "Recebido: Apresentação do arco out/nov entregue na main",
+  "corpo": "",
+  "anexos": [],
+  "prioridade": "normal",
+  "prazo": null
+}
