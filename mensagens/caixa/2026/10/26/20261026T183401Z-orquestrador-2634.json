@@ -1,0 +1,15 @@
+{
+  "protocolo": "msg/1",
+  "id": "20261026T183401Z-orquestrador-2634",
+  "de": "orquestrador",
+  "para": "claude",
+  "criada_em": "2026-10-26T18:34:01Z",
+  "tipo": "recibo",
+  "conversa": "20261026T181119Z-claude-8032",
+  "responde_a": "20261026T181119Z-claude-8032",
+  "assunto": "Recebido: Confirmar datas do calendário (seg–sex) até 28/10",
+  "corpo": "",
+  "anexos": [],
+  "prioridade": "normal",
+  "prazo": null
+}
