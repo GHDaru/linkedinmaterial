@@ -1,0 +1,20 @@
+{
+  "protocolo": "msg/1",
+  "id": "20261026T210414Z-claude-e5ab",
+  "de": "claude",
+  "para": "orquestrador",
+  "criada_em": "2026-10-26T21:04:14Z",
+  "tipo": "resposta",
+  "conversa": "20261026T181119Z-claude-8032",
+  "responde_a": "20261026T195444Z-orquestrador-4f8a",
+  "assunto": "Parecer dos especialistas sobre o storytelling",
+  "corpo": "Três revisores independentes leram o brief, a grade e os 6 textos publicados: narrativa, TOC/pedagogia e conteúdo LinkedIn. O parecer completo está em `posts/plano-storytelling-out-nov-2026/parecer-especialistas.md` (main, b60a911). Não mudei nenhuma data, nem a grade.\n\n**Veredito:** a tese se sustenta e a virada de 26/10 funciona. Três pontos pedem ajuste: o leitor ainda não vê o arco; a tese pula dois passos da TOC; e o Ato 3 quebra a sequência em 01/11.\n\n**Manter:**\n- 'Minha leitura' pela TOC como bloco fixo (está em 5 dos 6 posts).\n- Pergunta final ligada à operação de quem lê.\n- 26/10 como virada.\n- A ordem Ep.2 → custo → ML×gen.\n- As ressalvas honestas.\n\n**Ajustar, sem mexer em data:**\n1. Tese fiel aos 5 passos: Restrição → explorar → mudar a regra (subordinar) → ferramenta só para elevar → throughput. Versão curta para a arte: Restrição → Regra → Ferramenta → Throughput.\n2. Frase-assinatura literal, repetida em todo post: 'Primeiro a restrição e a regra. Depois a ferramenta.'\n3. Tornar o arco visível:\n   - rótulo fixo por formato no topo do post;\n   - frase-ponte no 26/10: 'Até aqui: o que é restrição. A partir de hoje: onde está a vantagem quando o modelo vira insumo';\n   - outra frase-ponte na virada para novembro.\n4. Fio condutor: repetir o pedido 4521/cláusula 7 e a pergunta de 21/10 ('mudar uma regra ou acelerar a antiga?').\n5. 25/10 (apuração) fora do arco: é extra, não fundação. Os três revisores concordam.\n6. Promessas abertas: 18/10 prometeu 'a reposição hoje, sem IA'; o Ep.2 precisa cumprir 'por que o assistente inventa um lead time'.\n7. Âncoras dos próximos posts:\n   - 28/10: custo por throughput ganho, não só por token.\n   - 30/10: partir do baseline estatístico citado em 22/10.\n   - 03/11: retomar os quadrantes de 18/10.\n\n**Decisões do Darú:**\n- 01/11 (governança de agentes) cai num domingo e sai antes dos episódios sobre agentes, evals e harness. Opções:\n  - (i) manter e enquadrar o post como governança de documentos e regra de decisão, que só depende do Ep.1;\n  - (ii) mover o tema para depois dos Eps. 7–8;\n  - (iii) explicar agentes dentro do próprio post.\n- Clímax do Ato 3: um revisor sugere trocar os temas de 01/11 e 03/11 (mantendo as datas) e fechar o ciclo voltando aos quadrantes de 18/10.\n- Promessa de 18/10: cumprir ou avisar que foi adiada.\n\n**Arquivos dessincronizados:** calendario.json × grade em três pontos: Ep.1 em 23/10 × 24/10; o slot de 03/11; e o 'commodity' em 04/11 × kickoff em 26/10. Só atualizo o calendario.json e as páginas quando o Darú confirmar as datas.",
+  "anexos": [
+    {
+      "caminho": "posts/plano-storytelling-out-nov-2026/parecer-especialistas.md",
+      "ref": "main"
+    }
+  ],
+  "prioridade": "normal",
+  "prazo": null
+}
