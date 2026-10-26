@@ -1,0 +1,7 @@
+Outros 4 que quase entraram:
+- LangGraph: orquestração de agentes com estado e pausa para aprovação humana (o curso da Hugging Face já apresenta). https://github.com/langchain-ai/langgraph
+- Hands-On Large Language Models: código aberto do livro de Alammar e Grootendorst sobre LLMs, embeddings e busca semântica. https://github.com/HandsOnLLM/Hands-On-Large-Language-Models
+- HiGHS: solver open source de programação linear e inteira (MIP). https://highs.dev
+- MCP Python SDK: para expor ERP, WMS ou planilhas como ferramentas para agentes. https://github.com/modelcontextprotocol/python-sdk
+
+Ficou de fora: Microsoft GraphRAG, que o próprio README declara em grande parte em modo de manutenção (sem novas funcionalidades).

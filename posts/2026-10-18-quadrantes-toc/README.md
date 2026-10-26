@@ -1,0 +1,69 @@
+# Por que sua equipe não adota a IA? Os 4 quadrantes da mudança
+
+**Publicado em:** 2026-10-18 · publicado 18/10/2026
+
+**Série relacionada:** TOC Fundamentos (continuação do post anterior sobre a montanha da TOC).
+
+## Texto
+
+```
+𝗣𝗢𝗥 𝗤𝗨𝗘 𝗦𝗨𝗔 𝗘𝗤𝗨𝗜𝗣𝗘 𝗡Ã𝗢 𝗔𝗗𝗢𝗧𝗔 𝗔 𝗜𝗔?
+𝗢𝗦 𝟰 𝗤𝗨𝗔𝗗𝗥𝗔𝗡𝗧𝗘𝗦 𝗗𝗔 𝗠𝗨𝗗𝗔𝗡Ç𝗔.
+
+TOC Fundamentos | Este post continua o anterior. Lá, a montanha da TOC foi ilustração. Aqui, explico a teoria por trás dela.
+
+Para Goldratt, ninguém resiste à mudança por natureza. Antes de decidir, a pessoa pesa quatro quadrantes:
+
+Pote de ouro, no topo: o benefício de mudar.
+Muleta, na subida: o risco de mudar, cair e sair machucado.
+Jacaré, embaixo: o risco de não mudar.
+Sereia, também embaixo: o benefício de não mudar, o que é bom hoje e fica para trás.
+
+Quando falamos de IA no varejo, quase sempre olhamos só o pote de ouro. Mas a sereia mais forte não é a tecnologia. São os processos atuais, enraizados, que continuam valendo depois que a IA chega:
+
+Monitorar a ruptura, quando ruptura já é tarde. O processo precisa se antecipar a ela.
+Investir em prever melhor, quando talvez o ganho esteja em repor com mais agilidade.
+Pedir desconto em lote grande, quando o que gera resultado é aumentar o giro.
+Encher o caminhão com poucos produtos em grande quantidade, em vez de um mix maior, em quantidades menores e mais frequentes.
+
+Cada uma dessas regras faz sentido isoladamente e é medida por algum indicador. Por isso é uma sereia: abrir mão dela parece perda.
+
+Colocar IA sobre essas regras não muda a montanha. Só acelera o processo antigo. A mudança é mais profunda: revisar como se repõe, como se compra e como se mede, e só então decidir onde a IA ajuda.
+
+Minha leitura: antes do piloto de IA, monte a matriz para cada envolvido (comprador, loja, logística, fornecedor) e pergunte qual regra atual cada um teria que deixar para trás.
+
+No próximo post da série, vou olhar o modelo atual, sem IA: como a reposição funciona hoje no varejo e quais regras precisam mudar primeiro.
+
+E na sua empresa, qual regra antiga está segurando a mudança lá embaixo?
+
+Post anterior: https://www.linkedin.com/feed/update/urn:li:share:7516914934967050240/
+
+Fontes:
+TOCICO Dictionary, 2ª ed., "change analogy" e "buy-in": https://www.tocico.org/
+Animação Overcoming Resistance to Change (Goldratt): https://www.youtube.com/watch?v=hcz1aZ60k7w
+Mesma animação, canal de Alan Barnard (Goldratt Research Labs): https://www.youtube.com/watch?v=9T_WB--wAxU
+Goldratt Consulting Brasil, Resistência à mudança: https://www.youtube.com/watch?v=37HxjZZ5Aq8
+Miguel Abuhab, resistência à mudança e a reforma tributária: https://www.linkedin.com/feed/update/urn:li:activity:7025659285053317120/
+Jack Vinson, matriz da mudança e camadas de resistência: https://www.jackvinson.com/blog/2018/5/7/combining-the-change-matrix-and-the-layers-of-resistance
+
+#TOC #TOCFundamentos #TeoriaDasRestricoes #GestaoDaMudanca #IA #SupplyChain #Goldratt #Varejo
+```
+
+Arquivo-fonte do texto: [`texto.txt`](texto.txt).
+
+## Materiais
+
+| Arquivo | O que é |
+|---|---|
+| [`quadrada.png`](quadrada.png) | Imagem final do post (1200×1200) |
+| [`texto.txt`](texto.txt) | Texto publicado |
+
+## Referências
+
+TOCICO. *TOCICO Dictionary*. 2. ed. Disponível em: https://www.tocico.org/. Acesso em: 18 out. 2026.
+
+GOLDRATT, Eliyahu M. *Overcoming Resistance to Change* (animação). YouTube. Disponível em: https://www.youtube.com/watch?v=hcz1aZ60k7w. Acesso em: 18 out. 2026.
+
+BARNARD, Alan. *Overcoming Resistance to Change*. Goldratt Research Labs / YouTube. Disponível em: https://www.youtube.com/watch?v=9T_WB--wAxU. Acesso em: 18 out. 2026.
+
+VINSON, Jack. Combining the change matrix and the layers of resistance. 2018. Disponível em: https://www.jackvinson.com/blog/2018/5/7/combining-the-change-matrix-and-the-layers-of-resistance. Acesso em: 18 out. 2026.

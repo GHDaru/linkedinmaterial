@@ -1,0 +1,1 @@
+Quem quiser ir além do RAG e entender como se monta o ambiente em volta do modelo (ferramentas, contexto, verificação e limites), deixei gratuito o livro Engenharia de Harness: https://harness.ghdaru.com.br

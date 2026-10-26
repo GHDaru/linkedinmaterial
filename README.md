@@ -14,7 +14,14 @@ Posts que não fazem parte de uma série ficam em [`posts/`](posts/), um por pas
 
 | Data | Post | Material |
 |---|---|---|
-| | *nenhum ainda* | |
+| 2026-10-18 | [4 quadrantes TOC](posts/2026-10-18-quadrantes-toc/) | texto + `quadrada.png` |
+| 2026-10-20 | [Modelos de mundo](posts/2026-10-20-modelos-de-mundo/) | [post](https://www.linkedin.com/feed/update/urn:li:share:7518312859643187201/) · texto + `imagem.png` |
+| 2026-10-21 | [IA Aplicada · 4 casos](posts/2026-10-21-ia-aplicada-4-casos/) | texto + `imagem.png` |
+| 2026-10-22 | [8 recursos de IA para SC](posts/2026-10-22-8-recursos-ia-supply-chain/) | [post](https://www.linkedin.com/feed/update/urn:li:share:7518882943445131265/) · texto + `imagem.png` |
+| 2026-10-24 | [RAG ep.1](posts/2026-10-24-rag-ep1/) | [post](https://www.linkedin.com/feed/update/urn:li:activity:7519773053938012161/) · texto + `capa.png` · [série](series/ia-do-basico-ao-avancado/ep01-rag/) |
+| 2026-10-25 | [Apuração mapa](posts/2026-10-25-apuracao-mapa/) | [post](https://www.linkedin.com/feed/update/urn:li:share:7520242340351864832/) · texto + `arte_linkedin.png` |
+
+Brief de storytelling out/nov: [`posts/plano-storytelling-out-nov-2026/`](posts/plano-storytelling-out-nov-2026/).
 
 ## Estrutura
 

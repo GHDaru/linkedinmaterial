@@ -11,7 +11,7 @@ O RAG (Retrieval-Augmented Generation) tem duas fases:
 
 O notebook implementa cada etapa numa célula, com os mesmos documentos e a mesma pergunta da animação. No fim há três experimentos: pergunta sem resposta na base, tamanho do chunk e busca semântica versus busca por palavra.
 
-**Post:** *link do post no LinkedIn*
+*Post:* https://www.linkedin.com/feed/update/urn:li:activity:7519773053938012161/
 
 | Arquivo | O que é |
 |---|---|

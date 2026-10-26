@@ -1,0 +1,13 @@
+Links dos 8 recursos:
+
+Parte 1: aprender
+1. Forecasting: Principles and Practice, versão Python (gratuito): https://otexts.com/fpppy/
+2. AI Engineering (Chip Huyen; livro pago, materiais gratuitos no GitHub): https://github.com/chiphuyen/aie-book
+3. Hugging Face AI Agents Course (gratuito): https://huggingface.co/learn/agents-course
+4. Engenharia de Harness (meu livro, gratuito, leitura online): https://harness.ghdaru.com.br/?utm_source=linkedin&utm_medium=comentario&utm_campaign=post_20261022_8recursos
+
+Parte 2: construir
+5. StatsForecast (Nixtla, Apache-2.0): https://github.com/Nixtla/statsforecast
+6. Google OR-Tools (Apache-2.0): https://developers.google.com/optimization
+7. Docling (MIT): https://github.com/docling-project/docling
+8. promptfoo (hoje parte da OpenAI, segue open source e MIT): https://github.com/promptfoo/promptfoo

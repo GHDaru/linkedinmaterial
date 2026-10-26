@@ -8,3 +8,16 @@ posts/2026-11-01-governanca-ia/
   imagem.png       peças visuais
   notebook.ipynb   opcional
 ```
+
+## Índice
+
+| Data | Post | Pasta |
+|---|---|---|
+| 2026-10-18 | 4 quadrantes TOC | [`2026-10-18-quadrantes-toc/`](2026-10-18-quadrantes-toc/) |
+| 2026-10-20 | Modelos de mundo | [`2026-10-20-modelos-de-mundo/`](2026-10-20-modelos-de-mundo/) |
+| 2026-10-21 | IA Aplicada · 4 casos | [`2026-10-21-ia-aplicada-4-casos/`](2026-10-21-ia-aplicada-4-casos/) |
+| 2026-10-22 | 8 recursos de IA para SC | [`2026-10-22-8-recursos-ia-supply-chain/`](2026-10-22-8-recursos-ia-supply-chain/) |
+| 2026-10-24 | RAG ep.1 | [`2026-10-24-rag-ep1/`](2026-10-24-rag-ep1/) |
+| 2026-10-25 | Apuração mapa | [`2026-10-25-apuracao-mapa/`](2026-10-25-apuracao-mapa/) |
+
+Brief de storytelling (out/nov): [`plano-storytelling-out-nov-2026/`](plano-storytelling-out-nov-2026/).

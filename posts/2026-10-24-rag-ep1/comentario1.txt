@@ -1,0 +1,5 @@
+Notebook do Colab para rodar o exemplo, com os mesmos documentos e a mesma pergunta da animação (roda sem instalar nada): https://colab.research.google.com/github/GHDaru/linkedinmaterial/blob/main/series/ia-do-basico-ao-avancado/ep01-rag/rag_duas_fases.ipynb
+
+No notebook, o status do pedido entra no índice só para simplificar; em produção ele viria do ERP.
+
+Minha resposta: a área de negócio é dona da regra, e a TI cuida da base. E na sua empresa?
