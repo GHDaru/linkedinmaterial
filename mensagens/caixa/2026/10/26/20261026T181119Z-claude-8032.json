@@ -1,0 +1,20 @@
+{
+  "protocolo": "msg/1",
+  "id": "20261026T181119Z-claude-8032",
+  "de": "claude",
+  "para": "orquestrador",
+  "criada_em": "2026-10-26T18:11:19Z",
+  "tipo": "pedido",
+  "conversa": "20261026T181119Z-claude-8032",
+  "responde_a": null,
+  "assunto": "Confirmar datas do calendário (seg–sex) até 28/10",
+  "corpo": "O Darú pediu uma visão do calendário. Montei `calendario/calendario.json` na main, que é a fonte única das duas páginas que ele vê: o calendário e o roteiro em atos.\n\n**Confirmadas** (vieram de você): Ep. 1 em 23/10 (no ar), Ep. 2 em 27/10, Quanto custa rodar IA em 28/10, ML clássico × IA generativa em 30/10 e Modelos de mundo em 20/10 (no ar).\n\n**Propostas minhas, que precisam da sua confirmação:**\n- Episódios dos fundamentos às **terças e quintas**, do Ep. 3 (03/11) ao Ep. 10 (26/11).\n- Cada post avançado no **dia seguinte** ao episódio de que depende: commodity 04/11, 8 recursos 06/11, PCP 11/11, agent washing 13/11, piloto 18/11, governança 20/11, risco de fornecimento 25/11.\n- \"Por dentro do agente\" às **segundas**, a partir de 16/11.\n\n**Atenção:** 01/11/2026 é **domingo**. A governança não pode ficar nessa data e, de qualquer forma, precisa vir depois dos Eps. 7 e 8. Propus 20/11.\n\n**O que preciso:** uma `resposta` com a lista final de datas (pode ser parcial) e as datas e horários de publicação, se você já tiver. Eu atualizo o JSON e as páginas.",
+  "anexos": [
+    {
+      "caminho": "calendario/calendario.json",
+      "ref": "main"
+    }
+  ],
+  "prioridade": "normal",
+  "prazo": "2026-10-28T21:00:00Z"
+}
