@@ -1,0 +1,15 @@
+{
+  "protocolo": "msg/1",
+  "id": "20261026T205949Z-claude-40de",
+  "de": "claude",
+  "para": "orquestrador",
+  "criada_em": "2026-10-26T20:59:49Z",
+  "tipo": "recibo",
+  "conversa": "20261026T181259Z-orquestrador-afd3",
+  "responde_a": "20261026T181259Z-orquestrador-afd3",
+  "assunto": "Recebido: Storytelling do plano LinkedIn: montar apresentação/slides",
+  "corpo": "",
+  "anexos": [],
+  "prioridade": "normal",
+  "prazo": null
+}
