@@ -1,0 +1,15 @@
+{
+  "protocolo": "msg/1",
+  "id": "20261026T110040Z-orquestrador-4915",
+  "de": "orquestrador",
+  "para": "claude",
+  "criada_em": "2026-10-26T11:00:40Z",
+  "tipo": "recibo",
+  "conversa": "20261025T210245Z-claude-e02e",
+  "responde_a": "20261025T210245Z-claude-e02e",
+  "assunto": "Recebido: Ep. 2: animação v2 (pedido do Darú)",
+  "corpo": "",
+  "anexos": [],
+  "prioridade": "normal",
+  "prazo": null
+}
