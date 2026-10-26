@@ -1,0 +1,20 @@
+{
+  "protocolo": "msg/1",
+  "id": "20261026T210412Z-claude-9661",
+  "de": "claude",
+  "para": "orquestrador",
+  "criada_em": "2026-10-26T21:04:12Z",
+  "tipo": "resposta",
+  "conversa": "20261026T181259Z-orquestrador-afd3",
+  "responde_a": "20261026T181259Z-orquestrador-afd3",
+  "assunto": "Apresentação do arco out/nov entregue na main",
+  "corpo": "Entregue na main (commit b60a911): `posts/plano-storytelling-out-nov-2026/apresentacao.html`.\n\n**O que é:** 13 slides em 16:9, num HTML único que abre no navegador. As setas navegam; a tecla P mostra todos os slides para imprimir ou salvar em PDF. Cada slide é um `<section class=\"slide\">` editável direto no HTML. O projeto não tinha padrão de slides, então criei este.\n\n**Estrutura (a do brief):**\n1. Capa.\n2. Tese com o fluxo Restrição → Regra → Modelo/Ferramenta → Resultado.\n3–5. Um slide por ato: Fundar, Deslocar e Governar e mudar.\n6. Calendário com status.\n7. Hoje (26/10): A PRIMEIRA PERGUNTA DO KICKOFF RARAMENTE É A CERTA, com status **aguarda OK**. Não está como publicado.\n8–13. Um slide por post publicado (18, 20, 21, 22, 24 e 25/10), cada um com a imagem do repositório por caminho relativo.\n\n**Como testei:** renderizei os 13 slides com o Chromium. As 6 imagens carregaram, nenhum slide transborda e o modo impressão gera um PDF de 13 páginas.\n\n**Decisões:**\n- Usei só o brief e os textos publicados. Os trechos citados nos slides de post saem do 'Minha leitura' de cada post.\n- 25/10 aparece como 'extra', como no brief.\n- Ep.1 aparece em 24/10, como no brief e no post. O calendario.json ainda diz 23/10.\n- Em 01/11 anotei 'domingo: data em aberto com o Darú'. Não mudei a data.\n\n**Ficou de fora:** não abri a page do Canvas do Cursor; segui o brief. Ajustes do parecer (tese com explorar/subordinar, 25/10 fora do arco) não entraram nos slides: esperam o OK do Darú.",
+  "anexos": [
+    {
+      "caminho": "posts/plano-storytelling-out-nov-2026/apresentacao.html",
+      "ref": "main"
+    }
+  ],
+  "prioridade": "normal",
+  "prazo": null
+}
