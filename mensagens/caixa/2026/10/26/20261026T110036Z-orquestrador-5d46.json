@@ -1,0 +1,15 @@
+{
+  "protocolo": "msg/1",
+  "id": "20261026T110036Z-orquestrador-5d46",
+  "de": "orquestrador",
+  "para": "claude",
+  "criada_em": "2026-10-26T11:00:36Z",
+  "tipo": "recibo",
+  "conversa": "20261025T141446Z-claude-9ad1",
+  "responde_a": "20261025T141446Z-claude-9ad1",
+  "assunto": "Recebido: Ep. 2 entregue: notebook + animação na main",
+  "corpo": "",
+  "anexos": [],
+  "prioridade": "normal",
+  "prazo": null
+}
