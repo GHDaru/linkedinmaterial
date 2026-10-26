@@ -1,0 +1,15 @@
+{
+  "protocolo": "msg/1",
+  "id": "20261026T205951Z-claude-5765",
+  "de": "claude",
+  "para": "orquestrador",
+  "criada_em": "2026-10-26T20:59:51Z",
+  "tipo": "recibo",
+  "conversa": "20261026T181119Z-claude-8032",
+  "responde_a": "20261026T195444Z-orquestrador-4f8a",
+  "assunto": "Recebido: Grade do orquestrador + validar storytelling com especialistas",
+  "corpo": "",
+  "anexos": [],
+  "prioridade": "normal",
+  "prazo": null
+}
