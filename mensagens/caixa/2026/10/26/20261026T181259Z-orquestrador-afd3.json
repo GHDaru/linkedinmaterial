@@ -1,0 +1,68 @@
+{
+  "protocolo": "msg/1",
+  "id": "20261026T181259Z-orquestrador-afd3",
+  "de": "orquestrador",
+  "para": "claude",
+  "criada_em": "2026-10-26T18:12:59Z",
+  "tipo": "pedido",
+  "conversa": "20261026T181259Z-orquestrador-afd3",
+  "responde_a": null,
+  "assunto": "Storytelling do plano LinkedIn: montar apresentação/slides",
+  "corpo": "Pedido do Darú (via orquestrador), 26/10/2026.\n\n## O que fazer\n\nMontar a **storytelling do plano LinkedIn out/nov 2026** em **apresentação / slides**.\n\n- HTML no repositório é aceitável.\n- Se você já tiver padrão de slides editáveis no projeto, prefira esse formato.\n- Entregar os arquivos na branch **`main`** e responder com o caminho dos arquivos gerados.\n\n## Material já commitado em `main`\n\nFaça `git fetch origin main` e use o brief + os posts publicados (texto + imagem final). **Não invente** dados, URLs, métricas ou status. **Não** trate 26/10 como publicado (status: hoje / aguarda OK).\n\n### Brief (anexo principal)\n\n- `posts/plano-storytelling-out-nov-2026/README.md` @ main\n\nO brief traz: tese da voz (Restrição → Regra → Modelo → Resultado), arco em 3 atos (Fundar / Deslocar / Governar), calendário out/nov, slide “hoje” 26/10, tabela dos posts e instruções de estrutura dos slides.\n\n### Page de referência (externa, não confidencial)\n\nhttps://cursor.com/canvas/store-7d5f0d2c-82d1-43cc-bab2-cf2aa7f5cd10/de4f025c-ac51-47f5-bc40-d67c581c5ed1\n\n### Posts publicados em `main` (texto + imagem)\n\n| Data | Pasta | Imagem |\n|---|---|---|\n| 18/10 | `posts/2026-10-18-quadrantes-toc/` | `quadrada.png` |\n| 20/10 | `posts/2026-10-20-modelos-de-mundo/` | `imagem.png` |\n| 21/10 | `posts/2026-10-21-ia-aplicada-4-casos/` | `imagem.png` |\n| 22/10 | `posts/2026-10-22-8-recursos-ia-supply-chain/` | `imagem.png` |\n| 24/10 | `posts/2026-10-24-rag-ep1/` | `capa.png` |\n| 25/10 | `posts/2026-10-25-apuracao-mapa/` | `arte_linkedin.png` |\n\nSérie relacionada: `series/ia-do-basico-ao-avancado/` (Ep.1 RAG já tem notebook/animação; o post avulso em `posts/2026-10-24-rag-ep1/` linka a série).\n\n## Estrutura mínima dos slides (do brief)\n\n1. Capa do arco\n2. 1 slide tese + diagrama do fluxo\n3. 1 slide por ato (Fundar / Deslocar / Governar)\n4. 1 slide calendário out/nov com status\n5. 1 slide “hoje” 26/10 — título *A PRIMEIRA PERGUNTA DO KICKOFF RARAMENTE É A CERTA*; ideia modelo=insumo; status aguarda OK\n6. Slides opcionais por post publicado, citando a imagem do repo\n\n## Regras do repositório público\n\nPortuguês. Sem senhas, tokens, chaves, dados de cliente ou informação interna. Sem caminhos locais de máquina.\n\n## Ciclo de resposta\n\n1. Enviar **recibo** deste pedido.\n2. Entregar na `main` e enviar **resposta** com o caminho dos arquivos gerados.\n\nO Darú pedirá a você montar a apresentação; este pedido já entrega o material e o brief.",
+  "anexos": [
+    {
+      "caminho": "posts/plano-storytelling-out-nov-2026/README.md",
+      "ref": "main"
+    },
+    {
+      "caminho": "posts/2026-10-18-quadrantes-toc/README.md",
+      "ref": "main"
+    },
+    {
+      "caminho": "posts/2026-10-18-quadrantes-toc/quadrada.png",
+      "ref": "main"
+    },
+    {
+      "caminho": "posts/2026-10-20-modelos-de-mundo/README.md",
+      "ref": "main"
+    },
+    {
+      "caminho": "posts/2026-10-20-modelos-de-mundo/imagem.png",
+      "ref": "main"
+    },
+    {
+      "caminho": "posts/2026-10-21-ia-aplicada-4-casos/README.md",
+      "ref": "main"
+    },
+    {
+      "caminho": "posts/2026-10-21-ia-aplicada-4-casos/imagem.png",
+      "ref": "main"
+    },
+    {
+      "caminho": "posts/2026-10-22-8-recursos-ia-supply-chain/README.md",
+      "ref": "main"
+    },
+    {
+      "caminho": "posts/2026-10-22-8-recursos-ia-supply-chain/imagem.png",
+      "ref": "main"
+    },
+    {
+      "caminho": "posts/2026-10-24-rag-ep1/README.md",
+      "ref": "main"
+    },
+    {
+      "caminho": "posts/2026-10-24-rag-ep1/capa.png",
+      "ref": "main"
+    },
+    {
+      "caminho": "posts/2026-10-25-apuracao-mapa/README.md",
+      "ref": "main"
+    },
+    {
+      "caminho": "posts/2026-10-25-apuracao-mapa/arte_linkedin.png",
+      "ref": "main"
+    }
+  ],
+  "prioridade": "alta",
+  "prazo": null
+}
