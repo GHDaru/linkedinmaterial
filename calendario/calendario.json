@@ -1,0 +1,45 @@
+{
+  "atualizado_em": "2026-10-26",
+  "legenda_status": {
+    "publicado": "Já foi ao ar",
+    "confirmado": "Data combinada com o orquestrador",
+    "revisao": "Data em revisão",
+    "proposta": "Proposta do Claude, aguardando o orquestrador"
+  },
+  "atos": [
+    {"id": "a1", "titulo": "O modelo sozinho", "pergunta": "O que um LLM faz de verdade, e quanto isso custa?"},
+    {"id": "a2", "titulo": "Dando contexto", "pergunta": "Como fazer o modelo responder com os nossos dados?"},
+    {"id": "a3", "titulo": "Do texto à ação", "pergunta": "Quando a IA deixa de responder e passa a agir?"},
+    {"id": "a4", "titulo": "Confiança", "pergunta": "Como saber se dá para colocar isso em produção?"},
+    {"id": "a5", "titulo": "Relações e mundo", "pergunta": "E quando a resposta depende de como as coisas se conectam?"},
+    {"id": "t2", "titulo": "Temporada 2 · Por dentro do agente", "pergunta": "Quais são as peças em volta do modelo que fazem um agente funcionar?"}
+  ],
+  "posts": [
+    {"id": "mundo", "data": "2026-10-20", "tipo": "avancado", "titulo": "Modelos de mundo", "status": "publicado", "ato": "a5", "depende": ["ep10"]},
+    {"id": "ep01", "data": "2026-10-23", "tipo": "episodio", "serie": "fundamentos", "n": 1, "titulo": "RAG em duas fases", "status": "publicado", "ato": "a2", "material": "pronto"},
+    {"id": "ep02", "data": "2026-10-27", "tipo": "episodio", "serie": "fundamentos", "n": 2, "titulo": "LLM e tokens", "status": "confirmado", "ato": "a1", "material": "pronto"},
+    {"id": "custo", "data": "2026-10-28", "tipo": "avancado", "titulo": "Quanto custa rodar IA", "status": "confirmado", "ato": "a1", "depende": ["ep02"]},
+    {"id": "mlgen", "data": "2026-10-30", "tipo": "avancado", "titulo": "ML clássico × IA generativa", "status": "confirmado", "ato": "a1", "depende": ["ep02"]},
+    {"id": "ep03", "data": "2026-11-03", "tipo": "episodio", "serie": "fundamentos", "n": 3, "titulo": "Embeddings e busca semântica", "status": "proposta", "ato": "a2"},
+    {"id": "commodity", "data": "2026-11-04", "tipo": "avancado", "titulo": "O modelo virou commodity", "status": "proposta", "ato": "a1", "depende": ["ep01", "ep02"]},
+    {"id": "ep04", "data": "2026-11-05", "tipo": "episodio", "serie": "fundamentos", "n": 4, "titulo": "Contexto e prompt", "status": "proposta", "ato": "a2"},
+    {"id": "recursos", "data": "2026-11-06", "tipo": "avancado", "titulo": "Os 8 recursos", "status": "proposta", "ato": "a2", "depende": ["ep04"]},
+    {"id": "ep05", "data": "2026-11-10", "tipo": "episodio", "serie": "fundamentos", "n": 5, "titulo": "Ferramentas e MCP", "status": "proposta", "ato": "a3"},
+    {"id": "pcp", "data": "2026-11-11", "tipo": "avancado", "titulo": "Agentes no PCP", "status": "proposta", "ato": "a3", "depende": ["ep05"]},
+    {"id": "ep06", "data": "2026-11-12", "tipo": "episodio", "serie": "fundamentos", "n": 6, "titulo": "Agente ou automação", "status": "proposta", "ato": "a3"},
+    {"id": "washing", "data": "2026-11-13", "tipo": "avancado", "titulo": "Agent washing", "status": "proposta", "ato": "a3", "depende": ["ep06"]},
+    {"id": "pa01", "data": "2026-11-16", "tipo": "episodio", "serie": "agente", "n": 1, "titulo": "AGENTS.md", "status": "proposta", "ato": "t2"},
+    {"id": "ep07", "data": "2026-11-17", "tipo": "episodio", "serie": "fundamentos", "n": 7, "titulo": "Evals", "status": "proposta", "ato": "a4"},
+    {"id": "piloto", "data": "2026-11-18", "tipo": "avancado", "titulo": "Projetos que travam no piloto", "status": "proposta", "ato": "a4", "depende": ["ep07"]},
+    {"id": "ep08", "data": "2026-11-19", "tipo": "episodio", "serie": "fundamentos", "n": 8, "titulo": "Harness", "status": "proposta", "ato": "a4"},
+    {"id": "governanca", "data": "2026-11-20", "tipo": "avancado", "titulo": "Governança de IA", "status": "revisao", "ato": "a4", "depende": ["ep01", "ep07", "ep08"], "nota": "Previsto para 01/11, que cai num domingo e antes de Evals e Harness. Proposta: 20/11."},
+    {"id": "pa02", "data": "2026-11-23", "tipo": "episodio", "serie": "agente", "n": 2, "titulo": "Skills", "status": "proposta", "ato": "t2"},
+    {"id": "ep09", "data": "2026-11-24", "tipo": "episodio", "serie": "fundamentos", "n": 9, "titulo": "Grafo de conhecimento", "status": "proposta", "ato": "a5"},
+    {"id": "risco", "data": "2026-11-25", "tipo": "avancado", "titulo": "Risco de fornecimento e GraphRAG", "status": "proposta", "ato": "a5", "depende": ["ep09"]},
+    {"id": "ep10", "data": "2026-11-26", "tipo": "episodio", "serie": "fundamentos", "n": 10, "titulo": "Modelos de mundo", "status": "proposta", "ato": "a5"},
+    {"id": "pa03", "data": "2026-11-30", "tipo": "episodio", "serie": "agente", "n": 3, "titulo": "Memória", "status": "proposta", "ato": "t2"},
+    {"id": "pa04", "data": "2026-12-07", "tipo": "episodio", "serie": "agente", "n": 4, "titulo": "Hooks e permissões", "status": "proposta", "ato": "t2"},
+    {"id": "pa05", "data": "2026-12-14", "tipo": "episodio", "serie": "agente", "n": 5, "titulo": "Subagentes", "status": "proposta", "ato": "t2"}
+  ],
+  "proximos": "Episódios 6 a 10 de \"Por dentro do agente\" (Mods e plugins, Cadeia de suprimentos do agente, Evals de agente, Agente fala com agente, Harness mínimo) a partir de janeiro de 2027."
+}

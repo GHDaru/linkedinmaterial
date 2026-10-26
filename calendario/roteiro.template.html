@@ -1,0 +1,144 @@
+<title>Roteiro da Série</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400;1,6..72,500&family=Schibsted+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap">
+<style>
+/* Layout: uma história em atos; cada ato abre com a pergunta do leitor (serifada) e mostra episódios-base à esquerda e os posts avançados que eles destravam à direita */
+:root{
+  --bg:#F6F7FA; --surface:#FFFFFF; --ink:#141A2A; --ink-2:#5B6578; --line:#E2E7EF;
+  --fund:#0A84FF; --fund-bg:#E6F1FF; --avan:#2B3550; --avan-bg:#E9ECF3; --agen:#7A5AF8; --agen-bg:#F0ECFF;
+  --warn:#C77700; --ok:#1E9E4A;
+  --f-story:"Newsreader",Georgia,"Times New Roman",serif;
+  --f-ui:"Schibsted Grotesk",-apple-system,"Segoe UI",system-ui,sans-serif;
+  --f-num:"JetBrains Mono",ui-monospace,"SF Mono",Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0F131C; --surface:#171C28; --ink:#E8ECF4; --ink-2:#98A2B6; --line:#262D3D;
+  --fund:#4DA3FF; --fund-bg:#14273F; --avan:#C9D1E4; --avan-bg:#232A3A; --agen:#A48BFF; --agen-bg:#241F3D;
+  --warn:#F0A63A; --ok:#3CCB6C; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0F131C; --surface:#171C28; --ink:#E8ECF4; --ink-2:#98A2B6; --line:#262D3D;
+  --fund:#4DA3FF; --fund-bg:#14273F; --avan:#C9D1E4; --avan-bg:#232A3A; --agen:#A48BFF; --agen-bg:#241F3D;
+  --warn:#F0A63A; --ok:#3CCB6C; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-ui);font-size:15px;line-height:1.5;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:40px 64px}
+.wrap{max-width:980px;margin:0 auto;display:flex;flex-direction:column;gap:44px}
+.intro{display:flex;flex-direction:column;gap:14px;max-width:66ch}
+.eyebrow{font:700 12px/1 var(--f-ui);letter-spacing:.16em;text-transform:uppercase;color:var(--fund)}
+h1{font:600 clamp(34px,5vw,52px)/1.02 var(--f-story);letter-spacing:-.02em;margin:0;text-wrap:balance}
+.lead{font:400 19px/1.5 var(--f-story);color:var(--ink);margin:0}
+.lead em{color:var(--ink-2)}
+.arc{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px}
+.arc a{text-decoration:none;color:inherit;border-top:3px solid var(--line);padding-top:8px;display:flex;flex-direction:column;gap:3px;min-width:0}
+.arc a:hover,.arc a:focus-visible{border-color:var(--fund);outline:none}
+.arc .r{font:600 11px/1 var(--f-ui);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2)}
+.arc .n{font:600 14px/1.25 var(--f-ui)}
+.arc .dt{font:500 12px/1 var(--f-num);color:var(--ink-2)}
+@media (max-width:720px){.arc{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:14px}}
+
+.act{display:flex;flex-direction:column;gap:18px;scroll-margin-top:24px}
+.act-h{display:grid;grid-template-columns:120px minmax(0,1fr);gap:18px;align-items:baseline}
+.act-h .r{font:600 13px/1.2 var(--f-ui);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+.act-h .r b{display:block;font:700 15px/1.3 var(--f-ui);letter-spacing:0;text-transform:none;color:var(--ink);margin-top:4px}
+.q{font:italic 500 clamp(22px,3vw,30px)/1.25 var(--f-story);margin:0;text-wrap:balance}
+.act.t2 .q{color:var(--agen)}
+.rows{display:grid;grid-template-columns:120px minmax(0,1fr) 28px minmax(0,1fr);gap:12px 18px;align-items:stretch}
+.colh{font:600 11px/1 var(--f-ui);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);align-self:end}
+.dt{font:600 13px/1.3 var(--f-num);color:var(--ink-2);padding-top:14px;font-variant-numeric:tabular-nums}
+.dt b{display:block;font:700 11px/1 var(--f-ui);letter-spacing:.08em;text-transform:uppercase}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.card .lab{font:700 11px/1.2 var(--f-ui);letter-spacing:.1em;text-transform:uppercase}
+.card .t{font:600 16px/1.3 var(--f-ui)}
+.card .m{font-size:13px;color:var(--ink-2)}
+.card.fundamentos .lab{color:var(--fund)}
+.card.avancado .lab{color:var(--avan)}
+.card.agente .lab{color:var(--agen)}
+.card.proposta{border-style:dashed}
+.card.revisao{border-color:var(--warn)}
+.st{font:600 11px/1 var(--f-ui);letter-spacing:.06em;padding:3px 7px;border-radius:99px;margin-left:6px;vertical-align:1px;white-space:nowrap}
+.st.publicado{color:var(--ok);background:color-mix(in srgb,var(--ok) 14%,transparent)}
+.st.confirmado{color:var(--fund);background:var(--fund-bg)}
+.st.proposta{color:var(--ink-2);border:1px dashed var(--ink-2)}
+.st.revisao{color:var(--warn);border:1px solid var(--warn)}
+.arrow{display:flex;align-items:center;justify-content:center;color:var(--ink-2);font:600 18px/1 var(--f-ui)}
+.empty{border:1px dashed var(--line);border-radius:12px}
+@media (max-width:720px){
+  .act-h{grid-template-columns:1fr;gap:6px}
+  .rows{grid-template-columns:64px minmax(0,1fr)}
+  .rows .arrow,.rows .colh,.rows .empty{display:none}
+  .rows .side-b{grid-column:2}
+}
+.act.t2 .empty,.act.t2 .arrow:empty{display:none}
+.act.t2 .rows{grid-template-columns:120px minmax(0,1fr)}
+.act.t2 .colh:nth-of-type(4){display:none}
+.epi{border-top:1px solid var(--line);padding-top:24px;color:var(--ink-2);font-size:14px;max-width:72ch}
+</style>
+
+<div class="wrap">
+  <section class="intro">
+    <div class="eyebrow">IA do básico ao avançado · Por dentro do agente</div>
+    <h1>Roteiro da Série</h1>
+    <p class="lead">Uma história em cinco atos e uma segunda temporada: do modelo sozinho, que só completa texto, até agentes que agem com segurança dentro da operação. Cada episódio prepara o terreno para um post avançado. <em>A ordem dos atos é a da história; a das datas está no calendário.</em></p>
+  </section>
+
+  <nav class="arc" id="arc" aria-label="Atos"></nav>
+  <div id="acts" style="display:flex;flex-direction:column;gap:52px"></div>
+
+  <p class="epi" id="epi"></p>
+</div>
+
+<script>
+const DATA = /*DATA*/null;
+const ROM=["I","II","III","IV","V"];
+const DOW=["Dom","Seg","Ter","Qua","Qui","Sex","Sáb"];
+const parse=s=>{const [y,m,d]=s.split("-").map(Number);return new Date(y,m-1,d)};
+const fmt=d=>`${String(d.getDate()).padStart(2,"0")}/${String(d.getMonth()+1).padStart(2,"0")}`;
+const esc=s=>s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const byId=Object.fromEntries(DATA.posts.map(p=>[p.id,p]));
+const STL={publicado:"no ar",confirmado:"confirmado",proposta:"proposta",revisao:"em revisão"};
+const classe=p=>p.tipo==="avancado"?"avancado":p.serie;
+const rotulo=p=>p.tipo==="avancado"?"Post avançado":(p.serie==="agente"?`Por dentro do agente · Ep. ${p.n}`:`Episódio ${p.n}`);
+const curto=p=>p.tipo==="avancado"?p.titulo:(p.serie==="agente"?`Agente ${p.n}`:`Ep. ${p.n}`);
+// quem prepara quem
+const prepara={}; DATA.posts.forEach(p=>(p.depende||[]).forEach(d=>(prepara[d] ||= []).push(p.id)));
+
+const card=p=>{
+  let meta="";
+  if(p.tipo==="avancado" && p.depende) meta=`Apoia-se em: ${p.depende.map(d=>curto(byId[d])).join(", ")}`;
+  else if(prepara[p.id]) meta=`Prepara: ${prepara[p.id].map(d=>byId[d].titulo).join(", ")}`;
+  if(p.material==="pronto") meta+= (meta?" · ":"")+"material pronto";
+  if(p.nota) meta+= (meta?" · ":"")+p.nota;
+  return `<div class="card ${classe(p)} ${p.status}"><div class="lab">${rotulo(p)}<span class="st ${p.status}">${STL[p.status]}</span></div><div class="t">${esc(p.titulo)}</div>${meta?`<div class="m">${esc(meta)}</div>`:""}</div>`;
+};
+const dcell=p=>{const d=parse(p.data);return `<div class="dt"><b>${DOW[d.getDay()]}</b>${fmt(d)}</div>`};
+
+let arc="", acts="";
+DATA.atos.forEach((a,i)=>{
+  const ps=DATA.posts.filter(p=>p.ato===a.id).sort((x,y)=>x.data.localeCompare(y.data));
+  const r= a.id==="t2"?"Temporada 2":`Ato ${ROM[i]}`;
+  const nome= a.id==="t2"?a.titulo.replace("Temporada 2 · ",""):a.titulo;
+  const ds=ps.map(p=>parse(p.data));
+  arc+=`<a href="#${a.id}"><span class="r">${r}</span><span class="n">${esc(nome)}</span><span class="dt">${fmt(new Date(Math.min(...ds)))}–${fmt(new Date(Math.max(...ds)))}</span></a>`;
+  // linhas: cada base (episódio) com os avançados que dependem dela neste ato; avançados sem base no ato vão sozinhos
+  const usados=new Set(); let rows=`<div></div><div class="colh">Base</div><div></div><div class="colh">Desdobramento</div>`;
+  ps.filter(p=>p.tipo==="episodio").forEach(e=>{
+    // cada post avançado fica ao lado do episódio mais recente de que depende, dentro do ato
+    const base=f=>(f.depende||[]).map(d=>byId[d]).filter(d=>d&&d.ato===a.id&&d.tipo==="episodio").sort((x,y)=>y.data.localeCompare(x.data))[0];
+    const filhos=ps.filter(p=>p.tipo==="avancado" && !usados.has(p.id) && base(p)===e);
+    if(!filhos.length){ rows+=`${dcell(e)}${card(e)}<div class="arrow"></div><div class="empty"></div>`; return; }
+    filhos.forEach((f,k)=>{usados.add(f.id);
+      rows+= k===0 ? `${dcell(e)}${card(e)}<div class="arrow">→</div><div class="side-b">${card(f)}<div class="dt" style="padding-top:6px">${fmt(parse(f.data))}</div></div>`
+                   : `<div></div><div></div><div class="arrow">→</div><div class="side-b">${card(f)}<div class="dt" style="padding-top:6px">${fmt(parse(f.data))}</div></div>`;
+    });
+  });
+  if(a.id==="t2") rows=`<div></div><div class="colh">Episódios</div>`+ps.map(e=>dcell(e)+card(e)).join("");
+  ps.filter(p=>p.tipo==="avancado" && !usados.has(p.id)).forEach(f=>{
+    rows+=`${dcell(f)}<div class="empty"></div><div class="arrow">→</div><div class="side-b">${card(f)}</div>`;
+  });
+  acts+=`<section class="act ${a.id}" id="${a.id}"><div class="act-h"><div class="r">${r}<b>${esc(nome)}</b></div><p class="q">${esc(a.pergunta)}</p></div><div class="rows">${rows}</div></section>`;
+});
+document.getElementById("arc").innerHTML=arc;
+document.getElementById("acts").innerHTML=acts;
+document.getElementById("epi").innerHTML=`<b>Notas de roteiro.</b> O Ep. 1 (RAG) abriu a série pelo meio, como gancho; o Ep. 2 volta ao começo, ao modelo sozinho. O post de Modelos de mundo (20/10) saiu antes, como teaser do último ato. ${esc(DATA.proximos)} Fonte: calendario/calendario.json.`;
+</script>

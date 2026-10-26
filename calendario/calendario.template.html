@@ -1,0 +1,154 @@
+<title>Calendário de Posts</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap">
+<style>
+/* Layout: grade de dias úteis (seg–sex) por mês; cada post é uma etiqueta cuja cor diz a série e o contorno diz o status */
+:root{
+  --bg:#F4F6FA; --surface:#FFFFFF; --ink:#141A2A; --ink-2:#5B6578; --line:#E2E7EF;
+  --fund:#0A84FF; --fund-bg:#E6F1FF;
+  --avan:#2B3550; --avan-bg:#E9ECF3;
+  --agen:#7A5AF8; --agen-bg:#F0ECFF;
+  --ok:#1E9E4A; --warn:#C77700; --warn-bg:#FFF4E0;
+  --today:#0A84FF;
+  --f-ui:"Schibsted Grotesk",-apple-system,"Segoe UI",system-ui,sans-serif;
+  --f-num:"JetBrains Mono",ui-monospace,"SF Mono",Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0F131C; --surface:#171C28; --ink:#E8ECF4; --ink-2:#98A2B6; --line:#262D3D;
+  --fund:#4DA3FF; --fund-bg:#14273F; --avan:#C9D1E4; --avan-bg:#232A3A; --agen:#A48BFF; --agen-bg:#241F3D;
+  --ok:#3CCB6C; --warn:#F0A63A; --warn-bg:#33270F; --today:#4DA3FF; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0F131C; --surface:#171C28; --ink:#E8ECF4; --ink-2:#98A2B6; --line:#262D3D;
+  --fund:#4DA3FF; --fund-bg:#14273F; --avan:#C9D1E4; --avan-bg:#232A3A; --agen:#A48BFF; --agen-bg:#241F3D;
+  --ok:#3CCB6C; --warn:#F0A63A; --warn-bg:#33270F; --today:#4DA3FF; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-ui);font-size:15px;line-height:1.45;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:32px 56px}
+.wrap{max-width:1120px;margin:0 auto;display:flex;flex-direction:column;gap:28px}
+header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px}
+h1{font-size:clamp(28px,4vw,40px);line-height:1.05;letter-spacing:-.02em;margin:0;font-weight:800;text-wrap:balance}
+.sub{color:var(--ink-2);margin:6px 0 0}
+.next{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 18px;display:flex;gap:14px;align-items:center;min-width:0}
+.next .k{font:600 11px/1 var(--f-ui);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2)}
+.next .d{font:600 22px/1 var(--f-num);font-variant-numeric:tabular-nums}
+.next .t{font-weight:700}
+.legend{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13px;color:var(--ink-2)}
+.legend span{display:inline-flex;align-items:center;gap:7px}
+.sw{width:14px;height:14px;border-radius:4px;display:inline-block}
+.month{display:flex;flex-direction:column;gap:10px}
+.month h2{font-size:18px;margin:0;letter-spacing:-.01em;display:flex;align-items:baseline;gap:10px}
+.month h2 small{font:500 13px/1 var(--f-ui);color:var(--ink-2)}
+.grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--line);gap:1px}
+.dow{background:var(--surface);padding:8px 10px;font:600 11px/1 var(--f-ui);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2)}
+.cell{background:var(--surface);min-height:104px;padding:8px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.cell.out{background:var(--bg)}
+.cell.out .num{opacity:.35}
+.num{font:600 13px/1 var(--f-num);color:var(--ink-2);font-variant-numeric:tabular-nums;display:flex;justify-content:space-between}
+.cell.today{box-shadow:inset 0 0 0 2px var(--today)}
+.cell.today .num{color:var(--today)}
+.cell.today .num::after{content:"hoje";font:700 10px/1 var(--f-ui);letter-spacing:.1em;text-transform:uppercase}
+.chip{border-radius:8px;padding:6px 8px;font-size:12.5px;line-height:1.25;font-weight:600;border:1.5px solid transparent;overflow-wrap:anywhere}
+.chip .lab{display:block;font:600 10px/1.2 var(--f-ui);letter-spacing:.08em;text-transform:uppercase;opacity:.8;margin-bottom:2px}
+.chip.fundamentos{background:var(--fund-bg);color:var(--fund)}
+.chip.avancado{background:var(--avan-bg);color:var(--avan)}
+.chip.agente{background:var(--agen-bg);color:var(--agen)}
+.chip.proposta{background:transparent;border-style:dashed;border-color:currentColor}
+.chip.revisao{background:var(--warn-bg);color:var(--warn);border-color:var(--warn)}
+.chip.publicado .lab::after{content:" · no ar";}
+.chip.confirmado .lab::after{content:" · confirmado";}
+.chip.revisao .lab::after{content:" · em revisão";}
+.notes{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 20px;display:flex;flex-direction:column;gap:8px;max-width:72ch}
+.notes h3{margin:0;font-size:15px}
+.notes p{margin:0;color:var(--ink-2)}
+.notes b{color:var(--ink)}
+footer{color:var(--ink-2);font-size:13px}
+/* celular: vira agenda */
+.agenda{display:none;flex-direction:column;gap:8px}
+@media (max-width:720px){
+  .grid{display:none}.agenda{display:flex}
+  .arow{display:grid;grid-template-columns:64px minmax(0,1fr);gap:10px;align-items:start}
+  .arow .dd{font:600 13px/1.2 var(--f-num);color:var(--ink-2);padding-top:7px}
+  .arow .dd b{display:block;font:700 11px/1 var(--f-ui);letter-spacing:.08em;text-transform:uppercase}
+}
+</style>
+
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Calendário de Posts</h1>
+      <p class="sub">LinkedIn · segunda a sexta · atualizado em <span id="upd"></span></p>
+    </div>
+    <div class="next" id="next"></div>
+  </header>
+
+  <div class="legend">
+    <span><i class="sw" style="background:var(--fund)"></i>IA do básico ao avançado</span>
+    <span><i class="sw" style="background:var(--avan)"></i>Post avançado</span>
+    <span><i class="sw" style="background:var(--agen)"></i>Por dentro do agente</span>
+    <span><i class="sw" style="border:1.5px dashed var(--ink-2)"></i>Proposta, aguardando confirmação</span>
+    <span><i class="sw" style="background:var(--warn-bg);border:1.5px solid var(--warn)"></i>Data em revisão</span>
+  </div>
+
+  <div id="months"></div>
+
+  <div class="notes" id="notes"></div>
+  <footer>Fonte: <code>calendario/calendario.json</code> no repositório GHDaru/linkedinmaterial. Datas propostas pelo Claude seguem a cadência episódio às terças e quintas, post avançado no dia seguinte ao episódio que ele usa, e "Por dentro do agente" às segundas.</footer>
+</div>
+
+<script>
+const DATA = /*DATA*/null;
+const MESES=["janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"];
+const DOW=["Seg","Ter","Qua","Qui","Sex"];
+const parse=s=>{const [y,m,d]=s.split("-").map(Number);return new Date(y,m-1,d)};
+const key=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
+const fmt=d=>`${String(d.getDate()).padStart(2,"0")}/${String(d.getMonth()+1).padStart(2,"0")}`;
+const esc=s=>s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const today=new Date(); today.setHours(0,0,0,0);
+document.getElementById("upd").textContent=fmt(parse(DATA.atualizado_em))+"/"+DATA.atualizado_em.slice(0,4);
+
+const porDia={}; DATA.posts.forEach(p=>(porDia[p.data] ||= []).push(p));
+const classe=p=>p.tipo==="avancado"?"avancado":p.serie;
+const rotulo=p=>p.tipo==="avancado"?"Avançado":(p.serie==="agente"?`Agente · Ep. ${p.n}`:`Ep. ${p.n}`);
+const chip=p=>`<div class="chip ${classe(p)} ${p.status}" title="${esc(DATA.legenda_status[p.status])}${p.nota?" · "+esc(p.nota):""}"><span class="lab">${rotulo(p)}</span>${esc(p.titulo)}</div>`;
+
+// próximo post a partir de hoje
+const prox=DATA.posts.filter(p=>parse(p.data)>=today).sort((a,b)=>a.data.localeCompare(b.data))[0];
+if(prox){const d=parse(prox.data);
+  document.getElementById("next").innerHTML=`<div><div class="k">Próximo post</div><div class="d">${fmt(d)}</div></div><div style="min-width:0"><div class="k">${rotulo(prox)}</div><div class="t">${esc(prox.titulo)}</div></div>`;}
+else document.getElementById("next").hidden=true;
+
+// meses cobertos
+const datas=DATA.posts.map(p=>parse(p.data));
+const ini=new Date(Math.min(...datas)), fim=new Date(Math.max(...datas));
+let html="";
+const segIni=new Date(ini); segIni.setDate(segIni.getDate()-((segIni.getDay()+6)%7));
+const sexFim=new Date(fim); sexFim.setDate(sexFim.getDate()+(4-((sexFim.getDay()+6)%7)));
+for(let m=new Date(ini.getFullYear(),ini.getMonth(),1); m<=fim; m=new Date(m.getFullYear(),m.getMonth()+1,1)){
+  const ultimo=new Date(m.getFullYear(),m.getMonth()+1,0);
+  // semanas que têm pelo menos um dia útil deste mês, dentro do período com posts
+  const s=new Date(Math.max(+m,+segIni)); s.setDate(s.getDate()-((s.getDay()+6)%7));
+  const lim=new Date(Math.min(+ultimo,+sexFim));
+  let cells="", agenda="", n=0;
+  for(let w=new Date(s); w<=lim; w.setDate(w.getDate()+7)){
+    const dias=[0,1,2,3,4].map(i=>{const d=new Date(w);d.setDate(d.getDate()+i);return d});
+    if(!dias.some(d=>d.getMonth()===m.getMonth())) continue;
+    dias.forEach((d,dw)=>{
+      const k=key(d), ps=porDia[k]||[], fora=d.getMonth()!==m.getMonth();
+      if(!fora) n+=ps.length;
+      cells+=`<div class="cell${fora?" out":""}${!fora&&+d===+today?" today":""}"><div class="num">${d.getDate()}</div>${fora?"":ps.map(chip).join("")}</div>`;
+      if(!fora && ps.length) agenda+=`<div class="arow"><div class="dd"><b>${DOW[dw]}</b>${fmt(d)}</div><div style="display:flex;flex-direction:column;gap:6px">${ps.map(chip).join("")}</div></div>`;
+    });
+  }
+  html+=`<section class="month"><h2>${MESES[m.getMonth()][0].toUpperCase()+MESES[m.getMonth()].slice(1)} ${m.getFullYear()} <small>${n} post${n===1?"":"s"}</small></h2>
+    <div class="grid">${DOW.map(x=>`<div class="dow">${x}</div>`).join("")}${cells}</div><div class="agenda">${agenda}</div></section>`;
+}
+document.getElementById("months").innerHTML=html;
+
+// notas: itens em revisão + próximos
+const rev=DATA.posts.filter(p=>p.nota);
+document.getElementById("notes").innerHTML=`<h3>Pontos em aberto</h3>`+
+  rev.map(p=>`<p><b>${esc(p.titulo)}:</b> ${esc(p.nota)}</p>`).join("")+
+  `<p><b>Datas propostas:</b> tudo que aparece tracejado é proposta do Claude e só vale depois que o orquestrador confirmar.</p>`+
+  `<p><b>Depois de dezembro:</b> ${esc(DATA.proximos)}</p>`;
+</script>
