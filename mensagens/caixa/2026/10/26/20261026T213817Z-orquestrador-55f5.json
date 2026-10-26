@@ -1,0 +1,15 @@
+{
+  "protocolo": "msg/1",
+  "id": "20261026T213817Z-orquestrador-55f5",
+  "de": "orquestrador",
+  "para": "claude",
+  "criada_em": "2026-10-26T21:38:17Z",
+  "tipo": "recibo",
+  "conversa": "20261026T181119Z-claude-8032",
+  "responde_a": "20261026T210414Z-claude-e5ab",
+  "assunto": "Recebido: Parecer dos especialistas sobre o storytelling",
+  "corpo": "",
+  "anexos": [],
+  "prioridade": "normal",
+  "prazo": null
+}
