@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IA + supply chain pela TOC · out/nov 2026</title>
+<!--
+  Apresentação do arco de conteúdo do LinkedIn (out/nov 2026).
+  Fonte: posts/plano-storytelling-out-nov-2026/README.md e posts/2026-10-*/ na branch main.
+  Navegação: ← → ou clique; tecla P (ou ?print na URL) mostra todos os slides para imprimir/salvar em PDF.
+  Para editar: cada slide é um <section class="slide">; o texto está direto no HTML.
+-->
+<style>
+  :root{
+    --bg:#f4f1ea; --ink:#1d2329; --muted:#5d6670; --line:#d9d3c7;
+    --acc:#b5462a;  /* restrição */
+    --acc2:#1f5f74; /* modelo */
+    --ok:#2f7a4a; --warn:#b07a12; --pend:#7a8189; --prop:#4b5fa8;
+    --card:#fffdf8;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%;background:#22272c;font-family:"Inter","Segoe UI",system-ui,-apple-system,sans-serif;color:var(--ink)}
+  #deck{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .slide{width:1920px;height:1080px;background:var(--bg);position:absolute;padding:110px 140px;display:none;flex-direction:column;transform-origin:center center}
+  .slide.on{display:flex}
+  .slide.mid{justify-content:center}
+  .kicker{font-size:26px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);font-weight:700;margin-bottom:22px}
+  h1{font-size:92px;line-height:1.04;font-weight:800;letter-spacing:-.02em}
+  h2{font-size:64px;line-height:1.08;font-weight:800;letter-spacing:-.015em;margin-bottom:36px}
+  p,li{font-size:34px;line-height:1.4}
+  .muted{color:var(--muted)}
+  .foot{position:absolute;left:140px;right:140px;bottom:52px;display:flex;justify-content:space-between;font-size:22px;color:var(--muted);border-top:2px solid var(--line);padding-top:16px}
+  .chip{display:inline-block;font-size:21px;font-weight:700;padding:5px 14px;border-radius:999px;color:#fff;white-space:nowrap;letter-spacing:.02em}
+  .c-pub{background:var(--ok)} .c-hoje{background:var(--warn)} .c-pend{background:var(--pend)}
+  .c-res{background:transparent;color:var(--pend);border:2px dashed var(--pend)} .c-prop{background:var(--prop)}
+  .c-extra{background:transparent;color:var(--muted);border:2px solid var(--line)}
+  /* capa */
+  .capa{justify-content:center;background:linear-gradient(135deg,#1d2329 0%,#2b3640 100%);color:#f4f1ea}
+  .capa h1{font-size:124px;color:#fff}
+  .capa .kicker{color:#e3866a}
+  .capa .sub{font-size:40px;margin-top:34px;color:#cfd6dc;max-width:1400px}
+  .capa .autor{margin-top:90px;font-size:32px;color:#cfd6dc}
+  .capa .foot{color:#9aa4ad;border-color:#3b4650}
+  /* fluxo */
+  .fluxo{display:flex;align-items:stretch;gap:0;margin-top:40px}
+  .passo{flex:1;background:var(--card);border:3px solid var(--line);border-radius:22px;padding:34px 30px;display:flex;flex-direction:column;gap:14px}
+  .passo b{font-size:44px}
+  .passo span{font-size:27px;line-height:1.35;color:var(--muted)}
+  .passo.r{border-color:var(--acc)} .passo.r b{color:var(--acc)}
+  .passo.g{border-color:var(--acc)} .passo.g b{color:var(--acc)}
+  .passo.m{border-color:var(--acc2)} .passo.m b{color:var(--acc2)}
+  .passo.o{border-color:var(--ok)} .passo.o b{color:var(--ok)}
+  .seta{width:84px;display:flex;align-items:center;justify-content:center;font-size:60px;color:var(--muted)}
+  .frase{font-size:48px;line-height:1.25;font-weight:700;max-width:1550px}
+  .frase em{font-style:normal;color:var(--acc)}
+  /* atos */
+  .atos-nav{display:flex;gap:14px;margin-bottom:28px}
+  .atos-nav span{font-size:24px;font-weight:700;padding:8px 20px;border-radius:10px;background:#e7e1d5;color:var(--muted)}
+  .atos-nav span.at{background:var(--ink);color:#fff}
+  .duas{display:grid;grid-template-columns:1fr 1.25fr;gap:70px;align-items:start}
+  .lista{list-style:none;display:flex;flex-direction:column;gap:0}
+  .lista li{display:grid;grid-template-columns:120px 1fr auto;gap:22px;align-items:center;font-size:30px;padding:17px 0;border-bottom:2px solid var(--line)}
+  .lista li .d{font-weight:800;font-variant-numeric:tabular-nums}
+  .lista li .t{line-height:1.25}
+  /* calendário */
+  table.cal{width:100%;border-collapse:collapse;font-size:27px}
+  table.cal th{text-align:left;font-size:21px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding:0 14px 12px;border-bottom:3px solid var(--ink)}
+  table.cal td{padding:10px 14px;border-bottom:2px solid var(--line);vertical-align:middle}
+  table.cal td.d{font-weight:800;font-variant-numeric:tabular-nums;width:150px}
+  table.cal td.p{width:190px;color:var(--muted);font-weight:600}
+  table.cal tr.sep td{border-bottom:3px solid var(--ink)}
+  /* hoje */
+  .hoje{background:#fbf3df}
+  .hoje h1{font-size:96px;max-width:1500px}
+  .aviso{margin-top:auto;margin-bottom:60px;display:flex;align-items:center;gap:22px;font-size:30px;padding:22px 30px;border:3px solid var(--warn);border-radius:18px;background:#fff8e6;max-width:1300px}
+  .ideia{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:50px}
+  .ideia div{background:var(--card);border-radius:18px;padding:28px 30px;border-top:8px solid var(--acc2)}
+  .ideia b{font-size:36px;display:block;margin-bottom:8px}
+  .ideia span{font-size:26px;color:var(--muted);line-height:1.35}
+  /* post */
+  .post{flex-direction:row;gap:90px;align-items:center}
+  .post .txt{flex:1;display:flex;flex-direction:column}
+  .post h2{font-size:56px}
+  .post .imgbox{width:760px;height:820px;display:flex;align-items:center;justify-content:center;flex:none}
+  .post img{max-width:100%;max-height:100%;border-radius:14px;box-shadow:0 18px 50px rgba(0,0,0,.18);background:#fff}
+  .post blockquote{font-size:31px;line-height:1.42;border-left:8px solid var(--acc);padding:6px 0 6px 30px;margin:10px 0 28px}
+  .post .meta{font-size:24px;color:var(--muted);line-height:1.5}
+  .post .meta code{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:21px;background:#e7e1d5;padding:2px 8px;border-radius:6px}
+  /* controles */
+  #hud{position:fixed;right:18px;bottom:14px;color:#cfd6dc;font:14px system-ui;opacity:.75;user-select:none}
+  #hud button{background:#3b4650;color:#fff;border:0;border-radius:6px;padding:6px 12px;margin-left:6px;cursor:pointer;font:14px system-ui}
+  /* impressão / modo lista */
+  body.print{background:#fff;overflow:auto}
+  body.print #deck{position:static;display:block}
+  body.print .slide{display:flex;position:relative;transform:none!important;margin:0 auto 24px;page-break-after:always;break-after:page}
+  body.print #hud{display:none}
+  @page{size:1920px 1080px;margin:0}
+  @media print{
+    body{background:#fff}
+    #deck{position:static;display:block}
+    .slide{display:flex!important;position:relative;transform:none!important;margin:0;page-break-after:always;break-after:page}
+    #hud{display:none}
+  }
+</style>
+</head>
+<body>
+<div id="deck">
+
+<!-- 1 · CAPA -->
+<section class="slide capa">
+  <div class="kicker">Plano de conteúdo · LinkedIn</div>
+  <h1>IA + supply chain<br>pela TOC</h1>
+  <p class="sub">O arco de outubro e novembro de 2026: primeiro a restrição e a regra de decisão, depois a ferramenta.</p>
+  <p class="autor">Gilsiley Henrique Darú</p>
+  <div class="foot"><span>out/nov 2026</span><span>github.com/GHDaru/linkedinmaterial</span></div>
+</section>
+
+<!-- 2 · TESE -->
+<section class="slide mid">
+  <div class="kicker">A tese da voz</div>
+  <p class="frase">O posicionamento não vende o modelo. Aponta o <em>gargalo</em>, muda a <em>regra</em> (dados, processos, experimentação) e só então escolhe a ferramenta.</p>
+  <div class="fluxo">
+    <div class="passo r"><b>Restrição</b><span>Onde está o gargalo que limita a operação?</span></div>
+    <div class="seta">→</div>
+    <div class="passo g"><b>Regra</b><span>Qual regra de decisão precisa mudar: dados, processos, experimentação?</span></div>
+    <div class="seta">→</div>
+    <div class="passo m"><b>Modelo / Ferramenta</b><span>Só agora: qual modelo ou ferramenta aponta para essa restrição?</span></div>
+    <div class="seta">→</div>
+    <div class="passo o"><b>Resultado</b><span>O efeito aparece na operação, não na demo.</span></div>
+  </div>
+  <div class="foot"><span>IA + supply chain pela TOC</span><span>2</span></div>
+</section>
+
+<!-- 3 · ATO 1 -->
+<section class="slide mid">
+  <div class="atos-nav"><span class="at">Ato 1 · Fundar</span><span>Ato 2 · Deslocar</span><span>Ato 3 · Governar e mudar</span></div>
+  <div class="duas">
+    <div>
+      <div class="kicker">Outubro</div>
+      <h2>Fundar</h2>
+      <p>O que é restrição e o que é modelo. A base conceitual para o leitor acompanhar o resto do arco.</p>
+    </div>
+    <ul class="lista">
+      <li><span class="d">18/10</span><span class="t">4 quadrantes TOC</span><span class="chip c-pub">publicado</span></li>
+      <li><span class="d">20/10</span><span class="t">Modelos de mundo</span><span class="chip c-pub">publicado</span></li>
+      <li><span class="d">21/10</span><span class="t">IA Aplicada · 4 casos</span><span class="chip c-pub">publicado</span></li>
+      <li><span class="d">22/10</span><span class="t">8 recursos de IA para supply chain</span><span class="chip c-pub">publicado</span></li>
+      <li><span class="d">24/10</span><span class="t">RAG · Ep.1 da série</span><span class="chip c-pub">publicado</span></li>
+      <li><span class="d">25/10</span><span class="t">Apuração · mapa <span class="muted">(extra)</span></span><span class="chip c-pub">publicado</span></li>
+    </ul>
+  </div>
+  <div class="foot"><span>IA + supply chain pela TOC</span><span>3</span></div>
+</section>
+
+<!-- 4 · ATO 2 -->
+<section class="slide mid">
+  <div class="atos-nav"><span>Ato 1 · Fundar</span><span class="at">Ato 2 · Deslocar</span><span>Ato 3 · Governar e mudar</span></div>
+  <div class="duas">
+    <div>
+      <div class="kicker">Agora</div>
+      <h2>Deslocar a vantagem</h2>
+      <p>Quando o modelo é commodity, um insumo, a vantagem está em apontá-lo à restrição.</p>
+    </div>
+    <ul class="lista">
+      <li><span class="d">26/10</span><span class="t">Kickoff / modelo = insumo</span><span class="chip c-hoje">hoje · aguarda OK</span></li>
+      <li><span class="d">27/10</span><span class="t">Ep.2 · LLM e tokens <span class="muted">(material pronto na série)</span></span><span class="chip c-pend">pendente</span></li>
+      <li><span class="d">28/10</span><span class="t">Quanto custa rodar IA</span><span class="chip c-pend">pendente</span></li>
+      <li><span class="d">30/10</span><span class="t">Previsão: ML clássico × IA generativa</span><span class="chip c-pend">pendente</span></li>
+      <li><span class="d">—</span><span class="t">Agent washing</span><span class="chip c-res">reserva</span></li>
+    </ul>
+  </div>
+  <div class="foot"><span>IA + supply chain pela TOC</span><span>4</span></div>
+</section>
+
+<!-- 5 · ATO 3 -->
+<section class="slide mid">
+  <div class="atos-nav"><span>Ato 1 · Fundar</span><span>Ato 2 · Deslocar</span><span class="at">Ato 3 · Governar e mudar</span></div>
+  <div class="duas">
+    <div>
+      <div class="kicker">Novembro</div>
+      <h2>Governar e mudar</h2>
+      <p>Com o modelo apontado para a restrição, o trabalho passa a ser governar e mudar a forma de decidir.</p>
+    </div>
+    <ul class="lista">
+      <li><span class="d">01/11</span><span class="t">Governança de agentes</span><span class="chip c-pend">pendente</span></li>
+      <li><span class="d">03/11</span><span class="t">Restrição do time de dados <span class="muted">(não é a tecnologia)</span></span><span class="chip c-pend">pendente</span></li>
+      <li><span class="d">nov+</span><span class="t">Fundamentos intercalados</span><span class="chip c-pend">pendente</span></li>
+      <li><span class="d">nov+</span><span class="t">Por dentro do agente <span class="muted">(após o Ep.6 dos fundamentos)</span></span><span class="chip c-prop">proposta</span></li>
+    </ul>
+  </div>
+  <div class="foot"><span>IA + supply chain pela TOC</span><span>5</span></div>
+</section>
+
+<!-- 6 · CALENDÁRIO -->
+<section class="slide" style="padding-top:80px">
+  <div class="kicker">Calendário out/nov 2026 · 1 post a cada 2 dias</div>
+  <table class="cal">
+    <thead><tr><th>Data</th><th>Ato</th><th>Tema</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td class="d">18/10</td><td class="p">Fundar</td><td>4 quadrantes TOC</td><td><span class="chip c-pub">publicado</span></td></tr>
+      <tr><td class="d">20/10</td><td class="p">Fundar</td><td>Modelos de mundo</td><td><span class="chip c-pub">publicado</span></td></tr>
+      <tr><td class="d">21/10</td><td class="p">Fundar</td><td>IA Aplicada · 4 casos</td><td><span class="chip c-pub">publicado</span></td></tr>
+      <tr><td class="d">22/10</td><td class="p">Fundar</td><td>8 recursos de IA para supply chain</td><td><span class="chip c-pub">publicado</span></td></tr>
+      <tr><td class="d">24/10</td><td class="p">Fundar</td><td>RAG · Ep.1</td><td><span class="chip c-pub">publicado</span></td></tr>
+      <tr class="sep"><td class="d">25/10</td><td class="p">Fundar</td><td>Apuração · mapa (extra)</td><td><span class="chip c-pub">publicado</span></td></tr>
+      <tr><td class="d">26/10</td><td class="p">Deslocar</td><td><b>Kickoff / modelo = insumo</b></td><td><span class="chip c-hoje">hoje · aguarda OK</span></td></tr>
+      <tr><td class="d">27/10</td><td class="p">Deslocar</td><td>Ep.2 · LLM e tokens</td><td><span class="chip c-pend">pendente</span></td></tr>
+      <tr><td class="d">28/10</td><td class="p">Deslocar</td><td>Quanto custa rodar IA</td><td><span class="chip c-pend">pendente</span></td></tr>
+      <tr><td class="d">30/10</td><td class="p">Deslocar</td><td>Previsão: ML clássico × IA generativa</td><td><span class="chip c-pend">pendente</span></td></tr>
+      <tr class="sep"><td class="d">reserva</td><td class="p">Deslocar</td><td>Agent washing</td><td><span class="chip c-res">reserva</span></td></tr>
+      <tr><td class="d">01/11</td><td class="p">Governar</td><td>Governança de agentes <span class="muted">(01/11 é domingo: data em aberto com o Darú)</span></td><td><span class="chip c-pend">pendente</span></td></tr>
+      <tr><td class="d">03/11</td><td class="p">Governar</td><td>Restrição do time de dados</td><td><span class="chip c-pend">pendente</span></td></tr>
+      <tr><td class="d">nov+</td><td class="p">Governar</td><td>Fundamentos intercalados</td><td><span class="chip c-pend">pendente</span></td></tr>
+      <tr><td class="d">nov+</td><td class="p">Governar</td><td>Por dentro do agente</td><td><span class="chip c-prop">proposta</span></td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- 7 · HOJE -->
+<section class="slide hoje">
+  <div class="kicker">26/10 · abertura do Ato 2</div>
+  <h1>A primeira pergunta do kickoff raramente é a certa</h1>
+  <p style="margin-top:34px;max-width:1500px">No kickoff, a primeira pergunta quase sempre é <b>“qual modelo vamos usar?”</b>. Quando todo mundo pode contratar praticamente o mesmo modelo, o modelo vira <b>insumo</b>.</p>
+  <div class="ideia">
+    <div><b>Dados</b><span>onde a vantagem passa a morar</span></div>
+    <div><b>Processos</b><span>a regra de decisão que muda junto</span></div>
+    <div><b>Experimentação</b><span>apontar o modelo à restrição e testar</span></div>
+  </div>
+  <div class="aviso"><span class="chip c-hoje">aguarda OK</span><span>Ainda não publicado. Depende da aprovação do Darú.</span></div>
+</section>
+
+<!-- 8 · POST 18/10 -->
+<section class="slide post">
+  <div class="txt">
+    <div class="kicker">18/10 · Ato 1 · publicado</div>
+    <h2>Por que sua equipe não adota a IA? Os 4 quadrantes da mudança</h2>
+    <blockquote>A sereia mais forte não é a tecnologia: são os processos atuais, enraizados. Colocar IA sobre essas regras não muda a montanha, só acelera o processo antigo.</blockquote>
+    <p class="meta">Imagem: <code>posts/2026-10-18-quadrantes-toc/quadrada.png</code></p>
+  </div>
+  <div class="imgbox"><img src="../2026-10-18-quadrantes-toc/quadrada.png" alt="Arte do post de 18/10: os 4 quadrantes da mudança"></div>
+</section>
+
+<!-- 9 · POST 20/10 -->
+<section class="slide post">
+  <div class="txt">
+    <div class="kicker">20/10 · Ato 1 · publicado</div>
+    <h2>Modelos de mundo na supply chain: simule a restrição, não o mundo</h2>
+    <blockquote>Modelo de mundo útil em supply chain não é o que imita o mundo, é o que simula a restrição. Sem saber onde está o gargalo, simular tudo é custo.</blockquote>
+    <p class="meta">Imagem: <code>posts/2026-10-20-modelos-de-mundo/imagem.png</code></p>
+  </div>
+  <div class="imgbox"><img src="../2026-10-20-modelos-de-mundo/imagem.png" alt="Arte do post de 20/10: modelos de mundo"></div>
+</section>
+
+<!-- 10 · POST 21/10 -->
+<section class="slide post">
+  <div class="txt">
+    <div class="kicker">21/10 · Ato 1 · publicado</div>
+    <h2>IA Aplicada: 4 casos em supply chain e PCP</h2>
+    <blockquote>Excedente costuma nascer da política de compra: a ferramenta só rende quando essa regra muda junto. A IA entrou para mudar uma regra ou para acelerar a regra antiga?</blockquote>
+    <p class="meta">Imagem: <code>posts/2026-10-21-ia-aplicada-4-casos/imagem.png</code></p>
+  </div>
+  <div class="imgbox"><img src="../2026-10-21-ia-aplicada-4-casos/imagem.png" alt="Arte do post de 21/10: 4 casos de IA aplicada"></div>
+</section>
+
+<!-- 11 · POST 22/10 -->
+<section class="slide post">
+  <div class="txt">
+    <div class="kicker">22/10 · Ato 1 · publicado</div>
+    <h2>8 recursos de IA para supply chain e PCP</h2>
+    <blockquote>A ordem certa é identificar a restrição, explorá-la com o que já existe e só então comprar ferramenta. Por isso a lista começa em previsão e sequenciamento, não em agentes.</blockquote>
+    <p class="meta">Imagem: <code>posts/2026-10-22-8-recursos-ia-supply-chain/imagem.png</code></p>
+  </div>
+  <div class="imgbox"><img src="../2026-10-22-8-recursos-ia-supply-chain/imagem.png" alt="Arte do post de 22/10: 8 recursos de IA"></div>
+</section>
+
+<!-- 12 · POST 24/10 -->
+<section class="slide post">
+  <div class="txt">
+    <div class="kicker">24/10 · Ato 1 · publicado · série IA do básico ao avançado</div>
+    <h2>RAG: como a IA responde usando os seus documentos (Ep.1)</h2>
+    <blockquote>A restrição de um projeto de RAG raramente é o modelo. É a governança dos documentos: se ninguém é dono da cláusula 7, o assistente cita a versão errada com toda a confiança.</blockquote>
+    <p class="meta">Imagem: <code>posts/2026-10-24-rag-ep1/capa.png</code><br>Notebook e animação: <code>series/ia-do-basico-ao-avancado/ep01-rag/</code></p>
+  </div>
+  <div class="imgbox"><img src="../2026-10-24-rag-ep1/capa.png" alt="Capa do post de 24/10: RAG Ep.1"></div>
+</section>
+
+<!-- 13 · POST 25/10 -->
+<section class="slide post">
+  <div class="txt">
+    <div class="kicker">25/10 · extra · publicado</div>
+    <h2>Quer projetar o resultado enquanto a apuração anda?</h2>
+    <blockquote>O mapa projeta cada estado com a fração já apurada e só depois agrega, direto dos arquivos do TSE.</blockquote>
+    <p class="meta">Post avulso de domingo, fora do tema central do arco.<br>Imagem: <code>posts/2026-10-25-apuracao-mapa/arte_linkedin.png</code></p>
+  </div>
+  <div class="imgbox"><img src="../2026-10-25-apuracao-mapa/arte_linkedin.png" alt="Arte do post de 25/10: mapa de apuração"></div>
+</section>
+
+</div>
+<div id="hud"><span id="pos"></span><button id="prev" aria-label="Anterior">←</button><button id="next" aria-label="Próximo">→</button><button id="pr">imprimir</button></div>
+<script>
+(function(){
+  const slides=[...document.querySelectorAll('.slide')];
+  slides.forEach((s,i)=>{const f=s.querySelector('.foot span:last-child'); if(f && /^\d+$/.test(f.textContent)) f.textContent=i+1;});
+  let i=0;
+  const h=parseInt((location.hash||'').slice(1),10); if(h>=1&&h<=slides.length) i=h-1;
+  function fit(){const k=Math.min(innerWidth/1920,innerHeight/1080);slides.forEach(s=>s.style.transform='scale('+k+')');}
+  function show(n){i=Math.max(0,Math.min(slides.length-1,n));slides.forEach((s,j)=>s.classList.toggle('on',j===i));
+    document.getElementById('pos').textContent=(i+1)+' / '+slides.length; history.replaceState(null,'','#'+(i+1));}
+  function printMode(){document.body.classList.add('print');slides.forEach(s=>s.style.transform='none');}
+  addEventListener('resize',fit);
+  addEventListener('keydown',e=>{
+    if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();show(i+1);}
+    else if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();show(i-1);}
+    else if(e.key==='Home')show(0); else if(e.key==='End')show(slides.length-1);
+    else if(e.key==='p'||e.key==='P')printMode();
+  });
+  document.getElementById('prev').onclick=()=>show(i-1);
+  document.getElementById('next').onclick=()=>show(i+1);
+  document.getElementById('pr').onclick=()=>{printMode();setTimeout(()=>print(),100);};
+  if(/[?&]print/.test(location.search)) printMode(); else {fit();show(i);}
+})();
+</script>
+</body>
+</html>

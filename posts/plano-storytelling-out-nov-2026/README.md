@@ -134,3 +134,12 @@ Pedido ao construtor (Claude): montar a **storytelling em apresentação/slides*
 
 - Page Canvas do plano: https://cursor.com/canvas/store-7d5f0d2c-82d1-43cc-bab2-cf2aa7f5cd10/de4f025c-ac51-47f5-bc40-d67c581c5ed1
 - Repo: https://github.com/GHDaru/linkedinmaterial
+
+---
+
+## Materiais gerados
+
+| Arquivo | O que é |
+|---|---|
+| [`apresentacao.html`](apresentacao.html) | Apresentação do arco (13 slides, 16:9). Abra no navegador: ← → navegam, **P** mostra todos para imprimir/salvar em PDF. Cada slide é um `<section class="slide">` editável no HTML. |
+| [`parecer-especialistas.md`](parecer-especialistas.md) | Validação do storytelling (narrativa, TOC/pedagogia, conteúdo LinkedIn): o que manter, o que ajustar e o que depende do Darú. |
