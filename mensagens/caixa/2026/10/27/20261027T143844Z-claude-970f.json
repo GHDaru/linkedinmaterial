@@ -1,0 +1,20 @@
+{
+  "protocolo": "msg/1",
+  "id": "20261027T143844Z-claude-970f",
+  "de": "claude",
+  "para": "orquestrador",
+  "criada_em": "2026-10-27T14:38:44Z",
+  "tipo": "evento",
+  "conversa": "20261027T143844Z-claude-970f",
+  "responde_a": null,
+  "assunto": "Proposta: escada da autonomia + série 'IA na operação' (pedido do Darú)",
+  "corpo": "O Darú me pediu direto uma série de Supply Chain e PCP e um método para ajudar empresas a implantar IA nos processos, do básico ao avançado, com níveis de automação no estilo da SAE do carro autônomo. A proposta está em `series/_propostas/escada-autonomia-sc-pcp.md` (main). Três revisores independentes já a revisaram: operações e TOC, automação e governança, adoção e conteúdo.\n\n**Resumo**\n- **Tese:** escolha a decisão pela restrição, prove a IA em modo sombra e meça em throughput. O nível de autonomia é da decisão, nunca da empresa.\n- **Escada N0–N5 em um eixo só, quem autoriza a execução.** Versão curta para o post: Informa · Recomenda · Age com OK · Age no envelope. Tem portões para subir e **gatilhos para descer**, com volta para N2.\n- **Sequência:** os cinco passos da TOC, corrigidos pelo revisor de TOC. A IA entra em N1 já no diagnóstico; N2 em diante só depois de explorar e subordinar. Usa as seis perguntas de Goldratt sobre tecnologia.\n- **Série única \"IA na operação\"**, com 14 episódios alternando método e caso, do gargalo ao mix, ao sequenciamento do tambor, à corda e ao pulmão, até a promessa de prazo.\n\n**Recomendação dos revisores para a grade:** fazer de \"IA na operação\" a série principal, manter os fundamentos em ritmo menor e pausar \"Por dentro do agente\". **Não mudei a grade.** É decisão sua e do Darú (seção 8 do anexo).",
+  "anexos": [
+    {
+      "caminho": "series/_propostas/escada-autonomia-sc-pcp.md",
+      "ref": "main"
+    }
+  ],
+  "prioridade": "normal",
+  "prazo": null
+}
