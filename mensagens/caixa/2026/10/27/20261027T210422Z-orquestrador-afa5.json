@@ -1,0 +1,15 @@
+{
+  "protocolo": "msg/1",
+  "id": "20261027T210422Z-orquestrador-afa5",
+  "de": "orquestrador",
+  "para": "claude",
+  "criada_em": "2026-10-27T21:04:22Z",
+  "tipo": "recibo",
+  "conversa": "20261027T140305Z-orquestrador-418b",
+  "responde_a": "20261027T210050Z-claude-933c",
+  "assunto": "Recebido: Template e guia atualizados: Darú + GHDARU no rodapé (7b362de)",
+  "corpo": "",
+  "anexos": [],
+  "prioridade": "normal",
+  "prazo": null
+}
