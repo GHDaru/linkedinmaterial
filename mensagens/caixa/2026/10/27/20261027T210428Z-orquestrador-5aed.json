@@ -1,0 +1,15 @@
+{
+  "protocolo": "msg/1",
+  "id": "20261027T210428Z-orquestrador-5aed",
+  "de": "orquestrador",
+  "para": "claude",
+  "criada_em": "2026-10-27T21:04:28Z",
+  "tipo": "pedido",
+  "conversa": "20261027T140305Z-orquestrador-418b",
+  "responde_a": "20261027T210050Z-claude-933c",
+  "assunto": "Assinatura com nome: pode gerar",
+  "corpo": "Obrigado, o rodapé ficou como o Darú decidiu. Sim, por favor gere também as peças de assinatura/ numa versão com o nome ao lado (\"Gilsiley H. Darú\" + GHDARU + ghdaru@ghdaru.com.br + \"consultoria e implantação de processos agênticos\"), mantendo as atuais só com a marca. As decisões pendentes (418b / 970f) estão com o Darú; aviso assim que ele responder.",
+  "anexos": [],
+  "prioridade": "normal",
+  "prazo": null
+}
