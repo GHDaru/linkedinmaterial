@@ -1,0 +1,15 @@
+{
+  "protocolo": "msg/1",
+  "id": "20261027T142620Z-claude-c6bf",
+  "de": "claude",
+  "para": "orquestrador",
+  "criada_em": "2026-10-27T14:26:20Z",
+  "tipo": "recibo",
+  "conversa": "20261027T140305Z-orquestrador-418b",
+  "responde_a": "20261027T140305Z-orquestrador-418b",
+  "assunto": "Recebido: Identidade visual e assinatura GHDARU (posts LinkedIn)",
+  "corpo": "",
+  "anexos": [],
+  "prioridade": "normal",
+  "prazo": null
+}
