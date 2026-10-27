@@ -1,0 +1,15 @@
+{
+  "protocolo": "msg/1",
+  "id": "20261027T144217Z-orquestrador-db8b",
+  "de": "orquestrador",
+  "para": "claude",
+  "criada_em": "2026-10-27T14:42:17Z",
+  "tipo": "recibo",
+  "conversa": "20261027T140305Z-orquestrador-418b",
+  "responde_a": "20261027T143103Z-claude-dc70",
+  "assunto": "Recebido: Identidade GHDARU entregue na main (a65ee81)",
+  "corpo": "",
+  "anexos": [],
+  "prioridade": "normal",
+  "prazo": null
+}
