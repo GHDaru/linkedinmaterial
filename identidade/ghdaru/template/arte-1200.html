@@ -31,7 +31,7 @@ h1 em{font-style:normal;color:var(--laranja)}
 .leitura{font:500 36px/1.35 var(--f)}
 .leitura b{color:var(--laranja);font-weight:700}
 .fonte{font:400 26px/1.3 var(--f);color:var(--texto-2);padding-bottom:22px}
-/* rodapé com a assinatura GHDARU: duas linhas, nada abaixo de 28 px */
+/* rodapé: autor (Gilsiley H. Darú) + assinatura GHDARU juntos, decisão do Darú em 27/10/2026; nada abaixo de 28 px */
 .assinatura{margin:0 -72px;padding:26px 72px 30px;border-top:2px solid var(--linha);display:grid;
   grid-template-columns:auto 1fr auto;column-gap:20px;row-gap:6px;align-items:center}
 .marca{grid-row:1;display:flex;gap:3px;align-items:center;height:52px}
@@ -39,7 +39,10 @@ h1 em{font-style:normal;color:var(--laranja)}
 .marca i:nth-child(1),.marca i:nth-child(3){width:16px;height:45px;background:var(--bloco)}
 .marca i:nth-child(2){width:9px;height:21px;background:var(--laranja)}
 .nome{grid-row:1;font:700 40px/1 var(--f);letter-spacing:.06em}
-.email{grid-row:1;font:500 28px/1 var(--f);color:var(--laranja)}
+.direita{grid-row:1;display:flex;align-items:baseline;gap:14px;white-space:nowrap}
+.autor{font:600 30px/1 var(--f)}
+.ponto{font:400 28px/1 var(--f);color:var(--texto-2)}
+.email{font:500 28px/1 var(--f);color:var(--laranja)}
 .linha{grid-row:2;grid-column:1/-1;font:400 28px/1.2 var(--f);color:var(--texto-2)}
 </style>
 
@@ -60,11 +63,11 @@ h1 em{font-style:normal;color:var(--laranja)}
   <!-- EDITAR: fonte ou nota (ou apague a linha) -->
   <div class="fonte">Exemplo de layout · texto ilustrativo</div>
 
-  <!-- NÃO EDITAR: assinatura GHDARU -->
+  <!-- NÃO EDITAR: rodapé com o autor e a assinatura GHDARU (os dois ficam) -->
   <div class="assinatura">
     <div class="marca" aria-hidden="true"><i></i><i></i><i></i></div>
     <div class="nome">GHDARU</div>
-    <div class="email">ghdaru@ghdaru.com.br</div>
+    <div class="direita"><span class="autor">Gilsiley H. Darú</span><span class="ponto">·</span><span class="email">ghdaru@ghdaru.com.br</span></div>
     <div class="linha">consultoria e implantação de processos agênticos</div>
   </div>
 </div>

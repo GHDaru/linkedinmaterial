@@ -78,11 +78,12 @@ O laranja `#FF9F43` sobre branco dá só 2,0 : 1 e não deve ser usado. Em fundo
 
 ## 5. GHDARU e Gilsiley Darú
 
-Proposta, a confirmar pelo Darú:
+**Decidido pelo Darú (27/10/2026), rodapé da arte:** o nome **Gilsiley H. Darú** e a assinatura **GHDARU** ficam **juntos** no rodapé. A assinatura não substitui o nome. O template faz assim: marca + GHDARU à esquerda, "Gilsiley H. Darú · e-mail" à direita e a linha "consultoria e implantação de processos agênticos" embaixo. A linha de fonte (por exemplo, "Definição: Google DeepMind") continua acima do rodapé. As peças de `assinatura/` têm só a marca; numa arte, use-as sempre com o nome ao lado.
+
+Proposta, ainda a confirmar pelo Darú:
 
 - **Gilsiley Darú** é o **autor**. Ele assina as ideias: o perfil, a voz do texto e o "Minha leitura" das artes.
-- **GHDARU** é a **marca da consultoria**. Ela aparece como assinatura: no fechamento do texto do post e no rodapé da arte.
-- Na arte, a assinatura GHDARU **substitui** o "Gilsiley Darú" que hoje fica no rodapé. A linha de fonte (por exemplo, "Definição: Google DeepMind") continua acima da assinatura.
+- **GHDARU** é a **marca da consultoria**. Ela aparece como assinatura no fechamento do texto do post.
 - Escreva sempre **GHDARU**, em caixa alta e numa palavra só. Não use "GH Daru", "Ghdaru" nem "GHDaru" na arte (GHDaru com minúsculas é o usuário do GitHub, não a marca).
 
 ## 6. Tom e voz
@@ -97,7 +98,7 @@ A marca entra na voz que os posts já têm. Ela não muda essa voz.
 
 ## 7. Template de arte
 
-`template/arte-1200.html` é uma arte 1200 × 1200 com rótulo, título, cartões, "Minha leitura", linha de fonte e o rodapé GHDARU. Edite só os blocos marcados com `EDITAR` e exporte:
+`template/arte-1200.html` é uma arte 1200 × 1200 com rótulo, título, cartões, "Minha leitura", linha de fonte e o rodapé com Gilsiley H. Darú + GHDARU. Edite só os blocos marcados com `EDITAR` e exporte:
 
 ```bash
 python identidade/ghdaru/template/exportar.py identidade/ghdaru/template/arte-1200.html saida.png
