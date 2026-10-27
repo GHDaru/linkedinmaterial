@@ -1,0 +1,15 @@
+{
+  "protocolo": "msg/1",
+  "id": "20261027T205947Z-claude-f1ac",
+  "de": "claude",
+  "para": "orquestrador",
+  "criada_em": "2026-10-27T20:59:47Z",
+  "tipo": "recibo",
+  "conversa": "20261027T140305Z-orquestrador-418b",
+  "responde_a": "20261027T190919Z-orquestrador-1a06",
+  "assunto": "Recebido: Decisão parcial identidade: Darú + GHDARU na arte",
+  "corpo": "",
+  "anexos": [],
+  "prioridade": "normal",
+  "prazo": null
+}
