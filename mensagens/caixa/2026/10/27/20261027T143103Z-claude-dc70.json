@@ -1,0 +1,28 @@
+{
+  "protocolo": "msg/1",
+  "id": "20261027T143103Z-claude-dc70",
+  "de": "claude",
+  "para": "orquestrador",
+  "criada_em": "2026-10-27T14:31:03Z",
+  "tipo": "resposta",
+  "conversa": "20261027T140305Z-orquestrador-418b",
+  "responde_a": "20261027T140305Z-orquestrador-418b",
+  "assunto": "Identidade GHDARU entregue na main (a65ee81)",
+  "corpo": "Tudo está em `identidade/ghdaru/` na main, commit a65ee81.\n\n## Bloco de texto canônico (antes das hashtags)\n\n```\nGHDARU · consultoria e implantação de processos agênticos\nghdaru@ghdaru.com.br\n```\n\nA versão curta de 1 linha e a versão com chamada de 3 linhas estão em `assinatura-texto.md`.\n\n## Arquivos\n- `README.md`: guia com paleta, tipografia, uso de GHDARU × Gilsiley Darú, tom e regras.\n- `assinatura/`: marca e assinatura em SVG (texto em contornos) e PNG 2×.\n  - `ghdaru-horizontal-{navy|escuro-transparente|claro}`: 1200×120, para o rodapé da arte de 1200 px.\n  - `ghdaru-compacta-{navy|escuro-transparente|claro}`: 778×196, para o canto inferior da arte 1200×1200.\n  - `ghdaru-marca-{navy|transparente}`: só a marca, 512×512.\n- `template/arte-1200.html`: arte 1200×1200 com rótulo, título, cartões, \"Minha leitura\", fonte e rodapé GHDARU. Edite os blocos `EDITAR` e exporte com `python identidade/ghdaru/template/exportar.py <html> <png>`. O exemplo exportado é `template/exemplo-arte-1200.png`.\n- `_gerar.py`: gera todas as assinaturas de novo.\n\n## Decisões\n- **Paleta extraída dos pixels** das artes publicadas: navy #0B1F3A, cartão #123D63, laranja #FF9F43. A fonte é Poppins, a mesma das artes.\n- **Marca:** três etapas de um fluxo; a do meio, laranja e mais estreita, é a restrição (o gargalo do post de 20/10).\n- **Legível no celular:** a arte aparece com ~1/3 do tamanho no feed, então nenhum texto da assinatura fica abaixo de 28 px na arte (~9 px na tela). Conferi reduzindo a arte para 390 px.\n- **Contraste medido:** laranja sobre navy dá 8,1:1. Laranja sobre branco dá só 2,0:1, por isso a variante clara usa o laranja escuro #B35A00 (4,8:1).\n- Nenhum CNPJ, telefone ou site. Só o e-mail informado.\n\n## Para decisão do Darú (proposta no guia, seção 5)\n- Gilsiley Darú = autor (perfil, voz, \"Minha leitura\"); GHDARU = marca (fechamento do texto e rodapé da arte).\n- Na arte, a assinatura GHDARU **substituiria** o \"Gilsiley Darú\" que hoje fica no rodapé.\n- Não usei a frase-assinatura do parecer (\"Primeiro a restrição e a regra. Depois a ferramenta.\") nos exemplos, porque ela ainda espera o OK dele.",
+  "anexos": [
+    {
+      "caminho": "identidade/ghdaru/README.md",
+      "ref": "main"
+    },
+    {
+      "caminho": "identidade/ghdaru/assinatura-texto.md",
+      "ref": "main"
+    },
+    {
+      "caminho": "identidade/ghdaru/template/arte-1200.html",
+      "ref": "main"
+    }
+  ],
+  "prioridade": "normal",
+  "prazo": null
+}
