@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-BR"><meta charset="utf-8">
+<title>Arte GHDARU 1200×1200</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap">
+<!--
+  Template de arte para posts do LinkedIn, identidade GHDARU.
+  Edite só os blocos marcados com EDITAR. Exporte com:
+    python identidade/ghdaru/template/exportar.py identidade/ghdaru/template/arte-1200.html saida.png
+  Regras: texto da arte >= 28 px (na tela do celular a arte aparece a ~1/3 do tamanho).
+-->
+<style>
+:root{
+  --navy:#0B1F3A; --cartao:#123D63; --laranja:#FF9F43; --branco:#FFFFFF;
+  --texto-2:#C9D4E3; --bloco:#2F6FA6; --linha:rgba(255,255,255,.14);
+  --f:"Poppins",-apple-system,"Segoe UI",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:#555;font-family:var(--f)}
+#arte{width:1200px;height:1200px;background:var(--navy);color:var(--branco);position:relative;overflow:hidden;
+  display:flex;flex-direction:column;padding:72px 72px 0}
+.eyebrow{font:700 30px/1 var(--f);letter-spacing:.14em;text-transform:uppercase;color:var(--laranja)}
+h1{font:800 76px/1.08 var(--f);letter-spacing:-.02em;margin:22px 0 0;text-wrap:balance}
+h1 em{font-style:normal;color:var(--laranja)}
+.corpo{flex:1;display:flex;flex-direction:column;justify-content:center;gap:28px;padding:40px 0}
+.cartoes{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.cartao{background:var(--cartao);border-radius:22px;padding:30px 32px;display:flex;flex-direction:column;gap:12px}
+.cartao.destaque{background:transparent;border:3px solid var(--laranja)}
+.cartao .k{font:700 26px/1.1 var(--f);letter-spacing:.1em;text-transform:uppercase;color:var(--laranja)}
+.cartao .t{font:600 40px/1.18 var(--f)}
+.cartao .s{font:italic 400 30px/1.3 var(--f);color:var(--texto-2)}
+.leitura{font:500 36px/1.35 var(--f)}
+.leitura b{color:var(--laranja);font-weight:700}
+.fonte{font:400 26px/1.3 var(--f);color:var(--texto-2);padding-bottom:22px}
+/* rodapé com a assinatura GHDARU: duas linhas, nada abaixo de 28 px */
+.assinatura{margin:0 -72px;padding:26px 72px 30px;border-top:2px solid var(--linha);display:grid;
+  grid-template-columns:auto 1fr auto;column-gap:20px;row-gap:6px;align-items:center}
+.marca{grid-row:1;display:flex;gap:3px;align-items:center;height:52px}
+.marca i{display:block;border-radius:99px}
+.marca i:nth-child(1),.marca i:nth-child(3){width:16px;height:45px;background:var(--bloco)}
+.marca i:nth-child(2){width:9px;height:21px;background:var(--laranja)}
+.nome{grid-row:1;font:700 40px/1 var(--f);letter-spacing:.06em}
+.email{grid-row:1;font:500 28px/1 var(--f);color:var(--laranja)}
+.linha{grid-row:2;grid-column:1/-1;font:400 28px/1.2 var(--f);color:var(--texto-2)}
+</style>
+
+<div id="arte">
+  <!-- EDITAR: rótulo e título (use <em> para o trecho em laranja) -->
+  <div class="eyebrow">IA aplicada</div>
+  <h1>Simule a restrição, <em>não o mundo.</em></h1>
+
+  <!-- EDITAR: corpo. Troque, apague ou repita os cartões. -->
+  <div class="corpo">
+    <div class="cartoes">
+      <div class="cartao"><div class="k">Sem regra nova</div><div class="t">A IA acelera o processo antigo</div><div class="s">"Fazemos o mesmo, mais rápido."</div></div>
+      <div class="cartao destaque"><div class="k">Com regra nova</div><div class="t">A IA eleva a restrição</div><div class="s">"O gargalo passou a produzir mais."</div></div>
+    </div>
+    <div class="leitura"><b>Minha leitura:</b> o ganho aparece quando a regra muda junto.</div>
+  </div>
+
+  <!-- EDITAR: fonte ou nota (ou apague a linha) -->
+  <div class="fonte">Exemplo de layout · texto ilustrativo</div>
+
+  <!-- NÃO EDITAR: assinatura GHDARU -->
+  <div class="assinatura">
+    <div class="marca" aria-hidden="true"><i></i><i></i><i></i></div>
+    <div class="nome">GHDARU</div>
+    <div class="email">ghdaru@ghdaru.com.br</div>
+    <div class="linha">consultoria e implantação de processos agênticos</div>
+  </div>
+</div>
+</html>

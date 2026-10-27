@@ -23,6 +23,10 @@ Posts que não fazem parte de uma série ficam em [`posts/`](posts/), um por pas
 
 Brief de storytelling out/nov: [`posts/plano-storytelling-out-nov-2026/`](posts/plano-storytelling-out-nov-2026/).
 
+## Identidade visual
+
+[GHDARU](identidade/ghdaru/): paleta, tipografia, marca, assinatura gráfica (SVG e PNG), template de arte 1200×1200 e bloco de texto dos posts.
+
 ## Estrutura
 
 ```
@@ -32,6 +36,7 @@ series/<serie>/              uma pasta por série
 posts/AAAA-MM-DD-tema/       posts avulsos
 templates/                   modelos de README para episódio e post
 tools/motion/                renderiza animações HTML em GIF e MP4
+identidade/ghdaru/           marca, assinatura e template de arte
 ```
 
 ## Como usar os notebooks
