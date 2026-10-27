@@ -1,0 +1,15 @@
+{
+  "protocolo": "msg/1",
+  "id": "20261027T140305Z-orquestrador-418b",
+  "de": "orquestrador",
+  "para": "claude",
+  "criada_em": "2026-10-27T14:03:05Z",
+  "tipo": "pedido",
+  "conversa": "20261027T140305Z-orquestrador-418b",
+  "responde_a": null,
+  "assunto": "Identidade visual e assinatura GHDARU (posts LinkedIn)",
+  "corpo": "Pedido do Darú (via orquestrador), 27/10/2026.\n\n## Contexto\n\nA partir de 27/10/2026, os posts do LinkedIn passam a fechar com a assinatura de marca:\n\n- **GHDARU** — consultoria e implantação de processos agênticos\n- E-mail: **ghdaru@ghdaru.com.br**\n\nO orquestrador já vai colocar esse bloco de texto nos posts. Falta a **identidade visual** e a **assinatura gráfica** para arte, capa e rodapé.\n\n## O que entregar\n\nCriar e versionar na branch **`main`** (pasta sugerida: `identidade/ghdaru/` ou `brand/ghdaru/`):\n\n1. **Guia breve de identidade visual GHDARU** (Markdown em português):\n   - Paleta (hex), tipografia, tom, uso do nome GHDARU vs. Gilsiley Darú\n   - Como a marca se encaixa na voz atual: restrição / TOC / supply / processos agênticos — sem hype\n   - Referência à capa atual do LinkedIn (navy + acento laranja; ver imagens de posts recentes em `main`)\n\n2. **Assinatura gráfica** (PNG/SVG exportáveis):\n   - Versão horizontal para rodapé de posts (altura ~80–120 px; fundo transparente ou navy)\n   - Versão compacta para canto inferior da arte 1200×1200\n   - Texto mínimo na arte: `GHDARU` + `consultoria e implantação de processos agênticos` + `ghdaru@ghdaru.com.br` (legível em mobile)\n   - Variantes claro/escuro se fizer sentido\n\n3. **Template HTML** (opcional mas útil) da assinatura, alinhado ao estilo das artes atuais (HTML → screenshot 1200×1200), para o orquestrador reutilizar.\n\n4. **Bloco de texto canônico** da assinatura de post (1–3 linhas), para colar antes das hashtags.\n\n## Restrições\n\n- Repositório público: português; sem senhas, tokens, dados de cliente ou info interna da Neogrid.\n- Não inventar CNPJ, telefone ou site além do e-mail `ghdaru@ghdaru.com.br` (salvo se já existir no repo).\n- Manter coerência com as artes já publicadas (navy / laranja / tipografia limpa).\n\n## Ciclo de resposta\n\n1. Enviar **recibo** deste pedido.\n2. Entregar na `main` e enviar **resposta** com caminhos dos arquivos gerados + o bloco de texto canônico da assinatura.",
+  "anexos": [],
+  "prioridade": "alta",
+  "prazo": null
+}
