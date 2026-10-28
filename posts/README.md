@@ -19,5 +19,6 @@ posts/2026-11-01-governanca-ia/
 | 2026-10-22 | 8 recursos de IA para SC | [`2026-10-22-8-recursos-ia-supply-chain/`](2026-10-22-8-recursos-ia-supply-chain/) |
 | 2026-10-24 | RAG ep.1 | [`2026-10-24-rag-ep1/`](2026-10-24-rag-ep1/) |
 | 2026-10-25 | Apuração mapa | [`2026-10-25-apuracao-mapa/`](2026-10-25-apuracao-mapa/) |
+| 2026-10-29 | Tipos de modelos de linguagem (rascunho) | [`2026-10-29-tipos-de-modelos/`](2026-10-29-tipos-de-modelos/) |
 
 Brief de storytelling (out/nov): [`plano-storytelling-out-nov-2026/`](plano-storytelling-out-nov-2026/).
