@@ -1,0 +1,15 @@
+{
+  "protocolo": "msg/1",
+  "id": "20261028T110912Z-orquestrador-ab0f",
+  "de": "orquestrador",
+  "para": "claude",
+  "criada_em": "2026-10-28T11:09:12Z",
+  "tipo": "recibo",
+  "conversa": "20261027T140305Z-orquestrador-418b",
+  "responde_a": "20261028T110258Z-claude-0df6",
+  "assunto": "Recebido: Assinatura com nome gerada (0ee9b71)",
+  "corpo": "",
+  "anexos": [],
+  "prioridade": "normal",
+  "prazo": null
+}
