@@ -1,38 +1,35 @@
 # Tipos de modelos de linguagem
 
 **Status:** rascunho para 29/10/2026, fora da grade do orquestrador. Encaixe a definir com o Darú.
-**Material:** `tipos-de-modelos.mp4` (1080×1350, 28 s) · `tipos-de-modelos.gif` (720 px) · fonte em `animacao.html` · orientações em [`orientacoes.md`](orientacoes.md)
+**Material:** `tipos-de-modelos.mp4` (1080×1350, 32 s) · `tipos-de-modelos.gif` (720 px) · fonte em `animacao.html` · orientações em [`orientacoes.md`](orientacoes.md)
 
 ## Texto do post
 
-LLM, SLM, VLM, MoE, LRM. Esta imagem resume bem os cinco tipos de modelos de linguagem que mais aparecem hoje. Vale entender o que cada um faz, e como eles se combinam.
+Numa doca de recebimento, três modelos de IA diferentes podem trabalhar no mesmo fluxo:
 
-Os cinco, em uma linha cada:
+• um modelo de visão lê a nota e a etiqueta e cruza com o pedido de compra;
+• um modelo pequeno no coletor faz a mesma checagem sem internet;
+• um modelo barato classifica as ocorrências que o motorista escreve.
 
-• LLM: prevê o próximo token. É a base do GPT, do Claude e do Gemini.
-• SLM: versão compacta, de 1 a 10 bilhões de parâmetros, que roda no notebook, no celular ou no coletor do armazém. Rápida, barata e sem mandar dado para fora.
-• VLM: lê imagem e texto juntos. A foto do palete com a pergunta "quantas caixas?" vira resposta.
-• MoE: o modelo tem muitos especialistas, e cada token usa só alguns. O DeepSeek-V3 tem 671 bilhões de parâmetros e ativa 37 bilhões por token.
-• LRM: pensa passo a passo antes de responder. Demora mais e acerta mais em cálculo e lógica.
+Cada um foi escolhido por uma restrição diferente: ler imagem, funcionar sem rede, custar pouco em volume alto. Para fazer essa escolha, vale conhecer as siglas que aparecem em toda proposta de IA:
 
-Os cinco não são excludentes: cada sigla responde a uma pergunta diferente. Tamanho (LLM ou SLM). O que entra (texto ou imagem). Arquitetura (densa ou MoE). Como responde (direto ou raciocinando). O DeepSeek-R1 é LLM, MoE e modelo de raciocínio ao mesmo tempo. E hoje o raciocínio costuma ser um modo do mesmo modelo, não outro modelo.
+• LLM (Large Language Model): modelo grande, treinado em texto em escala da web. A maioria gera a resposta prevendo o próximo token (pedaço de palavra). É a base do GPT, do Claude e do Gemini.
+• SLM (Small Language Model): versão compacta, de centenas de milhões a cerca de 10 bilhões de parâmetros (o tamanho do modelo; quanto maior, mais caro de rodar). Os menores rodam no celular ou no coletor.
+• VLM (Vision Language Model): lê imagem e texto juntos. A foto da etiqueta e a nota viram dados conferíveis.
+• MoE (Mixture of Experts): modelo grande que custa como médio, porque cada token usa só alguns "especialistas". O DeepSeek-V3 tem 671 bilhões de parâmetros e ativa 37 bilhões por token. Economiza cálculo, não memória.
+• LRM (Large Reasoning Model): treinado para pensar passo a passo antes de responder. Vale quando o problema tem várias regras. Conta simples, o sistema já faz.
 
-E há outros tipos que valem conhecer:
+As siglas não são excludentes: cada uma responde a uma pergunta diferente (tamanho, o que entra, arquitetura, como responde). O DeepSeek-R1 é LLM, MoE e de raciocínio ao mesmo tempo.
 
-• Difusão: em vez de escrever da esquerda para a direita, parte de um rascunho mascarado e refina todos os tokens em paralelo. Mercury (Inception Labs) e Gemini Diffusion (Google) geram muito mais rápido, mas ainda perdem em raciocínio difícil.
-• Híbridos com Mamba ou atenção linear (Nemotron, Qwen3-Next): trocam parte da atenção por camadas mais baratas, para aguentar textos longos.
-• VLA, visão, linguagem e ação: o modelo vê, entende a instrução e move o robô (Gemini Robotics, π0).
-• Embeddings: não geram texto, transformam texto em vetor. São a base da busca no RAG.
+E há outros que valem acompanhar. O mais importante é a difusão (dLLM): em vez de escrever da esquerda para a direita, refina vários tokens por passo. Mercury (Inception Labs) e Gemini Diffusion (Google) geram muito mais rápido, mas ainda perdem em raciocínio difícil. Para a operação, hoje quase nunca são a primeira escolha.
 
-Para quem opera supply chain, a pergunta útil não é "qual o melhor modelo". É "qual é a restrição do processo".
-
-Latência no coletor pede um modelo pequeno. Nota fiscal e foto de avaria pedem visão. Cálculo de reposição pede raciocínio, e de preferência uma ferramenta que faz a conta. Volume alto com resposta simples pede o mais barato que acerta.
+Voltando à doca: ninguém escolheu "o melhor modelo". Cada etapa tem uma restrição, e a restrição escolheu o modelo.
 
 Escolha o modelo pela restrição, não pelo ranking.
 
-Qual destes você já usa sem saber que usa?
+Qual processo seu travaria primeiro se a IA errasse?
 
-Imagem de referência: Jean Lee.
+Inspirado no infográfico "Top 5 Types of Language Models", de Jean Lee.
 
 GHDARU · processos agênticos · ghdaru@ghdaru.com.br
 
