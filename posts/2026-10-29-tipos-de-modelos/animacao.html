@@ -13,7 +13,7 @@
 body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--f)}
 .frame{position:relative;width:1080px;height:1350px;overflow:hidden;background:var(--ground)}
 .abs{position:absolute}
-.card{left:60px;top:330px;width:960px;height:830px;border-radius:48px;background:var(--glass);
+.card{left:60px;top:350px;width:960px;height:810px;border-radius:48px;background:var(--glass);
   box-shadow:inset 0 1px 0 var(--edge),0 0 0 1px rgba(255,255,255,.7),0 2px 4px rgba(17,23,37,.04),0 14px 30px rgba(17,23,37,.06),0 44px 88px rgba(17,23,37,.10)}
 .scene{position:absolute;inset:0}
 .eyebrow{left:0;right:0;top:62px;text-align:center;font:700 28px/1 var(--f);letter-spacing:.16em;text-transform:uppercase;color:var(--blue)}
@@ -21,6 +21,10 @@ body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--f)}
 .h em{font-style:normal;color:var(--blue)}
 .d{left:70px;right:70px;top:200px;text-align:center;font:500 34px/1.28 var(--f);color:var(--ink-2)}
 .d b{color:var(--ink);font-weight:700}
+.ac{left:0;right:0;top:84px;text-align:center;font:900 124px/1 var(--f);letter-spacing:-.03em;color:var(--ink)}
+.en{left:0;right:0;top:214px;text-align:center;font:500 30px/1 var(--f);font-style:italic;color:var(--ink-2);letter-spacing:.02em}
+.dd{left:70px;right:70px;top:262px;text-align:center;font:500 30px/1.25 var(--f);color:var(--ink-2)}
+.dd b{color:var(--ink);font-weight:700}
 .nt{left:120px;width:840px;font:600 30px/1.3 var(--f);color:var(--ink)}
 .nt b{color:var(--blue)}
 .mono{font-family:var(--m)}
@@ -67,9 +71,10 @@ body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--f)}
 
   <!-- 1 LLM -->
   <div class="scene" id="s1">
-    <div class="abs eyebrow">1 · LLM</div>
-    <div class="abs h">Modelo grande de linguagem</div>
-    <div class="abs d">Treinado em texto em escala da web para <b>prever o próximo token</b>.</div>
+    <div class="abs eyebrow">1 · Modelo grande de linguagem</div>
+    <div class="abs ac">LLM</div>
+    <div class="abs en">Large Language Model</div>
+    <div class="abs dd">Treinado em texto em escala da web para <b>prever o próximo token</b>.</div>
     <div class="abs prompt">A capital da França é <span class="blank" id="blank">&nbsp;</span></div>
     <div class="abs bars" id="bars"></div>
     <div class="abs nt" style="top:900px">O pré-treino ensina a completar texto. É o <b>ajuste fino</b> depois que transforma isso em assistente.</div>
@@ -78,9 +83,10 @@ body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--f)}
 
   <!-- 2 SLM -->
   <div class="scene" id="s2">
-    <div class="abs eyebrow">2 · SLM</div>
-    <div class="abs h">Modelo pequeno</div>
-    <div class="abs d">Compacto para rodar <b>rápido, barato e no próprio aparelho</b>.</div>
+    <div class="abs eyebrow">2 · Modelo pequeno</div>
+    <div class="abs ac">SLM</div>
+    <div class="abs en">Small Language Model</div>
+    <div class="abs dd">Compacto para rodar <b>rápido, barato e no próprio aparelho</b>.</div>
     <div class="abs box" id="big" style="left:120px;top:410px;width:250px;height:250px;--bd:rgba(10,132,255,.45)"><div><div style="font:800 40px/1.1 var(--f)">Grande</div><div class="lbl" style="margin-top:8px">70 bi+ parâmetros</div></div></div>
     <div class="abs" id="tech" style="left:400px;top:410px;display:flex;flex-direction:column;gap:18px"></div>
     <div class="abs box" id="small" style="left:800px;top:612px;width:150px;height:150px;--bd:rgba(48,209,88,.7)"><div><div style="font:800 30px/1.1 var(--f)">Pequeno</div><div class="lbl" style="font-size:22px;margin-top:6px">1 a 10 bi</div></div></div>
@@ -90,9 +96,10 @@ body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--f)}
 
   <!-- 3 VLM -->
   <div class="scene" id="s3">
-    <div class="abs eyebrow">3 · VLM</div>
-    <div class="abs h">Visão e linguagem</div>
-    <div class="abs d">Entende <b>imagem e texto juntos</b>, num só modelo.</div>
+    <div class="abs eyebrow">3 · Visão e linguagem</div>
+    <div class="abs ac">VLM</div>
+    <div class="abs en">Vision Language Model</div>
+    <div class="abs dd">Entende <b>imagem e texto juntos</b>, num só modelo.</div>
     <div class="abs box" id="foto" style="left:110px;top:410px;width:230px;height:230px;flex-direction:column;gap:6px;--bd:rgba(10,132,255,.45)">
       <div id="palete" style="display:grid;grid-template-columns:repeat(4,34px);gap:5px"></div>
       <div style="width:170px;height:14px;background:#C49A6C;border-radius:3px"></div>
@@ -109,9 +116,10 @@ body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--f)}
 
   <!-- 4 MoE -->
   <div class="scene" id="s4">
-    <div class="abs eyebrow">4 · MoE</div>
-    <div class="abs h">Mistura de especialistas</div>
-    <div class="abs d">Cada token passa por <b>poucos especialistas</b>; o resto do modelo fica parado.</div>
+    <div class="abs eyebrow">4 · Mistura de especialistas</div>
+    <div class="abs ac">MoE</div>
+    <div class="abs en">Mixture of Experts</div>
+    <div class="abs dd">Cada token usa <b>poucos especialistas</b>; o resto fica parado.</div>
     <div class="abs pill" id="mtok" style="left:110px;top:640px;font:700 34px/1 var(--m);--bd:rgba(255,159,10,.8)">palete</div>
     <div class="abs box" id="router" style="left:360px;top:610px;width:180px;height:110px;font:800 30px/1 var(--f)">Roteador</div>
     <div class="abs" id="experts" style="left:640px;top:400px;display:grid;grid-template-columns:150px 150px;gap:16px 24px"></div>
@@ -121,9 +129,10 @@ body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--f)}
 
   <!-- 5 LRM -->
   <div class="scene" id="s5">
-    <div class="abs eyebrow">5 · LRM</div>
-    <div class="abs h">Modelo de raciocínio</div>
-    <div class="abs d">Pensa <b>passo a passo</b> antes de responder.</div>
+    <div class="abs eyebrow">5 · Modelo de raciocínio</div>
+    <div class="abs ac">LRM</div>
+    <div class="abs en">Large Reasoning Model</div>
+    <div class="abs dd">Pensa <b>passo a passo</b> antes de responder.</div>
     <div class="abs box" style="left:120px;top:400px;width:840px;height:130px;font:700 34px/1.3 var(--f);padding:0 30px;--bd:rgba(255,159,10,.7)">O caminhão sai do CD às 7h50 e a rota leva 3h25. Quando chega?</div>
     <div class="abs lbl" style="left:120px;top:570px;text-align:left">pensando…</div>
     <div class="abs" id="think" style="left:120px;top:620px;width:840px;display:flex;flex-direction:column;gap:16px"></div>
@@ -134,8 +143,9 @@ body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--f)}
   <!-- 6 difusão -->
   <div class="scene" id="s6">
     <div class="abs eyebrow" style="color:var(--violet)">Ficou de fora · difusão</div>
-    <div class="abs h">Gerar tudo <em style="color:var(--violet)">de uma vez</em></div>
-    <div class="abs d">Parte de um rascunho mascarado e <b>refina todos os tokens em paralelo</b>.</div>
+    <div class="abs ac" style="color:var(--violet)">dLLM</div>
+    <div class="abs en">Diffusion Large Language Model</div>
+    <div class="abs dd">Parte de um rascunho mascarado e <b>refina tudo em paralelo</b>.</div>
     <div class="abs lbl" style="left:110px;top:420px;text-align:left;color:var(--ink);font-weight:700">Autorregressivo: um token por vez</div>
     <div class="abs" id="lane1" style="left:110px;top:470px;display:flex;gap:12px"></div>
     <div class="abs lbl" id="c1" style="left:110px;top:570px;text-align:left"></div>
