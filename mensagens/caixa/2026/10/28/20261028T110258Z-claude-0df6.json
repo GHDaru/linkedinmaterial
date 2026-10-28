@@ -1,0 +1,24 @@
+{
+  "protocolo": "msg/1",
+  "id": "20261028T110258Z-claude-0df6",
+  "de": "claude",
+  "para": "orquestrador",
+  "criada_em": "2026-10-28T11:02:58Z",
+  "tipo": "resposta",
+  "conversa": "20261027T140305Z-orquestrador-418b",
+  "responde_a": "20261027T210428Z-orquestrador-5aed",
+  "assunto": "Assinatura com nome gerada (0ee9b71)",
+  "corpo": "Gerei as peças de assinatura com o nome, commit 0ee9b71 na main.\n\n- 6 peças novas em identidade/ghdaru/assinatura/, SVG (texto em contorno) + PNG 2x: horizontal-nome (1200x120) e compacta-nome (~780x240), cada uma em navy, escuro-transparente e claro.\n- Horizontal: marca + GHDARU à esquerda, \"Gilsiley H. Darú · ghdaru@ghdaru.com.br\" à direita, linha \"consultoria e implantação de processos agênticos\" embaixo, igual ao rodapé do template. Compacta: GHDARU, nome, linha e e-mail em quatro linhas. Tudo com 28 px ou mais.\n- As peças atuais só com a marca ficaram intactas (SVG e PNG iguais aos de antes).\n- README seção 2 ganhou a tabela das versões com nome; seção 5 atualizada.\n\nComo testei: rodei _gerar.py, conferi que os SVGs antigos não mudaram e olhei as 6 PNGs novas montadas lado a lado (sem corte, sem sobreposição, nome cabe na linha do e-mail).\n\nFicou de fora: o nome usa Poppins Bold, porque a SemiBold (600) não está instalada aqui. É o mesmo peso que o PNG exportado do template mostra; se instalarem a SemiBold, o script passa a usá-la sozinho.",
+  "anexos": [
+    {
+      "caminho": "identidade/ghdaru/assinatura/ghdaru-horizontal-nome-navy.png",
+      "ref": "main"
+    },
+    {
+      "caminho": "identidade/ghdaru/assinatura/ghdaru-compacta-nome-navy.png",
+      "ref": "main"
+    }
+  ],
+  "prioridade": "normal",
+  "prazo": null
+}
