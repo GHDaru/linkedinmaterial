@@ -5,7 +5,7 @@
 
 ## Texto do post
 
-Vi esta imagem com os 5 tipos de modelos de linguagem e ela é um bom começo. Mas tem uma armadilha: dá a impressão de que você escolhe um dos cinco. Não escolhe.
+LLM, SLM, VLM, MoE, LRM. Esta imagem resume bem os cinco tipos de modelos de linguagem que mais aparecem hoje. Vale entender o que cada um faz, e como eles se combinam.
 
 Os cinco, em uma linha cada:
 
@@ -15,9 +15,9 @@ Os cinco, em uma linha cada:
 • MoE: o modelo tem muitos especialistas, e cada token usa só alguns. O DeepSeek-V3 tem 671 bilhões de parâmetros e ativa 37 bilhões por token.
 • LRM: pensa passo a passo antes de responder. Demora mais e acerta mais em cálculo e lógica.
 
-Onde a imagem engana: as cinco categorias respondem a perguntas diferentes. Tamanho (LLM ou SLM). O que entra (texto ou imagem). Arquitetura (densa ou MoE). Como responde (direto ou raciocinando). O DeepSeek-R1 é LLM, MoE e modelo de raciocínio ao mesmo tempo. E hoje o raciocínio costuma ser um modo do mesmo modelo, não outro modelo.
+Os cinco não são excludentes: cada sigla responde a uma pergunta diferente. Tamanho (LLM ou SLM). O que entra (texto ou imagem). Arquitetura (densa ou MoE). Como responde (direto ou raciocinando). O DeepSeek-R1 é LLM, MoE e modelo de raciocínio ao mesmo tempo. E hoje o raciocínio costuma ser um modo do mesmo modelo, não outro modelo.
 
-E o que ficou de fora:
+E há outros tipos que valem conhecer:
 
 • Difusão: em vez de escrever da esquerda para a direita, parte de um rascunho mascarado e refina todos os tokens em paralelo. Mercury (Inception Labs) e Gemini Diffusion (Google) geram muito mais rápido, mas ainda perdem em raciocínio difícil.
 • Híbridos com Mamba ou atenção linear (Nemotron, Qwen3-Next): trocam parte da atenção por camadas mais baratas, para aguentar textos longos.
