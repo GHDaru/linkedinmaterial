@@ -28,6 +28,19 @@ Três etapas de um fluxo. A do meio, laranja e mais estreita, é a **restrição
 | `assinatura/ghdaru-compacta-escuro-transparente` | ~780 × 196 | Canto inferior sobre navy ou cartão |
 | `assinatura/ghdaru-compacta-claro` | ~780 × 196 | Canto inferior sobre fundo claro |
 
+**Com o nome (preferir em artes).** Mesmo desenho, com "Gilsiley H. Darú" ao lado da marca, como no rodapé do template:
+
+| Arquivo | Tamanho | Onde usar |
+|---|---|---|
+| `assinatura/ghdaru-horizontal-nome-navy` | 1200 × 120 | Rodapé de arte 1200 px, com fundo navy próprio |
+| `assinatura/ghdaru-horizontal-nome-escuro-transparente` | 1200 × 120 | Rodapé sobre o navy da própria arte |
+| `assinatura/ghdaru-horizontal-nome-claro` | 1200 × 120 | Rodapé sobre fundo branco ou claro |
+| `assinatura/ghdaru-compacta-nome-navy` | ~780 × 240 | Canto inferior de arte 1200 × 1200 |
+| `assinatura/ghdaru-compacta-nome-escuro-transparente` | ~780 × 240 | Canto inferior sobre navy ou cartão |
+| `assinatura/ghdaru-compacta-nome-claro` | ~780 × 240 | Canto inferior sobre fundo claro |
+
+As versões sem o nome continuam para usos em que o nome já aparece perto (slide com autor, capa com foto e nome).
+
 Cada variante existe em **SVG** (texto convertido em contornos, então abre igual em qualquer máquina) e em **PNG** com o dobro da resolução e fundo transparente quando o nome diz `transparente` ou `claro`.
 
 **Regras**
@@ -78,7 +91,7 @@ O laranja `#FF9F43` sobre branco dá só 2,0 : 1 e não deve ser usado. Em fundo
 
 ## 5. GHDARU e Gilsiley Darú
 
-**Decidido pelo Darú (27/10/2026), rodapé da arte:** o nome **Gilsiley H. Darú** e a assinatura **GHDARU** ficam **juntos** no rodapé. A assinatura não substitui o nome. O template faz assim: marca + GHDARU à esquerda, "Gilsiley H. Darú · e-mail" à direita e a linha "consultoria e implantação de processos agênticos" embaixo. A linha de fonte (por exemplo, "Definição: Google DeepMind") continua acima do rodapé. As peças de `assinatura/` têm só a marca; numa arte, use-as sempre com o nome ao lado.
+**Decidido pelo Darú (27/10/2026), rodapé da arte:** o nome **Gilsiley H. Darú** e a assinatura **GHDARU** ficam **juntos** no rodapé. A assinatura não substitui o nome. O template faz assim: marca + GHDARU à esquerda, "Gilsiley H. Darú · e-mail" à direita e a linha "consultoria e implantação de processos agênticos" embaixo. A linha de fonte (por exemplo, "Definição: Google DeepMind") continua acima do rodapé. Em `assinatura/`, as peças `*-nome-*` já trazem o nome; as demais têm só a marca e, numa arte, pedem o nome ao lado.
 
 Proposta, ainda a confirmar pelo Darú:
 
