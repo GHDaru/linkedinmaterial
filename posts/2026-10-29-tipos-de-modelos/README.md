@@ -1,48 +1,51 @@
-# Tipos de modelos de linguagem
+# Modelos de IA: o processo escolhe
 
-**Status:** rascunho para 29/10/2026, fora da grade do orquestrador. Encaixe a definir com o Darú.
-**Material:** `tipos-de-modelos.mp4` (1080×1350, 32 s) · `tipos-de-modelos.gif` (720 px) · fonte em `animacao.html` · orientações em [`orientacoes.md`](orientacoes.md)
+**Mídia:** `tipos-de-modelos.mp4` (1080×1350, 35 s) · `tipos-de-modelos.gif` (720 px) · fonte da animação em `animacao.html`
 
 ## Texto do post
 
-Numa doca de recebimento, três modelos de IA diferentes podem trabalhar no mesmo fluxo:
+𝗠𝗢𝗗𝗘𝗟𝗢𝗦 𝗗𝗘 𝗜𝗔: 𝗢 𝗣𝗥𝗢𝗖𝗘𝗦𝗦𝗢 𝗘𝗦𝗖𝗢𝗟𝗛𝗘
+Numa doca, três modelos de IA trabalham juntos. Nenhum é "o melhor".
 
-• um modelo de visão lê a nota e a etiqueta e cruza com o pedido de compra;
-• um modelo pequeno no coletor faz a mesma checagem sem internet;
+No mesmo recebimento:
+
+• um modelo de visão lê a etiqueta rasgada, sem código legível, e a foto da avaria, e cruza com o pedido de compra;
+• uma versão pequena desse modelo roda no próprio coletor e faz a checagem sem internet;
 • um modelo barato classifica as ocorrências que o motorista escreve.
 
-Cada um foi escolhido por uma restrição diferente: ler imagem, funcionar sem rede, custar pouco em volume alto. Para fazer essa escolha, vale conhecer as siglas que aparecem em toda proposta de IA:
+Cada um foi escolhido pela restrição de uma etapa: ler imagem, funcionar sem rede, custar pouco em volume alto. Para fazer essa escolha, vale conhecer as siglas que aparecem em toda proposta de IA:
 
-• LLM (Large Language Model): modelo grande, treinado em texto em escala da web. A maioria gera a resposta prevendo o próximo token (pedaço de palavra). É a base do GPT, do Claude e do Gemini.
-• SLM (Small Language Model): versão compacta, de centenas de milhões a cerca de 10 bilhões de parâmetros (o tamanho do modelo; quanto maior, mais caro de rodar). Os menores rodam no celular ou no coletor.
-• VLM (Vision Language Model): lê imagem e texto juntos. A foto da etiqueta e a nota viram dados conferíveis.
-• MoE (Mixture of Experts): modelo grande que custa como médio, porque cada token usa só alguns "especialistas". O DeepSeek-V3 tem 671 bilhões de parâmetros e ativa 37 bilhões por token. Economiza cálculo, não memória.
-• LRM (Large Reasoning Model): treinado para pensar passo a passo antes de responder. Vale quando o problema tem várias regras. Conta simples, o sistema já faz.
+• LLM (Large Language Model): modelo grande, treinado com uma quantidade enorme de texto da internet. A maioria gera a resposta prevendo o próximo token (pedaço de palavra). É a base do GPT, do Claude e do Gemini.
+• SLM (Small Language Model): versão compacta, em geral de centenas de milhões a cerca de 10 bilhões de parâmetros (não há fronteira oficial; parâmetros são o tamanho do modelo: quanto maior, mais caro de rodar). Os menores rodam no celular ou no coletor.
+• VLM (Vision Language Model): lê imagem e texto juntos. A foto da etiqueta e da avaria vira dado conferível.
+• MoE (Mixture of Experts): modelo grande dividido em blocos ("especialistas"); um roteador escolhe poucos blocos para cada token. O DeepSeek-V3 tem 671 bilhões de parâmetros e usa 37 bilhões por token. Calcula como médio, mas precisa de memória de grande.
+• LRM (Large Reasoning Model): treinado para raciocinar passo a passo antes de responder; hoje costuma ser um modo do mesmo modelo. Vale quando há várias regras ao mesmo tempo, como alocar docas com janelas, prioridades e tipos de veículo. Para uma conta simples, o WMS ou o TMS já resolve.
 
-As siglas não são excludentes: cada uma responde a uma pergunta diferente (tamanho, o que entra, arquitetura, como responde). O DeepSeek-R1 é LLM, MoE e de raciocínio ao mesmo tempo.
+As siglas não são excludentes: cada uma responde a uma pergunta diferente (tamanho, o que entra, como é construído por dentro, como raciocina). O DeepSeek-R1 é LLM, MoE e de raciocínio ao mesmo tempo. O modelo pequeno de visão do coletor é SLM e VLM.
 
-E há outros que valem acompanhar. O mais importante é a difusão (dLLM): em vez de escrever da esquerda para a direita, refina vários tokens por passo. Mercury (Inception Labs) e Gemini Diffusion (Google) geram muito mais rápido, mas ainda perdem em raciocínio difícil. Para a operação, hoje quase nunca são a primeira escolha.
+Fora da lista, vale acompanhar os modelos de difusão: em vez de escrever palavra por palavra, refinam um rascunho inteiro. Detalhes no primeiro comentário.
 
-Voltando à doca: ninguém escolheu "o melhor modelo". Cada etapa tem uma restrição, e a restrição escolheu o modelo.
+Voltando à doca: ninguém escolheu "o melhor modelo". Cada etapa tem uma condição que não pode falhar, e é ela que escolhe o modelo. Se a doca é o gargalo do CD, o modelo que importa é o que não para a doca quando cai o sinal.
 
 Escolha o modelo pela restrição, não pelo ranking.
 
-Qual processo seu travaria primeiro se a IA errasse?
+Na sua operação, o que escolheria o modelo primeiro: custo em volume alto ou funcionar sem rede?
 
 Inspirado no infográfico "Top 5 Types of Language Models", de Jean Lee.
 
-GHDARU · processos agênticos · ghdaru@ghdaru.com.br
+GHDARU · consultoria e implantação de processos agênticos
+ghdaru@ghdaru.com.br
 
-#IA #SupplyChain #TeoriaDasRestrições
+#InteligenciaArtificial #SupplyChain #TeoriaDasRestricoes
 
 ## Primeiro comentário
 
-Material do post (animação e fonte) no repositório: https://github.com/GHDaru/linkedinmaterial/tree/main/posts/2026-10-29-tipos-de-modelos
+Bônus, modelos de difusão (dLLM): em vez de gerar um token por vez, refinam vários tokens por passo, partindo de um rascunho mascarado. Mercury (Inception Labs) e Gemini Diffusion (Google) são várias vezes mais rápidos, segundo dados dos fabricantes, mas ainda ficam atrás em raciocínio difícil.
+
+Material do post (animação e fonte): https://github.com/GHDaru/linkedinmaterial/tree/main/posts/2026-10-29-tipos-de-modelos
 
 ## Referências
 
-- Imagem "Top 5 Types of Language Models", de Jean Lee (crédito obrigatório se for usada).
-- Difusão: [Inception Labs, Mercury](https://inceptionlabs.ai/news) · [Mercury e Gemini Diffusion, comparação de velocidade](https://tech-insider.org/?p=21391)
-- Híbridos: [Sebastian Raschka, galeria de arquiteturas com atenção híbrida](https://sebastianraschka.com/llm-architecture-gallery/hybrid-attention/)
-- VLA: [Google DeepMind, Gemini Robotics](https://deepmind.google/models/gemini-robotics/) · [Gemini Robotics, artigo](https://arxiv.org/abs/2503.20020v1)
+- Infográfico "Top 5 Types of Language Models", de Jean Lee (inspiração; crédito no post).
 - DeepSeek-V3: 671 bi de parâmetros, 37 bi ativos por token (relatório técnico do DeepSeek-V3, dez/2024).
+- Difusão: [Inception Labs, Mercury](https://inceptionlabs.ai/news) · [Mercury e Gemini Diffusion](https://tech-insider.org/?p=21391)

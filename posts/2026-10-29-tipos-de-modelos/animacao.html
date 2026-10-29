@@ -1,11 +1,12 @@
 <!doctype html>
 <html lang="pt-BR"><meta charset="utf-8">
-<title>Tipos de modelos de linguagem</title>
+<title>Modelos de IA: o processo escolhe</title>
 <style>
+/* regra: nenhum texto abaixo de 28 px no tamanho final (1080×1350) */
 :root{
-  --ground:#F2F4F8; --ink:#111725; --ink-2:#556079;
+  --ground:#F2F4F8; --ink:#111725; --ink-2:#4A5570;
   --glass:rgba(255,255,255,.78); --edge:rgba(255,255,255,.97);
-  --blue:#0A84FF; --green:#30D158; --amber:#FF9F0A; --violet:#8E5CF6; --line:rgba(17,23,37,.08);
+  --blue:#0066CC; --green:#1E9E4A; --green-l:#30D158; --amber:#FF9F0A; --red:#C0392B; --line:rgba(17,23,37,.08);
   --f:"Inter Display","Inter",-apple-system,"SF Pro Display",system-ui,sans-serif;
   --m:"DejaVu Sans Mono",ui-monospace,"SF Mono",Menlo,monospace;
 }
@@ -16,27 +17,21 @@ body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--f)}
 .card{left:60px;top:350px;width:960px;height:810px;border-radius:48px;background:var(--glass);
   box-shadow:inset 0 1px 0 var(--edge),0 0 0 1px rgba(255,255,255,.7),0 2px 4px rgba(17,23,37,.04),0 14px 30px rgba(17,23,37,.06),0 44px 88px rgba(17,23,37,.10)}
 .scene{position:absolute;inset:0}
-.eyebrow{left:0;right:0;top:62px;text-align:center;font:700 28px/1 var(--f);letter-spacing:.16em;text-transform:uppercase;color:var(--blue)}
+.eyebrow{left:0;right:0;top:50px;text-align:center;font:700 28px/1 var(--f);letter-spacing:.14em;text-transform:uppercase;color:var(--blue)}
 .h{left:40px;right:40px;top:112px;text-align:center;font:800 64px/1.08 var(--f);letter-spacing:-.025em}
 .h em{font-style:normal;color:var(--blue)}
-.d{left:70px;right:70px;top:200px;text-align:center;font:500 34px/1.28 var(--f);color:var(--ink-2)}
-.d b{color:var(--ink);font-weight:700}
-.ac{left:0;right:0;top:84px;text-align:center;font:900 124px/1 var(--f);letter-spacing:-.03em;color:var(--ink)}
-.en{left:0;right:0;top:214px;text-align:center;font:500 30px/1 var(--f);font-style:italic;color:var(--ink-2);letter-spacing:.02em}
-.dd{left:70px;right:70px;top:262px;text-align:center;font:500 30px/1.25 var(--f);color:var(--ink-2)}
+.ac{left:0;right:0;top:88px;text-align:center;font:900 124px/1 var(--f);letter-spacing:-.03em}
+.en{left:0;right:0;top:218px;text-align:center;font:500 30px/1 var(--f);font-style:italic;color:var(--ink-2)}
+.dd{left:60px;right:60px;top:266px;text-align:center;font:500 30px/1.25 var(--f);color:var(--ink-2)}
 .dd b{color:var(--ink);font-weight:700}
-.nt{left:120px;width:840px;font:600 30px/1.3 var(--f);color:var(--ink)}
+.nt{left:120px;width:840px;font:600 32px/1.3 var(--f);color:var(--ink)}
 .nt b{color:var(--blue)}
-.mono{font-family:var(--m)}
 .box{border-radius:22px;background:#fff;display:flex;align-items:center;justify-content:center;text-align:center;
   box-shadow:inset 0 1px 0 var(--edge),0 0 0 2px var(--bd,rgba(17,23,37,.10)),0 6px 14px rgba(17,23,37,.07)}
-.pill{border-radius:99px;padding:14px 24px;background:#fff;font:600 28px/1 var(--f);white-space:nowrap;
+.pill{border-radius:99px;padding:16px 26px;background:#fff;font:600 30px/1 var(--f);white-space:nowrap;
   box-shadow:0 0 0 2px var(--bd,rgba(17,23,37,.10)),0 6px 14px rgba(17,23,37,.06)}
 .sq{width:46px;height:46px;border-radius:10px}
-.lbl{font:600 26px/1.2 var(--f);color:var(--ink-2);text-align:center}
-.arrow{height:4px;background:var(--ink-2);border-radius:2px;transform-origin:left center;opacity:.5}
-.arrow::after{content:"";position:absolute;right:-2px;top:-8px;border-left:16px solid var(--ink-2);border-top:10px solid transparent;border-bottom:10px solid transparent}
-/* LLM */
+.lbl{font:600 30px/1.2 var(--f);color:var(--ink-2)}
 .prompt{left:120px;top:400px;width:840px;font:700 52px/1.2 var(--f);letter-spacing:-.02em}
 .blank{display:inline-block;min-width:200px;border-bottom:6px solid var(--blue);color:var(--blue);text-align:center}
 .bars{left:120px;top:540px;width:840px;display:flex;flex-direction:column;gap:22px}
@@ -45,28 +40,26 @@ body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--f)}
 .bar .t{flex:1;height:70px;border-radius:18px;background:rgba(17,23,37,.05);position:relative;overflow:hidden}
 .bar .f{position:absolute;left:0;top:0;bottom:0;border-radius:18px;background:var(--blue)}
 .bar .p{width:110px;text-align:right;font:700 36px/1 var(--m)}
-/* eixos */
-.ax{left:100px;width:880px;display:grid;grid-template-columns:240px 1fr;gap:18px;align-items:center;padding:20px 0;border-bottom:2px solid var(--line)}
-.ax .n{font:800 34px/1 var(--f)}
+.ax{left:100px;width:880px;display:grid;grid-template-columns:300px 1fr;gap:18px;align-items:center;padding:24px 0;border-bottom:2px solid var(--line)}
+.ax .n{font:800 34px/1.15 var(--f)}
 .ax .v{display:flex;gap:12px;flex-wrap:wrap}
-.ax .v span{font:600 28px/1 var(--f);padding:11px 14px;border-radius:12px;background:rgba(10,132,255,.10);color:#0b4fa0}
-.ax .v span.novo{background:rgba(142,92,246,.14);color:#5b2bc4}
-.sig{left:0;right:0;top:1250px;text-align:center;font:600 26px/1.3 var(--f);color:var(--ink-2)}
+.ax .v span{font:600 30px/1 var(--f);padding:12px 16px;border-radius:12px;background:rgba(0,102,204,.10);color:#004E9E}
+.sig{left:0;right:0;top:1246px;text-align:center;font:600 28px/1.3 var(--f);color:var(--ink-2)}
 .sig b{color:var(--ink);letter-spacing:.06em}
-.dots{left:0;right:0;top:1196px;display:flex;justify-content:center;gap:18px}
+.dots{left:0;right:0;top:1192px;display:flex;justify-content:center;gap:18px}
 .dots i{width:14px;height:14px;border-radius:50%;background:rgba(17,23,37,.15)}
 </style>
 
 <div class="frame" id="frame">
   <div class="abs card" id="card"></div>
   <div class="abs dots" id="dots"></div>
-  <div class="abs sig"><b>GHDARU</b> · consultoria e implantação de processos agênticos</div>
+  <img class="abs" id="sig" src="../../identidade/ghdaru/assinatura/ghdaru-horizontal-navy.svg" style="left:0;top:1242px;width:1080px;height:108px" alt="GHDARU · consultoria e implantação de processos agênticos · ghdaru@ghdaru.com.br">
 
   <!-- 0 abertura -->
   <div class="scene" id="s0">
     <div class="abs eyebrow">IA na prática</div>
-    <div class="abs h" style="top:470px">Tipos de modelos<br>de <em>linguagem</em></div>
-    <div class="abs d" style="top:690px">Numa doca de recebimento,<br><b>três deles trabalham juntos</b>. Veja quais.</div>
+    <div class="abs h" style="top:480px">Modelos de IA:<br>o processo <em>escolhe</em></div>
+    <div class="abs dd" style="top:700px;font-size:36px">Numa doca, três modelos trabalham juntos.<br><b>Nenhum é o mais forte.</b></div>
   </div>
 
   <!-- 1 LLM -->
@@ -74,11 +67,11 @@ body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--f)}
     <div class="abs eyebrow">1 · Modelo grande de linguagem</div>
     <div class="abs ac">LLM</div>
     <div class="abs en">Large Language Model</div>
-    <div class="abs dd">Treinado em texto em escala da web; a maioria gera <b>prevendo o próximo token</b>.</div>
+    <div class="abs dd">A maioria gera a resposta <b>prevendo o próximo token</b>.</div>
     <div class="abs prompt">A capital da França é <span class="blank" id="blank">&nbsp;</span></div>
     <div class="abs bars" id="bars"></div>
-    <div class="abs nt" style="top:900px">O pré-treino ensina a completar texto. É o <b>pós-treino</b> (ajuste fino e reforço) que o transforma em assistente.</div>
-    <div class="abs lbl" style="left:120px;top:1060px;text-align:left">GPT, Claude, Gemini, Llama · probabilidades ilustrativas</div>
+    <div class="abs nt" style="top:880px">Token é um pedaço de palavra. É a base do <b>GPT, do Claude e do Gemini</b>.</div>
+    <div class="abs lbl" style="left:120px;top:1060px">probabilidades ilustrativas</div>
   </div>
 
   <!-- 2 SLM -->
@@ -86,12 +79,12 @@ body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--f)}
     <div class="abs eyebrow">2 · Modelo pequeno</div>
     <div class="abs ac">SLM</div>
     <div class="abs en">Small Language Model</div>
-    <div class="abs dd">Compacto para rodar <b>rápido, barato e no próprio aparelho</b>.</div>
-    <div class="abs box" id="big" style="left:120px;top:410px;width:250px;height:250px;--bd:rgba(10,132,255,.45)"><div><div style="font:800 40px/1.1 var(--f)">Grande</div><div class="lbl" style="margin-top:8px">70 bi+ parâmetros</div></div></div>
-    <div class="abs" id="tech" style="left:400px;top:410px;display:flex;flex-direction:column;gap:18px"></div>
-    <div class="abs box" id="small" style="left:800px;top:612px;width:150px;height:150px;--bd:rgba(48,209,88,.7)"><div><div style="font:800 30px/1.1 var(--f)">Pequeno</div><div class="lbl" style="font-size:24px;margin-top:6px">&lt;1 a ~10 bi</div></div></div>
-    <div class="abs" id="devs" style="left:120px;top:800px;width:840px;display:flex;justify-content:space-between"></div>
-    <div class="abs nt" style="top:960px">Quantização não diminui o número de parâmetros: <b>guarda cada um com menos bits</b>.</div>
+    <div class="abs dd">Versão compacta: <b>rápida, barata e no próprio aparelho</b>.</div>
+    <div class="abs box" id="big" style="left:120px;top:430px;width:380px;height:300px;--bd:rgba(0,102,204,.45)"><div><div style="font:800 48px/1.1 var(--f)">Grande</div><div class="lbl" style="margin-top:14px">dezenas a centenas<br>de bilhões</div></div></div>
+    <div class="abs" id="sarrow" style="left:520px;top:570px;width:110px;height:6px;background:var(--ink-2);border-radius:3px;transform-origin:left center"></div>
+    <div class="abs box" id="small" style="left:660px;top:470px;width:300px;height:220px;--bd:rgba(30,158,74,.75)"><div><div style="font:800 44px/1.1 var(--f)">Pequeno</div><div class="lbl" style="margin-top:12px">&lt;1 a ~10 bilhões</div></div></div>
+    <div class="abs pill" id="coletor" style="left:660px;top:730px;--bd:rgba(30,158,74,.75)">roda no coletor</div>
+    <div class="abs nt" id="snt" style="top:880px">Parâmetros são o tamanho do modelo: <b>quanto maior, mais caro de rodar</b>.</div>
   </div>
 
   <!-- 3 VLM -->
@@ -99,20 +92,21 @@ body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--f)}
     <div class="abs eyebrow">3 · Visão e linguagem</div>
     <div class="abs ac">VLM</div>
     <div class="abs en">Vision Language Model</div>
-    <div class="abs dd">Entende <b>imagem e texto juntos</b>, num só modelo.</div>
-    <div class="abs box" id="foto" style="left:110px;top:410px;width:230px;height:230px;flex-direction:column;gap:6px;--bd:rgba(10,132,255,.45)">
-      <div style="font:800 26px/1 var(--f)">NF 4.512</div>
-      <div id="barras" style="display:flex;gap:3px;height:70px;align-items:stretch"></div>
-      <div style="font:700 24px/1 var(--m)">48 cx · lote 33</div>
-      <div class="lbl" style="font-size:22px">etiqueta.jpg</div></div>
-    <div class="abs box" id="perg" style="left:110px;top:720px;width:230px;height:120px;font:700 28px/1.2 var(--f);--bd:rgba(255,159,10,.7)">Confere com o pedido 7781?</div>
-    <div class="abs" id="itok" style="left:380px;top:500px;display:flex;gap:10px"></div>
-    <div class="abs" id="ttok" style="left:380px;top:756px;display:flex;gap:10px"></div>
-    <div class="abs lbl" id="il" style="left:380px;top:452px;text-align:left">tokens de imagem</div>
-    <div class="abs lbl" id="tl" style="left:380px;top:708px;text-align:left">tokens de texto</div>
-    <div class="abs box" id="vlm" style="left:770px;top:560px;width:200px;height:200px;font:800 32px/1.15 var(--f);--bd:rgba(10,132,255,.6)">Modelo de<br>linguagem</div>
-    <div class="abs pill" id="vans" style="left:640px;top:900px;--bd:var(--green);font-size:34px">Confere: 48 cx ✓</div>
-    <div class="abs nt" id="vexp" style="left:110px;top:1000px;width:860px">Lê a nota e a etiqueta e <b>cruza com o pedido de compra</b>. Qwen-VL, Llama Vision, Gemini.</div>
+    <div class="abs dd">Lê <b>imagem e texto juntos</b>, num só modelo.</div>
+    <div class="abs box" id="etq" style="left:110px;top:400px;width:240px;height:220px;flex-direction:column;gap:10px;--bd:rgba(0,102,204,.45);
+      clip-path:polygon(0 0,100% 0,100% 58%,86% 66%,93% 76%,80% 86%,88% 100%,0 100%)">
+      <div style="font:800 30px/1 var(--f)">NF 4.512</div>
+      <div id="barras" style="display:flex;gap:3px;height:62px;align-items:stretch;transform:rotate(-4deg)"></div>
+      <div class="lbl" style="font-size:28px">etiqueta</div></div>
+    <div class="abs box" id="avaria" style="left:110px;top:650px;width:240px;height:200px;flex-direction:column;gap:12px;--bd:rgba(0,102,204,.45)">
+      <div style="width:130px;height:96px;background:#D9A76A;box-shadow:inset 0 0 0 3px #B07E43;clip-path:polygon(0 0,62% 0,70% 22%,100% 14%,100% 100%,0 100%)"></div>
+      <div class="lbl" style="font-size:28px">avaria</div></div>
+    <div class="abs box" id="perg" style="left:390px;top:400px;width:350px;height:110px;font:700 30px/1.2 var(--f);--bd:rgba(255,159,10,.75)">Confere com o<br>pedido 7781?</div>
+    <div class="abs" id="ttok" style="left:390px;top:548px;display:flex;gap:10px"></div>
+    <div class="abs" id="itok" style="left:390px;top:720px;display:flex;gap:10px"></div>
+    <div class="abs box" id="vlm" style="left:790px;top:540px;width:180px;height:180px;font:800 30px/1.15 var(--f);--bd:rgba(0,102,204,.6)">Modelo<br>de visão</div>
+    <div class="abs pill" id="vans" style="left:110px;top:890px;--bd:var(--red);font-size:34px;font-weight:700">Caixa amassada → ocorrência aberta</div>
+    <div class="abs nt" id="vexp" style="left:110px;top:1010px;width:860px">Lê a etiqueta rasgada e a avaria e <b>cruza com o pedido de compra</b>.</div>
   </div>
 
   <!-- 4 MoE -->
@@ -120,12 +114,12 @@ body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--f)}
     <div class="abs eyebrow">4 · Mistura de especialistas</div>
     <div class="abs ac">MoE</div>
     <div class="abs en">Mixture of Experts</div>
-    <div class="abs dd">Cada token usa <b>poucos especialistas</b>: economiza cálculo, não memória.</div>
-    <div class="abs pill" id="mtok" style="left:110px;top:640px;font:700 34px/1 var(--m);--bd:rgba(255,159,10,.8)">nota</div>
-    <div class="abs box" id="router" style="left:360px;top:610px;width:180px;height:110px;font:800 30px/1 var(--f)">Roteador</div>
+    <div class="abs dd">Um roteador escolhe <b>poucos blocos</b> para cada token.</div>
+    <div class="abs pill" id="mtok" style="left:110px;top:620px;font:700 34px/1 var(--m);--bd:rgba(255,159,10,.8)">nota</div>
+    <div class="abs box" id="router" style="left:340px;top:592px;width:200px;height:110px;font:800 30px/1 var(--f)">Roteador</div>
     <div class="abs" id="experts" style="left:640px;top:400px;display:grid;grid-template-columns:150px 150px;gap:16px 24px"></div>
     <svg class="abs" id="mlines" style="left:0;top:0" width="1080" height="1350"></svg>
-    <div class="abs nt" style="top:980px">A escolha muda <b>a cada token e a cada camada</b>. DeepSeek-V3: 671 bi de parâmetros, 37 bi ativos por token.</div>
+    <div class="abs nt" id="mnt" style="top:900px"><b>671 bi no total, 37 bi por token.</b><br>Calcula como médio, mas precisa de memória de grande.</div>
   </div>
 
   <!-- 5 LRM -->
@@ -133,48 +127,34 @@ body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--f)}
     <div class="abs eyebrow">5 · Modelo de raciocínio</div>
     <div class="abs ac">LRM</div>
     <div class="abs en">Large Reasoning Model</div>
-    <div class="abs dd">Pensa <b>passo a passo</b> antes de responder.</div>
-    <div class="abs box" style="left:120px;top:400px;width:840px;height:130px;font:700 34px/1.3 var(--f);padding:0 30px;--bd:rgba(255,159,10,.7)">O caminhão sai do CD às 7h50 e a rota leva 3h25. Quando chega?</div>
-    <div class="abs lbl" style="left:120px;top:570px;text-align:left">pensando…</div>
-    <div class="abs" id="think" style="left:120px;top:620px;width:840px;display:flex;flex-direction:column;gap:16px"></div>
-    <div class="abs pill" id="lans" style="left:120px;top:900px;--bd:var(--green);font-size:36px">Chega às 11h15</div>
-    <div class="abs nt" style="top:1010px">Treinado por reforço para raciocinar. Conta simples assim o TMS já faz: <b>o LRM vale quando há várias regras</b>.</div>
+    <div class="abs dd">Treinado para <b>raciocinar passo a passo</b> antes de responder.</div>
+    <div class="abs box" style="left:120px;top:395px;width:840px;height:150px;font:700 32px/1.3 var(--f);padding:0 30px;--bd:rgba(255,159,10,.75)">3 caminhões, 2 docas. O refrigerado tem prioridade e a doca 2 não recebe carreta. Como alocar?</div>
+    <div class="abs lbl" style="left:120px;top:572px">pensando…</div>
+    <div class="abs" id="think" style="left:120px;top:620px;width:840px;display:flex;flex-direction:column;gap:14px"></div>
+    <div class="abs pill" id="lans" style="left:120px;top:900px;--bd:var(--green);font-size:34px;font-weight:700">Plano sem conflito ✓</div>
+    <div class="abs nt" style="top:1005px">Vale quando há <b>várias regras ao mesmo tempo</b>. Conta simples, o WMS ou o TMS resolve.</div>
   </div>
 
-  <!-- 6 difusão -->
+  <!-- 6 eixos -->
   <div class="scene" id="s6">
-    <div class="abs eyebrow" style="color:var(--violet)">6 · Modelo de difusão</div>
-    <div class="abs ac" style="color:var(--violet)">dLLM</div>
-    <div class="abs en">Diffusion Large Language Model</div>
-    <div class="abs dd">Parte de um rascunho mascarado e <b>refina tudo em paralelo</b>.</div>
-    <div class="abs lbl" style="left:110px;top:420px;text-align:left;color:var(--ink);font-weight:700">Autorregressivo: um token por vez</div>
-    <div class="abs" id="lane1" style="left:110px;top:470px;display:flex;gap:12px"></div>
-    <div class="abs lbl" id="c1" style="left:110px;top:570px;text-align:left"></div>
-    <div class="abs lbl" style="left:110px;top:660px;text-align:left;color:var(--ink);font-weight:700">Difusão: vários tokens por passo</div>
-    <div class="abs" id="lane2" style="left:110px;top:710px;display:flex;gap:12px"></div>
-    <div class="abs lbl" id="c2" style="left:110px;top:810px;text-align:left"></div>
-    <div class="abs nt" style="top:930px">Mercury (Inception Labs) e Gemini Diffusion (Google): <b>muito mais rápidos</b>, ainda atrás em raciocínio difícil.</div>
-  </div>
-
-  <!-- 7 eixos -->
-  <div class="scene" id="s7">
-    <div class="abs eyebrow">Eixos dos modelos</div>
+    <div class="abs eyebrow">As siglas se combinam</div>
     <div class="abs h">Um modelo,<br>vários <em>eixos</em>.</div>
     <div id="axes"></div>
-    <div class="abs nt" id="axn" style="top:1050px;text-align:center">DeepSeek-R1 é LLM, MoE e de raciocínio <b>ao mesmo tempo</b>.</div>
+    <div class="abs nt" id="axn" style="top:960px;text-align:center">DeepSeek-R1 é LLM, MoE e de raciocínio.<br>O modelo do coletor é <b>SLM e VLM</b>.</div>
   </div>
 
-  <!-- 8 doca -->
-  <div class="scene" id="s8">
+  <!-- 7 doca -->
+  <div class="scene" id="s7">
     <div class="abs eyebrow">Na prática · doca de recebimento</div>
     <div class="abs h">Três modelos,<br>um <em>fluxo</em>.</div>
     <div id="doca"></div>
-    <div class="abs nt" id="docn" style="top:990px;text-align:center">Cada etapa tem uma restrição diferente.<br><b>Escolha o modelo por ela, não pelo ranking.</b></div>
+    <div class="abs" style="left:0;right:0;top:1180px;text-align:center;font:700 32px/1 var(--f)">Gilsiley H. Darú</div>
+    <div class="abs nt" id="docn" style="top:975px;text-align:center;font-size:36px"><b>Escolha o modelo pela restrição,<br>não pelo ranking.</b></div>
   </div>
 </div>
 
 <script>
-const D=32,$=id=>document.getElementById(id);
+const D=35,$=id=>document.getElementById(id);
 const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
 const prog=(t,a,b)=>clamp((t-a)/(b-a));
 const ease=p=>p*p*(3-2*p);
@@ -184,85 +164,71 @@ const win=(t,a,b,f=.3)=>ease(prog(t,a,a+f))*(1-ease(prog(t,b-f,b)));
 const mk=(cls,html,parent,style)=>{const e=document.createElement('div');e.className=cls;e.innerHTML=html;if(style)e.style.cssText=style;parent.appendChild(e);return e};
 function vis(e,o,dy=0,sc=0){e.style.opacity=o;e.style.transform=`translateY(${(1-Math.min(1,o))*dy}px) scale(${1-(1-Math.min(1,o))*sc})`;e.style.visibility=o<.004?'hidden':'visible'}
 
-const S=[[0,2.8],[2.8,6.2],[6.2,9.6],[9.6,13.4],[13.4,16.8],[16.8,20.8],[20.8,24.4],[24.4,27.6],[27.6,32]];
+/* cenas: abertura, LLM, SLM, VLM, MoE (5,5 s), LRM (5,5 s), eixos (5 s), doca */
+const S=[[0,3],[3,6.8],[6.8,10],[10,14.2],[14.2,19.7],[19.7,25.2],[25.2,30.2],[30.2,35]];
 const scenes=S.map((_,i)=>$('s'+i));
-$('dots').innerHTML='';const dts=[0,1,2,3,4,5,6,7].map(()=>{const i=document.createElement('i');$('dots').appendChild(i);return i});
+const dts=S.slice(1).map(()=>{const i=document.createElement('i');$('dots').appendChild(i);return i});
 
 /* 1 LLM */
 const LB=[["Paris",.91],["Lyon",.04],["a",.02]].map(([k,p])=>{const b=mk('bar',`<div class="k">${k}</div><div class="t"><div class="f"></div></div><div class="p">${p.toFixed(2).replace('.',',')}</div>`,$('bars'));b.p=p;return b});
-/* 2 SLM */
-const TECH=["Destilação: o pequeno aprende com o grande","Poda: corta o que pouco contribui","Quantização: menos bits por número"].map(x=>mk('pill',x,$('tech'),'font-size:24px'));
-const DEVS=["Baixa latência","Privado e offline","Barato de rodar"].map(x=>mk('pill',x,$('devs'),'--bd:rgba(48,209,88,.6)'));
-/* 3 VLM */
-for(let i=0;i<22;i++) mk('', '', $('barras'),`width:${[3,6,2,4][i%4]}px;background:#111725`);
-const IT=[...Array(6)].map(()=>mk('sq','',$('itok'),'background:rgba(10,132,255,.75)'));
+/* 3 VLM: código de barras rasgado (barras faltando) */
+for(let i=0;i<22;i++) mk('', '', $('barras'),`width:${[3,6,2,4][i%4]}px;background:#111725;opacity:${[0,1,1,.25,1,0,.4][i%7]}`);
+const IT=[...Array(6)].map(()=>mk('sq','',$('itok'),'background:rgba(0,102,204,.75)'));
 const TT=[...Array(4)].map(()=>mk('sq','',$('ttok'),'background:rgba(255,159,10,.85)'));
-/* 4 MoE */
-const EX=[...Array(8)].map((_,i)=>mk('box',`Esp. ${i+1}`,$('experts'),'height:96px;font:700 30px/1.1 var(--f)'));
+/* 4 MoE: blocos sem rótulo */
+const EX=[...Array(8)].map(()=>mk('box','',$('experts'),'height:96px'));
 /* 5 LRM */
-const TH=["7h50 + 3h = 10h50","10h50 + 25 min = 11h15","Checagem: 11h15 − 7h50 = 3h25 ✓"].map(x=>mk('box',x,$('think'),'height:66px;justify-content:flex-start;padding:0 26px;font:700 30px/1 var(--m)'));
-/* 6 difusão */
-const W=["O","pedido","chega","amanhã","às","11h15"];
-const mkLane=l=>W.map(w=>mk('box','',l,`height:76px;padding:0 18px;min-width:${Math.max(80,w.length*22+36)}px;font:700 32px/1 var(--f)`));
-const L1=mkLane($('lane1')),L2=mkLane($('lane2'));
-const PASSO=[0,1,2,0,1,1]; // em que passo cada posição se resolve (difusão)
-const ORD=[1,2,3,1,2,2];
-/* 8 doca */
-const DOC=[["VLM","Lê a nota e a etiqueta e cruza com o pedido de compra.","rgba(10,132,255,.6)"],["SLM","Faz a mesma checagem no coletor, sem internet.","rgba(48,209,88,.75)"],["LLM barato","Classifica as ocorrências que o motorista escreve.","rgba(255,159,10,.85)"]];
-const DOE=DOC.map(([a,d,c],i)=>{const e=mk('abs',`<div class="box" style="width:210px;height:150px;font:900 ${a.length>4?34:52}px/1.05 var(--f);--bd:${c}">${a}</div><div style="font:600 34px/1.3 var(--f);flex:1">${d}</div>`,$('s8'),`left:110px;width:860px;top:${380+i*190}px;display:flex;gap:32px;align-items:center`);return e});
-/* 7 eixos */
-const AX=[["Tamanho",["LLM","SLM"]],["Entrada e saída",["texto","visão","áudio","ação (VLA)"]],["Arquitetura",["densa","MoE","híbrida (Mamba)"]],["Como gera",["autorregressivo","difusão"]],["Na resposta",["direto","raciocínio"]]];
-const AXE=AX.map(([n,v],i)=>{const e=mk('abs ax',`<div class="n">${n}</div><div class="v">${v.map(x=>`<span class="${/VLA|áudio|Mamba|difusão/.test(x)?'novo':''}">${x}</span>`).join('')}</div>`,$('s7'));e.style.top=(390+i*124)+'px';return e});
+const TH=["Refrigerado → doca 1, 8h00","Carreta só cabe na doca 1 → 9h00","Truck → doca 2, 8h00 · janelas ok ✓"].map(x=>mk('box',x,$('think'),'height:66px;justify-content:flex-start;padding:0 24px;font:700 28px/1 var(--m)'));
+/* 6 eixos */
+const AX=[["Tamanho",["LLM","SLM"]],["O que entra",["texto","imagem (VLM)"]],["Como é construído",["denso","MoE"]],["Como raciocina",["direto","passo a passo (LRM)"]]];
+const AXE=AX.map(([n,v],i)=>mk('abs ax',`<div class="n">${n}</div><div class="v">${v.map(x=>`<span>${x}</span>`).join('')}</div>`,$('s6'),`top:${395+i*132}px`));
+/* 7 doca */
+const DOC=[["VLM","Lê a etiqueta rasgada e a foto da avaria e cruza com o pedido.","rgba(0,102,204,.6)",52],["SLM","Versão pequena no coletor: checa sem internet.","rgba(30,158,74,.75)",52],["LLM<br>barato","Classifica as ocorrências que o motorista escreve.","rgba(255,159,10,.85)",36]];
+const DOE=DOC.map(([a,d,c,fs],i)=>mk('abs',`<div class="box" style="flex:0 0 210px;height:150px;font:900 ${fs}px/1.05 var(--f);--bd:${c}">${a}</div><div style="font:600 34px/1.3 var(--f);flex:1">${d}</div>`,$('s7'),`left:110px;width:860px;top:${385+i*190}px;display:flex;gap:32px;align-items:center`));
 
 function render(t){
   t=((t%D)+D)%D;
-  scenes.forEach((s,i)=>{const [a,b]=S[i];let o=win(t,a,b,.35);if(i===0)o=Math.max(t<.3?1:o, ease(prog(t,31.7,32)));s.style.opacity=o;s.style.visibility=o<.004?'hidden':'visible'});
-  dts.forEach((d,i)=>{const x=win(t,S[i+1][0],S[i+1][1],.3);d.style.background=i===5?`rgba(142,92,246,${.15+.85*x})`:`rgba(10,132,255,${.15+.85*x})`;d.style.transform=`scale(${1+.5*x})`});
+  scenes.forEach((s,i)=>{const [a,b]=S[i];let o=win(t,a,b,.35);if(i===0)o=Math.max(t<.3?1:o, ease(prog(t,D-.3,D)));s.style.opacity=o;s.style.visibility=o<.004?'hidden':'visible'});
+  dts.forEach((d,i)=>{const x=win(t,S[i+1][0],S[i+1][1],.3);d.style.background=`rgba(0,102,204,${.15+.85*x})`;d.style.transform=`scale(${1+.5*x})`});
   let s=0;for(const [a] of S.slice(1)){const d=t-a;if(d>0&&d<1)s+=Math.exp(-6*d)*Math.sin(14*d)}
   $('card').style.transform=`scale(${1+s*.025},${1-s*.035})`;
+  /* rodapé: nome do autor na última cena */
+  $('dots').style.opacity=1-win(t,S[7][0],S[7][1],.3);
 
-  /* 1 */
+  /* 1 LLM */
   {const a=S[1][0];LB.forEach((b,i)=>{vis(b,sp(t,a+.5+i*.12,.6),24);b.querySelector('.f').style.width=(b.p*100*ease(prog(t,a+.7,a+1.7)))+'%'});
    const pk=t>a+2.0;$('blank').textContent=pk?'Paris':' ';$('blank').style.transform=`scale(${pk?1+.15*Math.exp(-6*(t-a-2))*Math.sin(12*(t-a-2)):1})`;
-   LB[0].querySelector('.f').style.background=pk?'var(--green)':'var(--blue)';}
-  /* 2 */
+   LB[0].querySelector('.f').style.background=pk?'var(--green-l)':'var(--blue)';}
+  /* 2 SLM */
   {const a=S[2][0];vis($('big'),sp(t,a+.3),20);
-   TECH.forEach((p,i)=>vis(p,sp(t,a+.8+i*.35,.6),0,.2));
-   const k=ease(prog(t,a+1.9,a+2.4));vis($('small'),k,0,.6);
-   DEVS.forEach((p,i)=>vis(p,sp(t,a+2.3+i*.15,.6),20));
-   $('big').style.transform=`scale(${1-.12*ease(prog(t,a+.8,a+2.2))})`;}
-  /* 3 */
-  {const a=S[3][0];vis($('foto'),sp(t,a+.2),20);vis($('perg'),sp(t,a+.5),20);
-   vis($('il'),ease(prog(t,a+.8,a+1.1)));vis($('tl'),ease(prog(t,a+1.0,a+1.3)));
-   const mv=ease(prog(t,a+1.9,a+2.6));
-   IT.forEach((q,i)=>{const o=sp(t,a+.8+i*.06,.5);q.style.opacity=o*(1-mv*.9);q.style.transform=`translate(${mv*(400-i*56)}px,${mv*130}px) scale(${o*(1-mv*.6)})`});
-   TT.forEach((q,i)=>{const o=sp(t,a+1.0+i*.06,.5);q.style.opacity=o*(1-mv*.9);q.style.transform=`translate(${mv*(400-i*56)}px,${-mv*110}px) scale(${o*(1-mv*.6)})`});
+   $('sarrow').style.transform=`scaleX(${ease(prog(t,a+.8,a+1.2))})`;
+   vis($('small'),sp(t,a+1.1,.6),0,.4);vis($('coletor'),sp(t,a+1.6,.6),16);vis($('snt'),ease(prog(t,a+2.0,a+2.3)),10);}
+  /* 3 VLM */
+  {const a=S[3][0];vis($('etq'),sp(t,a+.2),20);vis($('avaria'),sp(t,a+.4),20);vis($('perg'),sp(t,a+.6),20);
+   const mv=ease(prog(t,a+1.8,a+2.5));
+   TT.forEach((q,i)=>{const o=sp(t,a+.9+i*.06,.5);q.style.opacity=o*(1-mv*.9);q.style.transform=`translate(${mv*(400-i*56)}px,${mv*60}px) scale(${o*(1-mv*.6)})`});
+   IT.forEach((q,i)=>{const o=sp(t,a+1.1+i*.06,.5);q.style.opacity=o*(1-mv*.9);q.style.transform=`translate(${mv*(400-i*56)}px,${-mv*90}px) scale(${o*(1-mv*.6)})`});
    vis($('vlm'),sp(t,a+.6),0,.3);
-   const pulse=Math.exp(-5*Math.max(0,t-a-2.6))*(t>a+2.6?1:0);$('vlm').style.boxShadow=`0 0 0 ${2+pulse*10}px rgba(10,132,255,${.6})`;
-   vis($('vans'),sp(t,a+2.7,.6),20);vis($('vexp'),ease(prog(t,a+2.9,a+3.2)),10);}
-  /* 4 */
-  {const a=S[4][0];const fase=t<a+2.0?0:1;const ativos=fase?[3,4]:[1,6];
+   const pulse=t>a+2.5?Math.exp(-5*(t-a-2.5)):0;$('vlm').style.boxShadow=`0 0 0 ${2+pulse*10}px rgba(0,102,204,.6)`;
+   vis($('vans'),sp(t,a+2.6,.6),20);vis($('vexp'),ease(prog(t,a+2.9,a+3.2)),10);}
+  /* 4 MoE */
+  {const a=S[4][0];const fase=t<a+2.8?0:1;const ativos=fase?[3,4]:[1,6];
    $('mtok').textContent=fase?'fiscal':'nota';
-   const tin=fase?a+2.0:a+.3;vis($('mtok'),sp(t,tin,.5),0,.3);vis($('router'),sp(t,a+.2),0,.2);
+   const tin=fase?a+2.8:a+.3;vis($('mtok'),sp(t,tin,.5),0,.3);vis($('router'),sp(t,a+.2),0,.2);
    const lit=ease(prog(t,tin+.5,tin+.9));
-   EX.forEach((e,i)=>{vis(e,sp(t,a+.3+i*.05,.5),0,.2);const on=ativos.includes(i);
-     e.style.setProperty('--bd',on?`rgba(48,209,88,${.2+.8*lit})`:'rgba(17,23,37,.10)');e.style.background=on?`rgba(48,209,88,${.18*lit})`:'#fff';e.style.opacity=on?1:(1-.55*lit)*Math.min(1,sp(t,a+.3+i*.05,.5))});
-   const ln=[...Array(8)].map((_,i)=>{const col=i%2,row=Math.floor(i/2);const x2=640+col*174,y2=400+row*112+48;const on=ativos.includes(i);
-     return `<line x1="540" y1="665" x2="${x2}" y2="${y2}" stroke="${on?'#30D158':'rgba(17,23,37,.10)'}" stroke-width="${on?5:2}" stroke-dasharray="600" stroke-dashoffset="${on?600*(1-lit):0}" opacity="${on?1:sp(t,a+.4,.5)*.8}"/>`}).join('');
-   $('mlines').innerHTML=ln+`<line x1="290" y1="665" x2="360" y2="665" stroke="rgba(17,23,37,.35)" stroke-width="4" opacity="${sp(t,a+.4,.5)}"/>`;}
-  /* 5 */
-  {const a=S[5][0];TH.forEach((e,i)=>vis(e,sp(t,a+.6+i*.55,.6),18));vis($('lans'),sp(t,a+2.4,.6),0,.3);}
-  /* 6 */
-  {const a=S[6][0];const t1=t-a-.5;
-   L1.forEach((e,i)=>{const on=t1>i*.42;e.textContent=on?W[i]:'';e.style.setProperty('--bd',on?'rgba(10,132,255,.55)':'rgba(17,23,37,.10)');e.style.opacity=on?1:.5});
-   const n1=Math.max(0,Math.min(6,Math.floor(t1/.42)+1));$('c1').textContent=t1<0?'':`${n1} de 6 passadas · cada token depende do anterior`;
-   const passo=t1<0?-1:Math.min(3,Math.floor(t1/.45)+0);
-   L2.forEach((e,i)=>{const on=passo>=ORD[i];e.textContent=on?W[i]:'▒▒';e.style.color=on?'var(--ink)':'rgba(17,23,37,.25)';e.style.setProperty('--bd',on?'rgba(142,92,246,.7)':'rgba(17,23,37,.10)')});
-   $('c2').textContent=t1<0?'':(passo>=3?'menos passos que tokens · pronto antes':`passo ${Math.max(0,passo)}`);}
-  /* 8 */
-  {const a=S[8][0];DOE.forEach((e,i)=>vis(e,sp(t,a+.4+i*.55,.6),24));vis($('docn'),ease(prog(t,a+2.3,a+2.6)),10);}
-  /* 7 */
-  {const a=S[7][0];AXE.forEach((e,i)=>vis(e,sp(t,a+.4+i*.22,.6),24));vis($('axn'),ease(prog(t,a+1.8,a+2.1)),10);}
+   EX.forEach((e,i)=>{const on=ativos.includes(i);const o=Math.min(1,sp(t,a+.3+i*.05,.5));
+     e.style.setProperty('--bd',on?`rgba(30,158,74,${.2+.8*lit})`:'rgba(17,23,37,.10)');e.style.background=on?`rgba(48,209,88,${.25*lit})`:'#fff';
+     e.style.opacity=on?o:o*(1-.55*lit);e.style.visibility=o<.004?'hidden':'visible'});
+   $('mlines').innerHTML=[...Array(8)].map((_,i)=>{const col=i%2,row=Math.floor(i/2);const x2=640+col*174,y2=400+row*112+48;const on=ativos.includes(i);
+     return `<line x1="540" y1="647" x2="${x2}" y2="${y2}" stroke="${on?'#1E9E4A':'rgba(17,23,37,.10)'}" stroke-width="${on?5:2}" stroke-dasharray="600" stroke-dashoffset="${on?600*(1-lit):0}" opacity="${on?1:sp(t,a+.4,.5)*.8}"/>`}).join('')
+     +`<line x1="270" y1="647" x2="340" y2="647" stroke="rgba(17,23,37,.35)" stroke-width="4" opacity="${sp(t,a+.4,.5)}"/>`;
+   vis($('mnt'),ease(prog(t,a+1.3,a+1.6)),10);}
+  /* 5 LRM */
+  {const a=S[5][0];TH.forEach((e,i)=>vis(e,sp(t,a+.7+i*.8,.6),18));vis($('lans'),sp(t,a+3.3,.6),0,.3);}
+  /* 6 eixos */
+  {const a=S[6][0];AXE.forEach((e,i)=>vis(e,sp(t,a+.4+i*.35,.6),24));vis($('axn'),ease(prog(t,a+2.2,a+2.5)),10);}
+  /* 7 doca */
+  {const a=S[7][0];DOE.forEach((e,i)=>vis(e,sp(t,a+.4+i*.6,.6),24));vis($('docn'),ease(prog(t,a+2.4,a+2.7)),10);}
 }
 render(0);
 </script>
