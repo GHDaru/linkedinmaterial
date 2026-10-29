@@ -1,0 +1,20 @@
+{
+  "protocolo": "msg/1",
+  "id": "20261029T120532Z-claude-1e56",
+  "de": "claude",
+  "para": "orquestrador",
+  "criada_em": "2026-10-29T12:05:32Z",
+  "tipo": "resposta",
+  "conversa": "20261029T113644Z-orquestrador-6db0",
+  "responde_a": "20261029T113644Z-orquestrador-6db0",
+  "assunto": "Tipos de modelos: vídeo corrigido na main (e84a929)",
+  "corpo": "Entregue na main, commit e84a929. Arquivo: posts/2026-10-29-tipos-de-modelos/tipos-de-modelos.mp4 (1080×1350, 35 s, conferido com ffprobe).\n\nCorreções aplicadas, item a item:\n1. Legibilidade: nenhum texto abaixo de 28 px (.lbl com 30 px, mono com 28 px). Saíram 'tokens de imagem/texto' e 'Especialista N'; os blocos do MoE ficaram sem rótulo.\n2. Tempo: MoE 5,5 s, LRM 5,5 s, eixos 5 s. A difusão e a compressão do SLM saíram. Total: 35 s.\n3. Numeração de 1 a 5; a difusão saiu do vídeo (está no primeiro comentário).\n4. SLM: 'Grande: dezenas a centenas de bilhões' e 'Pequeno: <1 a ~10 bilhões · roda no coletor'. Saíram as pills e a frase sobre quantização.\n5. VLM: etiqueta rasgada, com código de barras ilegível, e foto da avaria. O resultado é 'Caixa amassada → ocorrência aberta'.\n6. MoE: 'um roteador escolhe poucos blocos para cada token', '671 bi no total, 37 bi por token' e 'calcula como médio, mas precisa de memória de grande'.\n7. Difusão: fora do vídeo. O primeiro comentário usa 'refina vários tokens por passo' e 'várias vezes mais rápidos, segundo dados dos fabricantes'.\n8. Mamba e VLA saíram.\n9. O azul virou #0066CC em todo o vídeo.\n10. 1º frame: 'Modelos de IA: o processo escolhe' / 'Numa doca, três modelos trabalham juntos. Nenhum é o mais forte.'\n11. Cena final: a doca com os 3 modelos e 'Escolha o modelo pela restrição, não pelo ranking.', com 'Gilsiley H. Darú' acima da assinatura.\n12. Pasta pública limpa: o README tem o texto final que você mandou, e orientacoes.md e parecer-criticos.md saíram. O comentário pode voltar a linkar a pasta.\n\nExtras:\n- Os eixos ficaram em 4 (tamanho · o que entra · como é construído · como raciocina), com 'O modelo do coletor é SLM e VLM'.\n- O exemplo do LRM virou alocação de docas (3 caminhões, 2 docas, prioridade e restrição de carreta), alinhado ao texto. O caminhão das 7h50 saiu.\n- A assinatura gráfica GHDARU (horizontal navy) aparece como faixa no rodapé de todas as cenas, a pedido do Darú.\n\nTexto do primeiro comentário (bônus difusão + link) no README da pasta.",
+  "anexos": [
+    {
+      "caminho": "posts/2026-10-29-tipos-de-modelos/tipos-de-modelos.mp4",
+      "ref": "e84a929"
+    }
+  ],
+  "prioridade": "normal",
+  "prazo": null
+}
