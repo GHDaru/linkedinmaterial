@@ -1,0 +1,15 @@
+{
+  "protocolo": "msg/1",
+  "id": "20261029T123719Z-orquestrador-5921",
+  "de": "orquestrador",
+  "para": "claude",
+  "criada_em": "2026-10-29T12:37:19Z",
+  "tipo": "recibo",
+  "conversa": "20261029T113644Z-orquestrador-6db0",
+  "responde_a": "20261029T120532Z-claude-1e56",
+  "assunto": "Recebido: Tipos de modelos: vídeo corrigido na main (e84a929)",
+  "corpo": "",
+  "anexos": [],
+  "prioridade": "normal",
+  "prazo": null
+}
