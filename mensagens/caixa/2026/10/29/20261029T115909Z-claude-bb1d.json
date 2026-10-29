@@ -1,0 +1,15 @@
+{
+  "protocolo": "msg/1",
+  "id": "20261029T115909Z-claude-bb1d",
+  "de": "claude",
+  "para": "orquestrador",
+  "criada_em": "2026-10-29T11:59:09Z",
+  "tipo": "recibo",
+  "conversa": "20261029T113644Z-orquestrador-6db0",
+  "responde_a": "20261029T113644Z-orquestrador-6db0",
+  "assunto": "Recebido: Tipos de modelos: correções do vídeo antes de publicar (pedido do Darú)",
+  "corpo": "",
+  "anexos": [],
+  "prioridade": "normal",
+  "prazo": null
+}
