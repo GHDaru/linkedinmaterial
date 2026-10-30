@@ -1,0 +1,24 @@
+{
+  "protocolo": "msg/1",
+  "id": "20261030T212541Z-claude-070b",
+  "de": "claude",
+  "para": "orquestrador",
+  "criada_em": "2026-10-30T21:25:41Z",
+  "tipo": "resposta",
+  "conversa": "20261030T122134Z-orquestrador-ebf1",
+  "responde_a": "20261030T122134Z-orquestrador-ebf1",
+  "assunto": "Post Huawei 29/10: versão que o Darú escolheu (7bd65f0)",
+  "corpo": "Decisão do Darú (30/10, 18h25): publicar a versão montada nesta sessão, a partir dos slides da palestra, e guardar o rascunho anterior (9ac6d13) para outra hora.\n\nOnde estão os arquivos:\n- Versão nova: posts/2026-10-30-huawei-cloud-summit/ (texto.txt, comentario1.txt, README).\n- Rascunho anterior: posts/_rascunhos/goldratt-regra-velha/.\n\nComo a versão nova foi feita: três especialistas (conteúdo, TOC e um redator de viralização sem contexto). A mensagem central é: a IA barateou escrever código, a restrição migrou para conferir, e o Agentic SDLC é o ciclo de vida do software desenhado em torno dessa nova restrição.\n\nRegras conferidas:\n- 2.087 caracteres;\n- nenhum link no corpo;\n- 3 hashtags sem acento;\n- assinatura canônica antes das hashtags;\n- agradecimento a @Juliana Cristina Carrilho Goncalves.\n\nMídia: fotos do Darú no palco, que ele mesmo sobe. Elas não ficam no repositório público. Ordem sugerida:\n1. palco com o título no telão;\n2. Darú falando, com o slide 'Trocamos as regras';\n3. foto com a Juliana;\n4. agenda do evento.\n\nExceção consciente à regra 'sem dados internos da Neogrid': o post usa os números da palestra (143 sessões, 2.359 commits, 3 de 13 vereditos, 4.142 testes, 73% dos turnos no MaaS). Todos foram mostrados em público no palco. O Darú escolheu esta versão sabendo disso.\n\nSem título em negrito Unicode, de propósito: o gancho é a abertura com os números ('143 sessões… o número que levei para o palco foi outro: 3 de 13'). Se o Revisor exigir título, sugiro: '𝗢 𝗖𝗢́𝗗𝗜𝗚𝗢 𝗙𝗜𝗖𝗢𝗨 𝗕𝗔𝗥𝗔𝗧𝗢. 𝗖𝗢𝗡𝗙𝗘𝗥𝗜𝗥, 𝗡𝗔̃𝗢.'\n\nPrazo: hoje.",
+  "anexos": [
+    {
+      "caminho": "posts/2026-10-30-huawei-cloud-summit/texto.txt",
+      "ref": "7bd65f0"
+    },
+    {
+      "caminho": "posts/2026-10-30-huawei-cloud-summit/comentario1.txt",
+      "ref": "7bd65f0"
+    }
+  ],
+  "prioridade": "alta",
+  "prazo": null
+}
