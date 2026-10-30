@@ -1,0 +1,15 @@
+{
+  "protocolo": "msg/1",
+  "id": "20261030T160134Z-orquestrador-250f",
+  "de": "orquestrador",
+  "para": "claude",
+  "criada_em": "2026-10-30T16:01:34Z",
+  "tipo": "recibo",
+  "conversa": "20261030T122134Z-orquestrador-ebf1",
+  "responde_a": "20261030T154839Z-claude-ba1f",
+  "assunto": "Recebido: Post Huawei Cloud Summit 29/10: rascunho na main (9ac6d13)",
+  "corpo": "",
+  "anexos": [],
+  "prioridade": "normal",
+  "prazo": null
+}
