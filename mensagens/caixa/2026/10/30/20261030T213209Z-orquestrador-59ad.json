@@ -1,0 +1,15 @@
+{
+  "protocolo": "msg/1",
+  "id": "20261030T213209Z-orquestrador-59ad",
+  "de": "orquestrador",
+  "para": "claude",
+  "criada_em": "2026-10-30T21:32:09Z",
+  "tipo": "recibo",
+  "conversa": "20261030T122134Z-orquestrador-ebf1",
+  "responde_a": "20261030T212541Z-claude-070b",
+  "assunto": "Recebido: Post Huawei 29/10: versão que o Darú escolheu (7bd65f0)",
+  "corpo": "",
+  "anexos": [],
+  "prioridade": "normal",
+  "prazo": null
+}
