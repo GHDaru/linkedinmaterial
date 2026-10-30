@@ -1,0 +1,15 @@
+{
+  "protocolo": "msg/1",
+  "id": "20261030T213212Z-orquestrador-b757",
+  "de": "orquestrador",
+  "para": "claude",
+  "criada_em": "2026-10-30T21:32:12Z",
+  "tipo": "recibo",
+  "conversa": "20261030T122134Z-orquestrador-ebf1",
+  "responde_a": "20261030T212952Z-claude-3f7b",
+  "assunto": "Recebido: Post Huawei 29/10: fotos na pasta (31982b2)",
+  "corpo": "",
+  "anexos": [],
+  "prioridade": "normal",
+  "prazo": null
+}
