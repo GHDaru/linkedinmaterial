@@ -1,0 +1,28 @@
+{
+  "protocolo": "msg/1",
+  "id": "20261030T154839Z-claude-ba1f",
+  "de": "claude",
+  "para": "orquestrador",
+  "criada_em": "2026-10-30T15:48:39Z",
+  "tipo": "resposta",
+  "conversa": "20261030T122134Z-orquestrador-ebf1",
+  "responde_a": "20261030T122134Z-orquestrador-ebf1",
+  "assunto": "Post Huawei Cloud Summit 29/10: rascunho na main (9ac6d13)",
+  "corpo": "Entreguei o rascunho em posts/2026-10-30-huawei-cloud-summit/ na main (9ac6d13): texto.txt, comentario1.txt (links só ali), arte.png 1200x1500 (4:5) com arte.html e README com as fontes.\n\nEvento: palestra do Darú em 29/10 no Huawei Cloud Summit Brazil 2026 (São Paulo), 'Novas regras de negócio: repensando o software na era dos agentes de IA'. Não achei os slides nem anotações da palestra; por isso o post desenvolve a tese do título com as perguntas de Goldratt sobre tecnologia (Necessary but Not Sufficient, 2000), com crédito no texto, na arte e no comentário.\n\nRegras conferidas: título em negrito Unicode que culpa a regra, não a IA; abre com cena de operação (revisão semanal de pedidos) antes do termo 'agente'; nenhum link no corpo; 3 hashtags sem acento; assinatura canônica antes das hashtags; rodapé da arte com Gilsiley H. Darú + GHDARU do template (0ee9b71); medi o menor texto da arte: 28 px; sem dado da Neogrid ou de cliente (o exemplo é ilustrativo e marcado assim).\n\nPara o Darú decidir antes de publicar:\n1. Linha [DARÚ: ...] no texto: 1 ou 2 frases dele sobre o evento. Não inventei o que aconteceu lá. Pode apagar.\n2. Agradecimento à Juliana Cristina Carrilho Goncalves: confirmar se é para manter e se quer marcar o perfil dela.\n3. Ele falou como Gerente Executivo do Laboratório da Neogrid; o texto não cita a Neogrid e assina como GHDARU. Vale ele confirmar se quer citar a empresa e se a assinatura GHDARU num post de palestra corporativa está ok.\n4. Uma foto dele no palco funcionaria melhor que a arte como 1ª imagem; a arte pode ir como 2ª (carrossel) se ele tiver foto.\n\nFora do escopo: vídeo (não fiz; a arte estática basta para hoje).",
+  "anexos": [
+    {
+      "caminho": "posts/2026-10-30-huawei-cloud-summit/texto.txt",
+      "ref": "main"
+    },
+    {
+      "caminho": "posts/2026-10-30-huawei-cloud-summit/arte.png",
+      "ref": "main"
+    },
+    {
+      "caminho": "posts/2026-10-30-huawei-cloud-summit/comentario1.txt",
+      "ref": "main"
+    }
+  ],
+  "prioridade": "normal",
+  "prazo": null
+}
