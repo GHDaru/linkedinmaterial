@@ -1,27 +1,49 @@
-𝗔𝗚𝗘𝗡𝗧𝗘 𝗡𝗢𝗩𝗢 𝗖𝗢𝗠 𝗥𝗘𝗚𝗥𝗔 𝗩𝗘𝗟𝗛𝗔 𝗙𝗔𝗭 𝗢 𝗠𝗘𝗦𝗠𝗢, 𝗦𝗢́ 𝗤𝗨𝗘 𝗠𝗔𝗜𝗦 𝗥𝗔́𝗣𝗜𝗗𝗢
+143 sessões de IA fizeram 2.359 commits entre 7/9 e 13/10.
+Mas o número que levei para o palco foi outro: 3 de 13.
 
-Numa reposição de lojas, o planejador revisa os pedidos uma vez por semana. Não porque o estoque pede, mas porque ninguém consegue olhar milhares de itens todo dia. A regra nasceu de uma limitação: a atenção de quem planeja.
+Ontem, no Huawei Cloud Summit Brazil 2026, falei sobre novas regras de negócio para o software na era dos agentes de IA.
 
-Ontem (29/10) falei sobre isso no Huawei Cloud Summit Brazil 2026, em São Paulo, na palestra "Novas regras de negócio: repensando o software na era dos agentes de IA".
+Parti de Goldratt, da Teoria das Restrições.
 
-A ideia central: quando um agente passa a olhar todos os itens todo dia, a limitação diminui. Se a regra semanal continua, o agente faz o mesmo pedido semanal, só que mais rápido. O ganho aparece quando a regra muda junto: revisar quando o estoque pede, não quando a agenda deixa.
+Para ele, tecnologia só traz benefício com duas condições:
+1. ela diminui uma limitação;
+2. a gente muda as regras que criou para conviver com essa limitação.
 
-Antes de escolher a ferramenta, quatro perguntas, adaptadas de Eli Goldratt:
+Só a primeira não basta.
 
-1. Que limitação essa tecnologia reduz?
-2. Que regras criamos para conviver com essa limitação?
-3. Que regras devemos usar agora?
-4. O que o software precisa mudar para seguir as regras novas?
+A limitação que os agentes diminuíram: escrever código era caro.
 
-A maioria dos projetos para na primeira. O resultado está na terceira.
+As regras que trocamos no Laboratório da Neogrid:
+→ "Mantenha o legado" virou "reescrever pode sair mais barato". ECS: 3 anos em 3 dias.
+→ "Planilha vira sistema depois de anos" virou "em semanas". OLA: 3 semanas.
+→ "Leia o código linha a linha" virou "testes e veredito escrito". 4.142 testes por entrega.
 
-[DARÚ: 1 ou 2 frases suas sobre a conversa no evento, uma pergunta da plateia ou o que mais chamou atenção. Se preferir, apague esta linha.]
+Com as regras antigas, o código dos agentes fica parado, esperando revisão.
 
-Obrigado à Juliana Cristina Carrilho Goncalves e à organização do evento.
+E aqui entra o 3 de 13.
 
-Na sua operação, qual regra existe só porque ninguém dava conta de olhar tudo?
+A restrição não sumiu. Mudou de lugar: de escrever para conferir.
+Num chamado, 3 de 13 vereditos técnicos saíram errados. O segundo verificador pegou os três.
+
+Por isso o método Maestro, 1 humano regendo N agentes, gira em torno de conferir:
+• Quem escreve o código não fecha o portão.
+• Veredito em arquivo, nunca por mensagem.
+• 19 workers de IA, no máximo 8 ativos. Gerar mais do que se confere só aumenta a fila.
+• Testes em VM, numa cópia limpa do código.
+• Retro vira regra: um gerente falou 5 horas com a sessão errada. Hoje toda sessão confirma o endereço.
+
+O ciclo de vida do software foi desenhado para quando o caro era escrever.
+Quando o caro passa a ser conferir, o ciclo precisa ser outro.
+
+Chamo isso de Agentic SDLC: Agentic Software Development Life Cycle.
+
+No motor, o glm-5.2 no Huawei Cloud MaaS fez 73% dos turnos; o Claude Opus ficou sobretudo na coordenação.
+
+Obrigado, @Juliana Cristina Carrilho Goncalves, pela parceria no palco.
+
+Qual regra da era do código caro ainda segura o seu time?
 
 GHDARU · consultoria e implantação de processos agênticos
 ghdaru@ghdaru.com.br
 
-#InteligenciaArtificial #SupplyChain #TeoriaDasRestricoes
+#TeoriaDasRestricoes #AgenticSDLC #AgentesDeIA

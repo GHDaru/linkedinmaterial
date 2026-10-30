@@ -1,6 +1,1 @@
-As quatro perguntas são uma adaptação das seis que Eli Goldratt, Eli Schragenheim e Carol Ptak propõem em "Necessary but Not Sufficient" (2000) para avaliar o valor de uma tecnologia. As duas que deixei de fora tratam de como fazer a mudança acontecer.
-
-Resumo das seis perguntas: https://ensembleconsultinggroup.com/how-to-judge-technology-with-six-questions/
-Série do Goldratt sobre o tema: https://www.toc-goldratt.com/product/Necessary-and-Sufficient-Series
-
-Arte e fonte do post: https://github.com/GHDaru/linkedinmaterial/tree/main/posts/2026-10-30-huawei-cloud-summit
+A ideia de que tecnologia só traz benefício quando as regras feitas para a limitação antiga mudam vem das seis perguntas de Eli Goldratt, Eli Schragenheim e Carol Ptak em "Necessary but Not Sufficient" (2000).
