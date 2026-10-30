@@ -1,5 +1,5 @@
-143 sessões de IA fizeram 2.359 commits entre 7/9 e 13/10.
-Mas o número que levei para o palco foi outro: 3 de 13.
+143 especificações. Cerca de 2.300 tarefas. Feitas por agentes de IA entre 7/9 e 13/10.
+E uma pergunta guiou tudo: o que temos que fazer para a IA desenvolver sozinha?
 
 Ontem, no Huawei Cloud Summit Brazil 2026, falei sobre novas regras de negócio para o software na era dos agentes de IA.
 
@@ -14,30 +14,22 @@ Só a primeira não basta.
 A limitação que os agentes diminuíram: escrever código era caro.
 
 As regras que trocamos no Laboratório da Neogrid:
-→ "Mantenha o legado" virou "reescrever pode sair mais barato". ECS: 3 anos em 3 dias.
-→ "Planilha vira sistema depois de anos" virou "em semanas". OLA: 3 semanas.
-→ "Leia o código linha a linha" virou "testes e veredito escrito". 4.142 testes por entrega.
-
-Com as regras antigas, o código dos agentes fica parado, esperando revisão.
-
-E aqui entra o 3 de 13.
+→ "Mantenha o legado" virou "reescrever pode sair mais barato". Um sistema bem documentado, que levou 3 anos para ser feito, foi replicado em 3 dias.
+→ "Planilha vira sistema depois de anos" virou "em semanas". Um sistema mais aberto levou 3 semanas, e o tempo foi para os portões humanos, não para o código.
+→ "Leia o código linha a linha" virou "testes e veredito escrito". TDD com DDD é premissa: 4.142 testes por entrega.
 
 A restrição não sumiu. Mudou de lugar: de escrever para conferir.
-Num chamado, 3 de 13 vereditos técnicos saíram errados. O segundo verificador pegou os três.
 
-Por isso o método Maestro, 1 humano regendo N agentes, gira em torno de conferir:
+E quem confere é a própria IA, em contexto fresco. Num chamado, 3 de 13 vereditos técnicos saíram errados; o segundo verificador pegou os três. Com dois agentes frescos auditando o código, os problemas praticamente zeraram.
+
+As regras do que chamo de Agentic SDLC (Agentic Software Development Life Cycle):
 • Quem escreve o código não fecha o portão.
 • Veredito em arquivo, nunca por mensagem.
-• 19 workers de IA, no máximo 8 ativos. Gerar mais do que se confere só aumenta a fila.
-• Testes em VM, numa cópia limpa do código.
-• Retro vira regra: um gerente falou 5 horas com a sessão errada. Hoje toda sessão confirma o endereço.
+• Antes de agir sozinho, o agente responde: a tarefa é reversível? Qual o impacto?
+• Um gerente coordena no máximo 7 workers. Mais que isso, a carga derruba a coordenação.
+• Retro vira regra: o tropeço que se repete vira regra escrita que toda sessão nova lê.
 
-O ciclo de vida do software foi desenhado para quando o caro era escrever.
-Quando o caro passa a ser conferir, o ciclo precisa ser outro.
-
-Chamo isso de Agentic SDLC: Agentic Software Development Life Cycle.
-
-No motor, o glm-5.2 no Huawei Cloud MaaS fez 73% dos turnos; o Claude Opus ficou sobretudo na coordenação.
+Rodamos com 2 gerentes e 13 workers de IA. No motor, o glm-5.2 no Huawei Cloud MaaS fez 73% dos turnos; o Claude Opus ficou sobretudo na coordenação.
 
 Obrigado, @Juliana Cristina Carrilho Goncalves, pela parceria no palco.
 
