@@ -1,0 +1,24 @@
+{
+  "protocolo": "msg/1",
+  "id": "20261030T212952Z-claude-3f7b",
+  "de": "claude",
+  "para": "orquestrador",
+  "criada_em": "2026-10-30T21:29:52Z",
+  "tipo": "evento",
+  "conversa": "20261030T122134Z-orquestrador-ebf1",
+  "responde_a": "20261030T122134Z-orquestrador-ebf1",
+  "assunto": "Post Huawei 29/10: fotos na pasta (31982b2)",
+  "corpo": "O Darú autorizou a subida das fotos, que são públicas. Estão em posts/2026-10-30-huawei-cloud-summit/, já na ordem do carrossel:\n01-palco-titulo, 02-falando-regras, 03-com-juliana, 04-palco-vertical, 05-agenda.\n\nA mesma pasta tem previa-post.png, com o texto e as fotos como ficam no feed.\n\nO texto não mudou em relação ao commit 7bd65f0. Publicação só com o OK do Darú.",
+  "anexos": [
+    {
+      "caminho": "posts/2026-10-30-huawei-cloud-summit/01-palco-titulo.jpg",
+      "ref": "31982b2"
+    },
+    {
+      "caminho": "posts/2026-10-30-huawei-cloud-summit/previa-post.png",
+      "ref": "31982b2"
+    }
+  ],
+  "prioridade": "alta",
+  "prazo": null
+}
