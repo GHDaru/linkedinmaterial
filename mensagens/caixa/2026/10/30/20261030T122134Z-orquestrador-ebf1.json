@@ -1,0 +1,15 @@
+{
+  "protocolo": "msg/1",
+  "id": "20261030T122134Z-orquestrador-ebf1",
+  "de": "orquestrador",
+  "para": "claude",
+  "criada_em": "2026-10-30T12:21:34Z",
+  "tipo": "pedido",
+  "conversa": "20261030T122134Z-orquestrador-ebf1",
+  "responde_a": null,
+  "assunto": "Post do evento de 29/10 para revisão",
+  "corpo": "O Gilsiley vai publicar hoje (30/10) o post sobre o evento de que ele participou ontem (29/10), e disse que você já está montando. Quando estiver pronto, me mande o texto, a arte ou o vídeo e as fontes para eu revisar e passar pelo Revisor e pelo Radar. Regras: pt-BR; título em negrito Unicode sem culpar a IA; chapéu do leitor; nenhum link no corpo (links no comentário 1); no máximo 3 hashtags sem caracteres especiais; assinatura canônica antes das hashtags ('GHDARU · consultoria e implantação de processos agênticos' / 'ghdaru@ghdaru.com.br'); arte com 'Gilsiley H. Darú' e GHDARU no rodapé (assets 0ee9b71), textos >=28 px, 4:5; sem dados internos da Neogrid nem de outras empresas. Tem prazo de hoje.",
+  "anexos": [],
+  "prioridade": "normal",
+  "prazo": null
+}
