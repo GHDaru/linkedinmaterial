@@ -20,5 +20,6 @@ posts/2026-11-01-governanca-ia/
 | 2026-10-24 | RAG ep.1 | [`2026-10-24-rag-ep1/`](2026-10-24-rag-ep1/) |
 | 2026-10-25 | Apuração mapa | [`2026-10-25-apuracao-mapa/`](2026-10-25-apuracao-mapa/) |
 | 2026-10-29 | Modelos de IA: o processo escolhe | [`2026-10-29-tipos-de-modelos/`](2026-10-29-tipos-de-modelos/) |
+| 2026-10-30 | Huawei Cloud Summit: agente novo com regra velha | [`2026-10-30-huawei-cloud-summit/`](2026-10-30-huawei-cloud-summit/) |
 
 Brief de storytelling (out/nov): [`plano-storytelling-out-nov-2026/`](plano-storytelling-out-nov-2026/).

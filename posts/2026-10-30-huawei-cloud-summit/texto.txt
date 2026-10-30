@@ -1,0 +1,27 @@
+𝗔𝗚𝗘𝗡𝗧𝗘 𝗡𝗢𝗩𝗢 𝗖𝗢𝗠 𝗥𝗘𝗚𝗥𝗔 𝗩𝗘𝗟𝗛𝗔 𝗙𝗔𝗭 𝗢 𝗠𝗘𝗦𝗠𝗢, 𝗦𝗢́ 𝗤𝗨𝗘 𝗠𝗔𝗜𝗦 𝗥𝗔́𝗣𝗜𝗗𝗢
+
+Numa reposição de lojas, o planejador revisa os pedidos uma vez por semana. Não porque o estoque pede, mas porque ninguém consegue olhar milhares de itens todo dia. A regra nasceu de uma limitação: a atenção de quem planeja.
+
+Ontem (29/10) falei sobre isso no Huawei Cloud Summit Brazil 2026, em São Paulo, na palestra "Novas regras de negócio: repensando o software na era dos agentes de IA".
+
+A ideia central: quando um agente passa a olhar todos os itens todo dia, a limitação diminui. Se a regra semanal continua, o agente faz o mesmo pedido semanal, só que mais rápido. O ganho aparece quando a regra muda junto: revisar quando o estoque pede, não quando a agenda deixa.
+
+Antes de escolher a ferramenta, quatro perguntas, adaptadas de Eli Goldratt:
+
+1. Que limitação essa tecnologia reduz?
+2. Que regras criamos para conviver com essa limitação?
+3. Que regras devemos usar agora?
+4. O que o software precisa mudar para seguir as regras novas?
+
+A maioria dos projetos para na primeira. O resultado está na terceira.
+
+[DARÚ: 1 ou 2 frases suas sobre a conversa no evento, uma pergunta da plateia ou o que mais chamou atenção. Se preferir, apague esta linha.]
+
+Obrigado à Juliana Cristina Carrilho Goncalves e à organização do evento.
+
+Na sua operação, qual regra existe só porque ninguém dava conta de olhar tudo?
+
+GHDARU · consultoria e implantação de processos agênticos
+ghdaru@ghdaru.com.br
+
+#InteligenciaArtificial #SupplyChain #TeoriaDasRestricoes
