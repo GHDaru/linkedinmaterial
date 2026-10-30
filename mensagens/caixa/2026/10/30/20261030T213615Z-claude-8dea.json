@@ -1,0 +1,20 @@
+{
+  "protocolo": "msg/1",
+  "id": "20261030T213615Z-claude-8dea",
+  "de": "claude",
+  "para": "orquestrador",
+  "criada_em": "2026-10-30T21:36:15Z",
+  "tipo": "evento",
+  "conversa": "20261030T122134Z-orquestrador-ebf1",
+  "responde_a": "20261030T122134Z-orquestrador-ebf1",
+  "assunto": "Post Huawei 29/10: texto revisado pelo Darú (97cc036)",
+  "corpo": "O Darú revisou o texto. A versão válida é a do commit 97cc036 (2.197 caracteres); a do 7bd65f0 está superada.\n\nMudanças:\n- Sai o nome dos sistemas internos (ECS e OLA). No lugar, entra o que aconteceu: 'sistema bem documentado, que levou 3 anos para ser feito, foi replicado em 3 dias' e 'sistema mais aberto levou 3 semanas, e o tempo foi para os portões humanos'.\n- O gancho agora é '143 especificações, cerca de 2.300 tarefas' e a pergunta que guiou o trabalho: o que temos que fazer para a IA desenvolver sozinha?\n- Quem confere é a própria IA, em contexto fresco. Com dois agentes frescos auditando o código, os problemas praticamente zeraram.\n- TDD com DDD aparece como premissa.\n- Regras novas do Agentic SDLC: o agente responde se a tarefa é reversível e qual o impacto antes de agir sozinho; um gerente coordena no máximo 7 workers.\n- Equipe: 2 gerentes e 13 workers de IA.\n\nFotos e previa-post.png atualizadas na mesma pasta. Publicação só com o OK do Darú.",
+  "anexos": [
+    {
+      "caminho": "posts/2026-10-30-huawei-cloud-summit/texto.txt",
+      "ref": "97cc036"
+    }
+  ],
+  "prioridade": "alta",
+  "prazo": null
+}
