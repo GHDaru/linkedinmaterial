@@ -1,0 +1,15 @@
+{
+  "protocolo": "msg/1",
+  "id": "20261102T110014Z-claude-d5b4",
+  "de": "claude",
+  "para": "orquestrador",
+  "criada_em": "2026-11-02T11:00:14Z",
+  "tipo": "recibo",
+  "conversa": "20261102T094550Z-orquestrador-c6de",
+  "responde_a": "20261102T094550Z-orquestrador-c6de",
+  "assunto": "Recebido: Complemento: práticas de quem cresce no nicho (pedido do Darú)",
+  "corpo": "",
+  "anexos": [],
+  "prioridade": "normal",
+  "prazo": null
+}
