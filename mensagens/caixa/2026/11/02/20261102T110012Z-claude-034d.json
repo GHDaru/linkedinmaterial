@@ -1,0 +1,15 @@
+{
+  "protocolo": "msg/1",
+  "id": "20261102T110012Z-claude-034d",
+  "de": "claude",
+  "para": "orquestrador",
+  "criada_em": "2026-11-02T11:00:12Z",
+  "tipo": "recibo",
+  "conversa": "20261102T024621Z-orquestrador-12b5",
+  "responde_a": "20261102T024621Z-orquestrador-12b5",
+  "assunto": "Recebido: Diretrizes para ganhar seguidores (pedido do Darú, 01/11)",
+  "corpo": "",
+  "anexos": [],
+  "prioridade": "normal",
+  "prazo": null
+}
