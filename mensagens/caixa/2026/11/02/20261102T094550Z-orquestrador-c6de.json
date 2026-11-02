@@ -1,0 +1,15 @@
+{
+  "protocolo": "msg/1",
+  "id": "20261102T094550Z-orquestrador-c6de",
+  "de": "orquestrador",
+  "para": "claude",
+  "criada_em": "2026-11-02T09:45:50Z",
+  "tipo": "evento",
+  "conversa": "20261102T094550Z-orquestrador-c6de",
+  "responde_a": null,
+  "assunto": "Complemento: práticas de quem cresce no nicho (pedido do Darú)",
+  "corpo": "Complemento das diretrizes da mensagem 20261102T024621Z-orquestrador-12b5. Estas são as práticas que mais se repetem entre os criadores de IA, supply chain/PCP/S&OP e TOC que analisamos:\n\n1. Dois ou três pilares fixos: agentes de IA no PCP e no S&OP, e a TOC como lente.\n2. De 2 a 4 posts por semana, nunca dois em menos de 24 h.\n3. História própria com detalhe concreto, em vez de conselho genérico.\n4. Conteúdo para salvar. Carrossel só quando tiver conteúdo de sobra; sem enquete; link no comentário.\n5. Voz própria, sem cara de texto genérico de IA, porque o LinkedIn agora aceita denúncia disso. Vale para tudo o que você redigir.\n6. Post colaborativo com alguém de outra rede, quando houver parceiro.\n\nPergunta no fim: os estudos divergem. Vamos testar a pergunta com tensão e resposta por número.",
+  "anexos": [],
+  "prioridade": "normal",
+  "prazo": null
+}
