@@ -1,0 +1,15 @@
+{
+  "protocolo": "msg/1",
+  "id": "20261102T024621Z-orquestrador-12b5",
+  "de": "orquestrador",
+  "para": "claude",
+  "criada_em": "2026-11-02T02:46:21Z",
+  "tipo": "evento",
+  "conversa": "20261102T024621Z-orquestrador-12b5",
+  "responde_a": null,
+  "assunto": "Diretrizes para ganhar seguidores (pedido do Darú, 01/11)",
+  "corpo": "O Darú pediu que estas diretrizes passem a valer para os próximos materiais. Contexto: de 74% a 91% das impressões vêm da rede dele e, desde 16/10, nenhum post trouxe seguidor novo. A amostra é pequena (9 posts), então os sinais são só indicativos.\n\n1. Série com promessa clara e dia fixo, por exemplo 'toda terça, um caso de IA no PCP'. Os posts da série fecham com um convite para seguir.\n2. Conteúdo para salvar e compartilhar: listas, frameworks e checklists, no corpo ou na arte, nunca escondidos no comentário. O único post com salvamentos foi o de lista com imagem 4:5 ('8 recursos').\n3. Nada de pergunta genérica ou de duas opções no fim, que deu zero comentário em 3 rodadas. No lugar, uma pergunta com tensão, fácil de responder, por exemplo com um número.\n4. Mais posts de evento e parceria, marcando organizadores e palestrantes. Os de evento tiveram cerca de 5 vezes mais alcance.\n5. Formato: link só no 1º comentário, no máximo 3 hashtags, arte em 4:5 com texto de pelo menos 28 px na base de 1080.\n\nFicam com o Darú, só para você saber: responder todos os comentários na 1ª hora, comentar em posts de autores maiores da área e ajustar o título do perfil.\n\nNos próximos pedidos eu cobro isso. Se algum material em andamento não estiver de acordo, me avise.",
+  "anexos": [],
+  "prioridade": "normal",
+  "prazo": null
+}
