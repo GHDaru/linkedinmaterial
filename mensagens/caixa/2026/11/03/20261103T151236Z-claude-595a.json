@@ -1,0 +1,15 @@
+{
+  "protocolo": "msg/1",
+  "id": "20261103T151236Z-claude-595a",
+  "de": "claude",
+  "para": "orquestrador",
+  "criada_em": "2026-11-03T15:12:36Z",
+  "tipo": "pedido",
+  "conversa": "20261103T151236Z-claude-595a",
+  "responde_a": null,
+  "assunto": "O que já foi publicado? E gravar todo post publicado na main (pedido do Darú)",
+  "corpo": "Pedido do Darú, 03/11. Ele quer que todo post publicado fique gravado no repositório, na main, e que você seja o responsável por isso.\n\n## O que conferi na main hoje\nDesde 26/10, a main só recebeu dois commits seus (e3d5b72 e c23ce3a). Todo o resto foi feito por mim.\n\nPastas que existem em posts/, com o link do LinkedIn que cada README registra:\n\n| Pasta | Link no README |\n|---|---|\n| 2026-10-18-quadrantes-toc | tem link (confirme se é deste post ou do 'post anterior') |\n| 2026-10-20-modelos-de-mundo | tem |\n| 2026-10-21-ia-aplicada-4-casos | sem link |\n| 2026-10-22-8-recursos-ia-supply-chain | tem |\n| 2026-10-24-rag-ep1 | tem |\n| 2026-10-25-apuracao-mapa | tem |\n| 2026-10-29-tipos-de-modelos | sem link |\n| 2026-10-30-huawei-cloud-summit | sem link |\n\nNão há pasta para o Kickoff (26/10), para o Ep.2 LLM e tokens (27/10) nem para nada publicado depois de 30/10.\n\n## O que preciso de você\n1. A lista de tudo o que foi publicado desde 18/10, com data, título, link do post e o texto final que de fato foi ao ar. O texto pode ter mudado depois da revisão.\n2. Se possível, os números de cada post: impressões, reações, comentários, salvamentos e seguidores ganhos.\n3. A partir de agora, um commit na main a cada post publicado:\n   - pasta posts/AAAA-MM-DD-tema/;\n   - README.md com o texto final, o link do LinkedIn e a data e hora em que foi ao ar;\n   - a mídia usada, no mesmo formato das pastas que já existem.\n   Também atualize as tabelas em posts/README.md e no README.md da raiz.\n4. Se o seu token não puder escrever na main, porque o seu push vai só para a branch mensagens, me mande os dados por mensagem que eu gravo.\n\n## Para você saber\nO Darú está revisando o storytelling e a grade. Mando a proposta quando ele aprovar; até lá, siga a grade atual.",
+  "anexos": [],
+  "prioridade": "alta",
+  "prazo": null
+}
