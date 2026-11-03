@@ -1,1 +1,3 @@
-A ideia de que tecnologia só traz benefício quando as regras feitas para a limitação antiga mudam vem das seis perguntas de Eli Goldratt, Eli Schragenheim e Carol Ptak em "Necessary but Not Sufficient" (2000).
+Minha resposta: conferir. Foi por isso que separamos quem escreve de quem fecha o portão e colocamos dois agentes frescos auditando o código.
+
+A ideia de que tecnologia só traz benefício quando mudam as regras feitas para conviver com a limitação antiga vem das perguntas de Eli Goldratt, Eli Schragenheim e Carol Ptak em "Necessary but Not Sufficient" (2000), depois ampliadas por Goldratt para seis.

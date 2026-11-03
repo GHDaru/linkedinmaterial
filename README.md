@@ -14,13 +14,15 @@ Posts que não fazem parte de uma série ficam em [`posts/`](posts/), um por pas
 
 | Data | Post | Material |
 |---|---|---|
-| 2026-10-18 | [4 quadrantes TOC](posts/2026-10-18-quadrantes-toc/) | texto + `quadrada.png` |
+| 2026-10-18 | [4 quadrantes TOC](posts/2026-10-18-quadrantes-toc/) | [post](https://www.linkedin.com/feed/update/urn:li:activity:7517774049201291264/) · texto + `quadrada.png` |
 | 2026-10-20 | [Modelos de mundo](posts/2026-10-20-modelos-de-mundo/) | [post](https://www.linkedin.com/feed/update/urn:li:share:7518312859643187201/) · texto + `imagem.png` |
-| 2026-10-21 | [IA Aplicada · 4 casos](posts/2026-10-21-ia-aplicada-4-casos/) | texto + `imagem.png` |
+| 2026-10-21 | [IA Aplicada · 4 casos](posts/2026-10-21-ia-aplicada-4-casos/) | [post](https://www.linkedin.com/feed/update/urn:li:activity:7518639291762413568/) · texto + `imagem.png` |
 | 2026-10-22 | [8 recursos de IA para SC](posts/2026-10-22-8-recursos-ia-supply-chain/) | [post](https://www.linkedin.com/feed/update/urn:li:share:7518882943445131265/) · texto + `imagem.png` |
 | 2026-10-24 | [RAG ep.1](posts/2026-10-24-rag-ep1/) | [post](https://www.linkedin.com/feed/update/urn:li:activity:7519773053938012161/) · texto + `capa.png` · [série](series/ia-do-basico-ao-avancado/ep01-rag/) |
 | 2026-10-25 | [Apuração mapa](posts/2026-10-25-apuracao-mapa/) | [post](https://www.linkedin.com/feed/update/urn:li:share:7520242340351864832/) · texto + `arte_linkedin.png` |
-| 2026-10-29 | [Modelos de IA: o processo escolhe](posts/2026-10-29-tipos-de-modelos/) | texto + `tipos-de-modelos.mp4` |
+| 2026-10-27 | [IA Aplicada · 5 casos](posts/2026-10-27-ia-aplicada-5-casos/) | [post](https://www.linkedin.com/feed/update/urn:li:activity:7520844949458927616/) · texto + `imagem.png` |
+| 2026-10-29 | [Modelos de IA: o processo escolhe](posts/2026-10-29-tipos-de-modelos/) | [post](https://www.linkedin.com/feed/update/urn:li:activity:7521551732909318144/) · texto + `tipos-de-modelos.mp4` |
+| 2026-10-30 | [Huawei Cloud Summit: agente novo com regra velha](posts/2026-10-30-huawei-cloud-summit/) | [post](https://www.linkedin.com/feed/update/urn:li:ugcPost:7522075643019431936/) · texto + 5 fotos |
 
 Brief de storytelling out/nov: [`posts/plano-storytelling-out-nov-2026/`](posts/plano-storytelling-out-nov-2026/).
 

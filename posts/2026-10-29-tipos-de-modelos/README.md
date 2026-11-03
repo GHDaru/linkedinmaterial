@@ -1,5 +1,12 @@
 # Modelos de IA: o processo escolhe
 
+## No LinkedIn
+
+- Post: https://www.linkedin.com/feed/update/urn:li:activity:7521551732909318144/
+- No ar: 29/10/2026, por volta de 09:40 (horário de Brasília)
+- Observação: Vídeo de 35 s; comentário 1 do autor (não fixado).
+
+
 **Mídia:** `tipos-de-modelos.mp4` (1080×1350, 35 s) · `tipos-de-modelos.gif` (720 px) · fonte da animação em `animacao.html`
 
 ## Texto do post

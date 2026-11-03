@@ -1,5 +1,11 @@
 # Modelos de mundo na supply chain: simule a restrição, não o mundo
 
+## No LinkedIn
+
+- Post: https://www.linkedin.com/feed/update/urn:li:share:7518312859643187201/
+- No ar: 20/10/2026, por volta de 12:00 (horário de Brasília)
+
+
 **Publicado em:** 2026-10-20 · [link do post](https://www.linkedin.com/feed/update/urn:li:share:7518312859643187201/)
 
 **Série relacionada:** prepara o Ep. 10 da série [IA do básico ao avançado](../../series/ia-do-basico-ao-avancado/).

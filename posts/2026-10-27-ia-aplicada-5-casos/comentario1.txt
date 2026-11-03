@@ -1,0 +1,6 @@
+Fontes (números das empresas/fornecedores):
+1. Vale — https://transportemoderno.com.br/2026/10/08/ia-amplia-capacidade-de-embarque-nos-portos-da-vale/
+2. Vibra — https://veja.abril.com.br/coluna/radar-economico/ia-libera-r-900-milhoes-que-a-vibra-mantinha-em-estoques/
+3. Cantu — https://aws.amazon.com/pt/blogs/aws-brasil/como-a-cantu-reduziu-em-15-o-erro-de-previsao-de-demanda-com-ia-na-aws/
+4. CJ Logistics — https://www.prnewswire.com/news-releases/cj-logistics-america-chooses-onetracks-aion-to-deploy-agentic-ai-across-40-warehouses-302861915.html
+5. TwinMed — https://www.twinmed.com/news-articles/twinmed-deploys-five-deepfabric-ai-agents-across-procurement

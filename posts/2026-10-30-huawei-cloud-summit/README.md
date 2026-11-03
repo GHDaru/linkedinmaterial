@@ -1,5 +1,12 @@
 # Huawei Cloud Summit Brazil 2026 · palestra de 29/10
 
+## No LinkedIn
+
+- Post: https://www.linkedin.com/feed/update/urn:li:ugcPost:7522075643019431936/
+- No ar: 30/10/2026 (sexta), por volta de 20:20 (horário de Brasília)
+- Observação: texto.txt e comentario1.txt são o rascunho final salvo no LinkedIn em 30/10 ~19:56; o Darú fez pequenos ajustes ao publicar, que não estão registrados aqui. Comentário 1 postado às 20:30.
+
+
 Post sobre a palestra "Novas regras de negócio: repensando o software na era dos agentes de IA" (trilha IA + Empresas, São Paulo).
 
 - `texto.txt`: texto do post (escrito com três especialistas: conteúdo, TOC e viralização).

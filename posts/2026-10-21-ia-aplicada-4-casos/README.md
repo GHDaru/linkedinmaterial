@@ -1,5 +1,11 @@
 # IA Aplicada | 4 casos em Supply Chain e PCP
 
+## No LinkedIn
+
+- Post: https://www.linkedin.com/feed/update/urn:li:activity:7518639291762413568/
+- No ar: 21/10/2026, por volta de 08:48 (horário de Brasília)
+
+
 **Publicado em:** 2026-10-21 · publicado ~08:48 (horário de Brasília) em 21/10/2026
 
 **Série relacionada:** curadoria IA Aplicada (dias úteis sem post longo).

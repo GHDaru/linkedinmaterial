@@ -1,7 +1,7 @@
 143 especificações. Cerca de 2.300 tarefas. Feitas por agentes de IA entre 7/9 e 13/10.
-E uma pergunta guiou tudo: o que temos que fazer para a IA desenvolver sozinha?
+Levei esses números ontem ao palco do Huawei Cloud Brasil Summit 2026.
 
-Ontem, no Huawei Cloud Summit Brazil 2026, falei sobre novas regras de negócio para o software na era dos agentes de IA.
+Falei sobre novas regras de negócio para o software na era dos agentes de IA. E uma pergunta guiou tudo: o que temos que fazer para a IA desenvolver sozinha?
 
 Parti de Goldratt, da Teoria das Restrições.
 
@@ -33,7 +33,7 @@ Rodamos com 2 gerentes e 13 workers de IA. No motor, o glm-5.2 no Huawei Cloud M
 
 Obrigado, @Juliana Cristina Carrilho Goncalves, pela parceria no palco.
 
-Qual regra da era do código caro ainda segura o seu time?
+No seu time, o gargalo hoje está em escrever o código ou em conferir o que a IA escreve?
 
 GHDARU · consultoria e implantação de processos agênticos
 ghdaru@ghdaru.com.br

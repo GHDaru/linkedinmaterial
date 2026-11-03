@@ -1,5 +1,11 @@
 # Quer projetar o resultado enquanto a apuração anda?
 
+## No LinkedIn
+
+- Post: https://www.linkedin.com/feed/update/urn:li:share:7520242340351864832/
+- No ar: 25/10/2026 (domingo), por volta de 19:00 (horário de Brasília)
+
+
 **Publicado em:** 2026-10-25 · [link do post](https://www.linkedin.com/feed/update/urn:li:share:7520242340351864832/)
 
 **Série relacionada:** post avulso (extra de domingo — mapa de apuração ao vivo).

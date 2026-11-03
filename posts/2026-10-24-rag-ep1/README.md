@@ -1,5 +1,11 @@
 # RAG: como a IA responde usando os seus documentos (Ep. 1)
 
+## No LinkedIn
+
+- Post: https://www.linkedin.com/feed/update/urn:li:activity:7519773053938012161/
+- No ar: 24/10/2026 (sábado; hora não registrada)
+
+
 **Publicado em:** 2026-10-24 · [link do post](https://www.linkedin.com/feed/update/urn:li:activity:7519773053938012161/)
 
 **Série relacionada:** Episódio 1 de [IA do básico ao avançado](../../series/ia-do-basico-ao-avancado/ep01-rag/) — notebook, animação GIF/MP4 e fontes da animação ficam na pasta da série; aqui só o texto e a capa do post.

@@ -1,5 +1,12 @@
 # Por que sua equipe não adota a IA? Os 4 quadrantes da mudança
 
+## No LinkedIn
+
+- Post: https://www.linkedin.com/feed/update/urn:li:activity:7517774049201291264/
+- No ar: 18/10/2026 (domingo), por volta de 23:30 (horário de Brasília)
+- Observação: O link "Post anterior" mais abaixo é o post da montanha da TOC (16/10), não este.
+
+
 **Publicado em:** 2026-10-18 · publicado 18/10/2026
 
 **Série relacionada:** TOC Fundamentos (continuação do post anterior sobre a montanha da TOC).

@@ -19,6 +19,7 @@ posts/2026-11-01-governanca-ia/
 | 2026-10-22 | 8 recursos de IA para SC | [`2026-10-22-8-recursos-ia-supply-chain/`](2026-10-22-8-recursos-ia-supply-chain/) |
 | 2026-10-24 | RAG ep.1 | [`2026-10-24-rag-ep1/`](2026-10-24-rag-ep1/) |
 | 2026-10-25 | Apuração mapa | [`2026-10-25-apuracao-mapa/`](2026-10-25-apuracao-mapa/) |
+| 2026-10-27 | IA Aplicada · 5 casos | [`2026-10-27-ia-aplicada-5-casos/`](2026-10-27-ia-aplicada-5-casos/) |
 | 2026-10-29 | Modelos de IA: o processo escolhe | [`2026-10-29-tipos-de-modelos/`](2026-10-29-tipos-de-modelos/) |
 | 2026-10-30 | Huawei Cloud Summit: agente novo com regra velha | [`2026-10-30-huawei-cloud-summit/`](2026-10-30-huawei-cloud-summit/) |
 

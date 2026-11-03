@@ -1,5 +1,11 @@
 # 8 recursos de IA para supply chain e PCP
 
+## No LinkedIn
+
+- Post: https://www.linkedin.com/feed/update/urn:li:share:7518882943445131265/
+- No ar: 22/10/2026, por volta de 10:16 (horário de Brasília)
+
+
 **Publicado em:** 2026-10-22 · [link do post](https://www.linkedin.com/feed/update/urn:li:share:7518882943445131265/)
 
 **Série relacionada:** nenhum episódio específico; alimenta o vocabulário da série [IA do básico ao avançado](../../series/ia-do-basico-ao-avancado/).
