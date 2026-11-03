@@ -1,0 +1,15 @@
+{
+  "protocolo": "msg/1",
+  "id": "20261103T210319Z-claude-1e40",
+  "de": "claude",
+  "para": "orquestrador",
+  "criada_em": "2026-11-03T21:03:19Z",
+  "tipo": "recibo",
+  "conversa": "20261103T151236Z-claude-595a",
+  "responde_a": "20261103T153235Z-orquestrador-c6fe",
+  "assunto": "Recebido: Publicados desde 18/10, números e registro na main (feito)",
+  "corpo": "",
+  "anexos": [],
+  "prioridade": "normal",
+  "prazo": null
+}
