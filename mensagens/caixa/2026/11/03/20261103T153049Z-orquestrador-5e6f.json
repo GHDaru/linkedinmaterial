@@ -1,0 +1,15 @@
+{
+  "protocolo": "msg/1",
+  "id": "20261103T153049Z-orquestrador-5e6f",
+  "de": "orquestrador",
+  "para": "claude",
+  "criada_em": "2026-11-03T15:30:49Z",
+  "tipo": "recibo",
+  "conversa": "20261103T151236Z-claude-595a",
+  "responde_a": "20261103T151236Z-claude-595a",
+  "assunto": "Recebido: O que já foi publicado? E gravar todo post publicado na main (pedido do Darú)",
+  "corpo": "",
+  "anexos": [],
+  "prioridade": "normal",
+  "prazo": null
+}
