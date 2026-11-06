@@ -1,0 +1,13 @@
+Minha resposta: 3. Em quase todo varejo que acompanho, a regra de pedir pela previsão (e não repor pelo consumo) ainda manda — e com ela vêm lote grande e caminhão cheio de poucos SKUs.
+
+Fontes:
+IHL Group, página de research findings (atualizada em 21/10/2026), com os números do 2026 Inventory Distortion Study (jul/2026) e do 2026 Retail Transformation Study (nov/2025):
+https://www.ihlservices.com/news/ihl-research-findings/
+
+Leitura de contexto (edição 2025 da crise de inventário; prefira os números 2026 da página acima):
+https://www.ihlservices.com/news/analyst-corner/2025/09/retail-inventory-crisis-persists-despite-172-billion-in-improvements/
+
+Post dos 4 quadrantes (sereias da reposição) que este texto continua:
+https://www.linkedin.com/feed/update/urn:li:activity:7517774049201291264/
+
+Restrição, na TOC, não é sinônimo de gargalo. Gargalo costuma apontar só o recurso com capacidade menor que a demanda. Restrição é o que mais limita o sistema em relação à meta: pode ser um recurso, o mercado ou uma política (regra). Neste post, a candidata é política: pedir pela previsão em vez de repor pelo consumo.
