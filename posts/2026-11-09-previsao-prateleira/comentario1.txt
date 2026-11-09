@@ -1,0 +1,7 @@
+Fontes e números:
+M5 Accuracy competition (Makridakis, Spiliotis e Assimakopoulos, IJF 2022; competição de 2020): 42.840 séries do Walmart; métrica WRMSSE; vencedor 22,4% melhor que o melhor benchmark (suavização exponencial bottom-up), na média de todos os níveis. Média dos 50 melhores: 40% no nível 1 (total), ~23% nos níveis 5–7 e ~3% nos níveis 10–12 (produto, produto-estado e produto-loja), p. 17 do preprint: https://doi.org/10.1016/j.ijforecast.2021.11.013
+Versão aberta (preprint): https://statmodeling.stat.columbia.edu/wp-content/uploads/2021/10/M5_accuracy_competition.pdf
+Tan et al., "Are Language Models Actually Useful for Time Series Forecasting?" (NeurIPS 2024; 13 bases de energia, trânsito, clima, saúde, câmbio e economia): https://arxiv.org/abs/2406.16964
+Ansari et al., "Chronos: Learning the Language of Time Series" (Amazon, TMLR 2024; só o histórico): https://arxiv.org/abs/2403.07815
+Ansari et al., "Chronos-2: From Univariate to Universal Forecasting" (Amazon, preprint de out/2025, sem revisão por pares; aceita promoções e feriados; caso em varejo): https://arxiv.org/abs/2510.15821
+Pergunta de Goldratt: Necessary But Not Sufficient (Goldratt, Schragenheim e Ptak, 2000).

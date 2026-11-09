@@ -1,0 +1,28 @@
+𝟰𝟬% 𝗠𝗘𝗡𝗢𝗦 𝗘𝗥𝗥𝗢 𝗡𝗢 𝗧𝗢𝗧𝗔𝗟, 𝟯% 𝗣𝗘𝗥𝗧𝗢 𝗗𝗔 𝗣𝗥𝗔𝗧𝗘𝗟𝗘𝗜𝗥𝗔
+
+A previsão do mês bateu no total, e mesmo assim deu ruptura (produto faltando na gôndola) numa loja e sobrou na outra. O M5, competição de previsão com dados do Walmart, ajuda a entender: no total da empresa, o erro médio dos melhores modelos caiu cerca de 40% em relação a um método estatístico de referência; perto da prateleira (produto, produto por estado e produto por loja), só cerca de 3%.
+
+E vem a pergunta da vez: "e se a gente trocar o modelo por IA generativa?"
+
+1. O M5 foi em 2020, antes dos LLMs, os modelos de linguagem como o do ChatGPT. Em 42.840 séries de vendas, venceu o aprendizado de máquina clássico: uma média de modelos LightGBM, que somam milhares de regras simples de decisão. Na média de todos os níveis, o vencedor errou 22,4% menos que o melhor método estatístico de referência.
+
+2. Os 40% e os 3% do início são a média das 50 melhores equipes contra esse método. Perto da prateleira, algumas ficaram até piores que ele.
+
+3. E os LLMs? Um estudo do NeurIPS 2024, uma das maiores conferências de IA, testou três métodos que usam LLM em 13 bases de energia, trânsito, clima, saúde, câmbio e economia, nenhuma de vendas de varejo. Sem o LLM, ou com uma peça simples no lugar, o resultado ficou igual ou melhor na maioria dos casos, com custo muito menor.
+
+4. IA generativa não é só LLM. O Chronos, da Amazon, também é generativo: um modelo de fundação, pré-treinado com muitas séries históricas, e não com texto, para servir de ponto de partida. Sem treino na base da empresa, chega perto de modelos treinados para cada base. O Chronos-2, relatório técnico de out/2025 ainda sem revisão por pares, passou a aceitar variáveis externas, como promoções e feriados.
+
+Minha leitura pela Teoria das Restrições (TOC):
+
+Goldratt propunha perguntar, diante de toda tecnologia nova, que regra precisa mudar para ela dar resultado.
+
+Minha posição: trocar o modelo por IA generativa sem mudar a regra de reposição é investir justamente onde o ganho medido no M5 foi de 3%. As regras que mudam estão no post de sexta (06/11), "A ruptura não é falta de previsão". Os LLMs podem ajudar o planejador a juntar o contexto que a série não mostra, como eventos e atrasos do fornecedor.
+
+Das últimas 5 melhorias de previsão na sua empresa, quantas mudaram alguma política ou regra de reposição?
+
+Fontes no primeiro comentário.
+
+GHDARU · consultoria e implantação de processos agênticos
+ghdaru@ghdaru.com.br
+
+#InteligenciaArtificial #SupplyChain #PrevisaoDeDemanda
