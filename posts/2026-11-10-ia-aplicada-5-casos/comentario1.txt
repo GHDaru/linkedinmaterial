@@ -1,0 +1,9 @@
+Fontes desta edição (números declarados pelas empresas ou fornecedores; sem auditoria independente):
+
+1. DHL Supply Chain — Valor Econômico, 10/11/2026 (imprensa, fala do VP de TI): https://valor.globo.com/publicacoes/especiais/revista-infraestrutura-e-logistica/noticia/2026/11/10/ia-eleva-produtividade-e-eficiencia-nos-centros-de-distribuicao.ghtml
+2. Mercado Livre — mesma reportagem do Valor, 10/11/2026 (imprensa, fala do diretor sênior de logística; ganho soma robôs e algoritmos): mesmo link do item 1
+3. Gildemeister — blog da Infor, fornecedora, 09/11/2026 (data do caso não informada): https://www.infor.com/blog/supply-chain-ai-agents-october-2026-release
+4. Algar — Brasil Inovador, 04/11/2026 (imprensa reproduzindo dados da empresa): https://brasilinovador.com.br/algar-reporta-economia-de-r-28-milhoes-em-suprimentos-com-agentes-autonomos-de-inteligencia-artificial/
+5. Hammermühle — Optiwiser, fornecedora, 01/11/2026 (case do fornecedor): https://www.optiwiser.io/en-news/hammermuhle-from-30-to-3-hours-of-planning-optiwiser
+
+Contraponto: pesquisa InstaLILY (Pollfish, 250 gestores; a InstaLILY vende agentes) — Supply Chain 24/7, 09/11/2026: https://www.supplychain247.com/article/supply-chain-ai-data-incidents-survey

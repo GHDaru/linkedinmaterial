@@ -24,5 +24,6 @@ posts/2026-11-01-governanca-ia/
 | 2026-10-30 | Huawei Cloud Summit: agente novo com regra velha | [`2026-10-30-huawei-cloud-summit/`](2026-10-30-huawei-cloud-summit/) |
 | 2026-11-06 | A ruptura não é falta de previsão | [`2026-11-06-reposicao-varejo/`](2026-11-06-reposicao-varejo/) |
 | 2026-11-09 | 40% menos erro no total, 3% perto da prateleira | [`2026-11-09-previsao-prateleira/`](2026-11-09-previsao-prateleira/) |
+| 2026-11-10 | IA Aplicada · 5 casos em Supply Chain e PCP | [`2026-11-10-ia-aplicada-5-casos/`](2026-11-10-ia-aplicada-5-casos/) |
 
 Brief de storytelling (out/nov): [`plano-storytelling-out-nov-2026/`](plano-storytelling-out-nov-2026/).

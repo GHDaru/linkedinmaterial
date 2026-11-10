@@ -25,6 +25,7 @@ Posts que não fazem parte de uma série ficam em [`posts/`](posts/), um por pas
 | 2026-10-30 | [Huawei Cloud Summit: agente novo com regra velha](posts/2026-10-30-huawei-cloud-summit/) | [post](https://www.linkedin.com/feed/update/urn:li:ugcPost:7522075643019431936/) · texto + 5 fotos |
 | 2026-11-06 | [A ruptura não é falta de previsão](posts/2026-11-06-reposicao-varejo/) | [post](https://www.linkedin.com/feed/update/urn:li:share:7524261999493697536/) · texto + `imagem.png` |
 | 2026-11-09 | [40% menos erro no total, 3% perto da prateleira](posts/2026-11-09-previsao-prateleira/) | [post](https://www.linkedin.com/feed/update/urn:li:share:7525518665274896384/) · texto + `imagem.png` |
+| 2026-11-10 | [IA Aplicada · 5 casos em Supply Chain e PCP](posts/2026-11-10-ia-aplicada-5-casos/) | [post](https://www.linkedin.com/feed/update/urn:li:share:7525891307006021632/) · texto + `imagem.jpg` |
 
 Brief de storytelling out/nov: [`posts/plano-storytelling-out-nov-2026/`](posts/plano-storytelling-out-nov-2026/).
 
