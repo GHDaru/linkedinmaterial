@@ -1,0 +1,72 @@
+# 6 horas de agente para 1 hora humana. Quem espera quem?
+
+## No LinkedIn
+
+- Post: https://www.linkedin.com/feed/update/urn:li:activity:7527804847123922944/
+- No ar: 15/11/2026 (domingo), por volta de 15:49 (horário de Brasília)
+- Observação: comentário 1 publicado às 20:39 (horário de Brasília); não fixado. Pasta nomeada pela data de publicação (15/11); o pacote de produção foi preparado em 13/11.
+
+## Texto
+
+```
+𝟲 𝗛𝗢𝗥𝗔𝗦 𝗗𝗘 𝗔𝗚𝗘𝗡𝗧𝗘 𝗣𝗔𝗥𝗔 𝟭 𝗛𝗢𝗥𝗔 𝗛𝗨𝗠𝗔𝗡𝗔. 𝗤𝗨𝗘𝗠 𝗘𝗦𝗣𝗘𝗥𝗔 𝗤𝗨𝗘𝗠?
+
+Fim de tarde. O planejador abre a tela e encontra 40 sugestões dos agentes esperando OK: pedido de compra, mudança de sequência, alerta de ruptura. Ele aprova as 10 primeiras com calma, as 20 seguintes no automático e deixa o resto para amanhã. Os agentes trabalharam o dia todo. A decisão ficou na fila.
+
+A cena é ilustrativa. O número que a explica não é.
+
+Em 16/10, a Anthropic publicou um estudo sobre o trabalho dentro da própria empresa, com dados internos de uso dos agentes, agendas e 17 entrevistas:
+
+• Em agosto, os agentes somaram 6 horas de trabalho para cada hora das pessoas que os dirigem (contando o tempo em que os agentes estão rodando, contra 40 h por semana de cada pessoa).
+• Quando a pessoa trabalha em conversa com o agente, cerca de 80% do tempo da sessão o agente fica parado, esperando a resposta dela.
+• Mesmo nas áreas não técnicas, ler tudo o que os agentes produzem tomaria mais da metade da semana de trabalho.
+• O trabalho de organizar os agentes (instruções, um agente revisando o outro, monitoramento) subiu de 10% para 22% das sessões entre o fim de 2025 e o primeiro semestre de 2026.
+
+Cuidado com a extrapolação: são dados da Anthropic sobre a própria Anthropic, uma empresa que usa IA em quase tudo. Mas o próprio relatório chama a atenção humana de gargalo: a IA acelerou a execução, e o que passou a segurar o resultado foi o tempo de quem decide.
+
+Minha leitura pela Teoria das Restrições (TOC):
+
+A restrição saiu do recurso que executa e foi para o recurso que decide: a atenção de uma pessoa. Goldratt dizia que uma hora perdida na restrição é uma hora perdida no sistema inteiro. Colocar mais um agente para trabalhar aumenta a fila na frente de quem decide, e o que sai pronto no fim continua limitado por essa atenção.
+
+Os 5 passos da TOC, aplicados aqui:
+
+1. Identificar: contar quantas decisões por dia chegam a cada pessoa, e quantas ela trata de verdade.
+2. Explorar: a atenção dela só recebe o que exige julgamento. O resto chega resumido, com a recomendação e a premissa.
+3. Subordinar: os agentes trabalham no ritmo de quem decide.
+4. Elevar: dar mais capacidade de decisão, com mais gente ou mais tempo dedicado.
+5. Repetir: quando a fila some, a restrição mudou de lugar. Procure de novo.
+
+Muitas vezes a restrição real é uma política: "tudo passa pelo gestor". Enquanto essa regra valer, cada agente novo só alonga a fila. A saída é reescrever a alçada.
+
+Quanto tempo uma sugestão do sistema espera na sua mesa até alguém decidir?
+Responda em horas.
+
+Fontes no primeiro comentário.
+
+GHDARU · consultoria e implantação de processos agênticos
+ghdaru@ghdaru.com.br
+
+#AgentesDeIA #SupplyChain #TeoriaDasRestricoes
+```
+
+## Comentário 1 (fontes)
+
+```
+Fontes:
+
+Wilmers, Catipon, Massenkoff e McCrory (Anthropic), "How employment is changing at Anthropic", 16/10/2026. Dados internos da empresa (uso de agentes, métricas, pesquisas, calendários, contratações) e 17 entrevistas. Em agosto, as horas dos agentes chegaram a 6 vezes as das pessoas que os dirigem; cerca de 80% do tempo das sessões em conversa o agente fica parado esperando a resposta humana; ler toda a saída tomaria mais da metade da semana mesmo nas áreas não técnicas; organizar os agentes (instruções, revisão entre agentes, monitoramento) subiu de 10% (outono de 2025) para 22% das sessões (1º semestre de 2026): https://www.anthropic.com/research/employment-at-anthropic
+
+No 6 para 1, a hora de agente é tempo de execução (sem esperas acima de 30 minutos) e a hora humana é 40 h por semana por funcionário.
+
+Em português: InfoMoney/Fortune, 20/10/2026: https://www.infomoney.com.br/business/global/um-exercito-de-claudes-anthropic-diz-que-atencao-humana-virou-gargalo-da-ia/
+
+Que uma hora perdida no gargalo é uma hora perdida no sistema inteiro é uma das regras de Goldratt em A Meta (em paráfrase). A cena do planejador é ilustrativa.
+```
+
+## Arquivos
+
+| Arquivo | Conteúdo |
+|---|---|
+| [`texto.txt`](texto.txt) | Texto publicado |
+| [`comentario1.txt`](comentario1.txt) | Primeiro comentário (publicado às 20:39, horário de Brasília; não fixado) |
+| [`imagem.png`](imagem.png) | Arte 1080×1350 (4:5) |

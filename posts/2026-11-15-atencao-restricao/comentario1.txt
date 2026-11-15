@@ -1,0 +1,9 @@
+Fontes:
+
+Wilmers, Catipon, Massenkoff e McCrory (Anthropic), "How employment is changing at Anthropic", 16/10/2026. Dados internos da empresa (uso de agentes, métricas, pesquisas, calendários, contratações) e 17 entrevistas. Em agosto, as horas dos agentes chegaram a 6 vezes as das pessoas que os dirigem; cerca de 80% do tempo das sessões em conversa o agente fica parado esperando a resposta humana; ler toda a saída tomaria mais da metade da semana mesmo nas áreas não técnicas; organizar os agentes (instruções, revisão entre agentes, monitoramento) subiu de 10% (outono de 2025) para 22% das sessões (1º semestre de 2026): https://www.anthropic.com/research/employment-at-anthropic
+
+No 6 para 1, a hora de agente é tempo de execução (sem esperas acima de 30 minutos) e a hora humana é 40 h por semana por funcionário.
+
+Em português: InfoMoney/Fortune, 20/10/2026: https://www.infomoney.com.br/business/global/um-exercito-de-claudes-anthropic-diz-que-atencao-humana-virou-gargalo-da-ia/
+
+Que uma hora perdida no gargalo é uma hora perdida no sistema inteiro é uma das regras de Goldratt em A Meta (em paráfrase). A cena do planejador é ilustrativa.
