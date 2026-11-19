@@ -1,0 +1,18 @@
+Fontes:
+
+Karpathy (19/12/2025), código "descartável após um uso": https://karpathy.bearblog.dev/year-in-review-2025/
+
+Willison (19/03/2025), definição de vibe coding: https://simonwillison.net/2025/Mar/19/vibe-coding/
+
+Gartner, previsões (15/09/2026): 80% das novas aplicações descartáveis até 2029, usadas por menos de um ano: https://www.gartner.com/en/newsroom/press-releases/2026-09-15-gartner-unveils-top-strategic-predictions-for-2027-and-beyond
+Artigo (16/11/2026), dono de negócio e desativação: https://www.gartner.com/en/articles/disposable-applications-ai
+
+Veracode (30/07/2025), 45% inseguro em tarefas de completar código: https://www.veracode.com/press-release/ai-generated-code-poses-major-security-risks-in-nearly-half-of-all-development-tasks-veracode-research-reveals/
+
+SaM Solutions (12/11/2026), exemplo das cotações: https://sam-solutions.us/insights/when-disposable-software-becomes-critical/
+
+Fifty Five and Five (01/10/2026), critérios de passagem para TI: https://fiftyfiveandfive.com/resources/is-saas-dead/
+
+Agent Skills (padrão aberto): https://agentskills.io
+
+Cena ilustrativa, adaptada da SaM. Critério, skill e leitura com/para a IA são proposta minha.
